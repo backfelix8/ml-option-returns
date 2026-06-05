@@ -17,12 +17,60 @@ import torch
 class Config:
     """
     @brief Class to handle configurations
-    @details Contains a single method to retrieve configuration for a specific model during training.
+    @details Contains methods to retrieve and modify configuration for a specific model during training.
     """
+
     @staticmethod
-    def get_config(model_type: str) -> tuple[list[dict], int]:
+    def get_config(model_type: str, regularization: str = 'none') -> tuple[list[dict], int]:
         """
-        @brief Returns the configuration for the given model_type
+        @brief Returns the configuration for the given model_type, adjusted for the regularization strategy
+        @param model_type: model_type
+        @param regularization: one of 'none' | 'l2' | 'noise' | 'discrete'
+        @return: list of dictionaries containing configuration for one run each, int number of samples to tune
+        """
+        configs, samples = Config._get_base_config(model_type)
+        return Config._apply_regularization(configs, model_type, regularization), samples
+
+    @staticmethod
+    def _apply_regularization(configs: list[dict], model_type: str, regularization: str) -> list[dict]:
+        """
+        @brief Overwrites regularization-related hyperparameter entries depending on the chosen strategy.
+               Only modifies GBR, RF and FFN; all other models are returned unchanged.
+        @param configs: list of config dicts as returned by _get_base_config
+        @param model_type: used to guard which models are modified
+        @param regularization: one of 'none' | 'l2' | 'noise' | 'discrete'
+        @return: modified configs
+        """
+        if model_type not in ('GBR', 'RF', 'FFN'):
+            return configs
+
+        for c in configs:
+            # --- Tree models (GBR, RF): control lambda_l2 ---
+            if 'lambda_l2' in c:
+                if regularization == 'none':
+                    c['lambda_l2'] = 0                           # fixed off → clean baseline
+                elif regularization == 'l2':
+                    c['lambda_l2'] = tune.uniform(1e-4, 0.3)    # enforced > 0
+
+            # --- FFN: weight_decay is always 0 (decoupled L2 disabled for all experiments).
+            # For 'l2' we use a coupled penalty directly in the loss instead (see train.py).
+            if 'weight_decay' in c:
+                c['weight_decay'] = 0
+
+            # Coupled L2 penalty coefficient tuned for 'l2' experiment (FFN only)
+            if regularization == 'l2' and 'weight_decay' in c:
+                c['lambda_l2'] = tune.loguniform(1e-6, 1e-2)
+
+            # Noise std tuned for 'noise' experiment (FFN only)
+            if regularization == 'noise' and 'weight_decay' in c:
+                c['noise_std'] = tune.loguniform(1e-6, 1e-3)
+
+        return configs
+
+    @staticmethod
+    def _get_base_config(model_type: str) -> tuple[list[dict], int]:
+        """
+        @brief Returns the base configuration for the given model_type (unmodified search spaces)
         @param model_type: model_type
         @return: list of dictionaries containing configuration for one run each, int number of samples to tune
         @exception ValueError: Raises ValueError if model_type is invalid

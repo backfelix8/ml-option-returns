@@ -12,6 +12,12 @@ Values to set manually:
 - IMPORTANT_COLUMNS - Features that we payed special attention to in some models
     (always the same in this thesis)
 - NORMALIZE - Whether to normalize the data before training
+- REGULARIZATION - Regularization strategy to apply. Possible 'none' | 'l2' | 'noise' | 'discrete'.
+    Only affects GBR, RF and FFN; all other models are unchanged.
+    'none'     : clean baseline (weight_decay=0, lambda_l2=0)
+    'l2'       : coupled L2 penalty in loss (tuned lambda_l2 for FFN and GBR/RF; weight_decay stays 0)
+    'noise'    : Noisy AdamW — adds Gaussian noise to weights after each optimizer step (FFN only)
+    'discrete' : SignSGD — uses only gradient sign for weight updates (FFN only)
 
 Classes:
 - LargeDataset - Class to handle large datasets
@@ -65,6 +71,19 @@ IMPORTANT_COLUMNS = ['theta', 'bid_size', 'ask_size','implVol','vega','normalize
 # Whether the model is trained with normalized features or not (True for Neural Network based models
 # and False for tree-based models across this thesis)
 NORMALIZE = False
+# Regularization strategy. Possible 'none' | 'l2' | 'noise' | 'discrete'.
+# Only has an effect for MODEL_TO_TRAIN in ('GBR', 'RF', 'FFN').
+REGULARIZATION = 'none'
+# Data availability and rolling window configuration.
+# MONTHS_AVAILABLE: how many monthly parquet files exist (1 … MONTHS_AVAILABLE are loaded).
+# TRAIN_MONTHS:     size of the initial training window (months 1 … TRAIN_MONTHS).
+# N_WINDOWS:        number of rolling windows; each window extends training by one month.
+# Validation for window `step` covers month TRAIN_MONTHS + step + 1.
+# The last available month should be reserved for testing in evaluate.py.
+# Default (full dataset): MONTHS_AVAILABLE=11, TRAIN_MONTHS=8, N_WINDOWS=3
+MONTHS_AVAILABLE = 5
+TRAIN_MONTHS = 3
+N_WINDOWS = 1
 MODEL_NAME_MAP = {
     'TransformerModel': 'attention',
     'AutoencoderModel': 'autoencoder',
@@ -81,7 +100,8 @@ MODEL_NAME_MAP = {
 }
 MODEL_NAME = MODEL_NAME_MAP.get(MODEL_TO_TRAIN, MODEL_TO_TRAIN)
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
-MODEL_DIR = os.path.join(SCRIPT_DIR, MODEL_NAME)
+_reg_suffix = f"_{REGULARIZATION}" if REGULARIZATION != 'none' else ""
+MODEL_DIR = os.path.join(SCRIPT_DIR, f"{MODEL_NAME}{_reg_suffix}")
 
 
 def preprocess() -> tuple[list[pd.DataFrame], pd.DataFrame | None]:
@@ -90,8 +110,8 @@ def preprocess() -> tuple[list[pd.DataFrame], pd.DataFrame | None]:
     @return loaded dfs (potentially normalized) and normalization params
     """
     dfs = []
-    # Iterate over months in training and validation (December not relevant as used only for testing)
-    for i in range(1, 12):
+    # Iterate over months in training and validation (last month reserved for testing in evaluate.py)
+    for i in range(1, MONTHS_AVAILABLE + 1):
         df = pd.read_parquet(
             f'/root/autodl-tmp/rerun_jakob_code/jakob-code/data/month/selected_data/data_month_{i}.parquet')
         # Transform to float32 and int32 for memory reasons
@@ -268,7 +288,9 @@ def create_tree_objective(X_train: pd.DataFrame, y_train: pd.Series,
             'bagging_fraction': trial.suggest_float('bagging_fraction', 0.25, 1.0),
             'bagging_freq': trial.suggest_categorical('bagging_freq', [1, 5, 10]),
             'lambda_l1': trial.suggest_float('lambda_l1', 0.0, 0.1),
-            'lambda_l2': trial.suggest_float('lambda_l2', 0.0, 0.1),
+            # lambda_l2: fixed off for 'none' baseline, tuned > 0 for 'l2' experiment
+            'lambda_l2': (0.0 if REGULARIZATION == 'none'
+                          else trial.suggest_float('lambda_l2', 1e-4, 0.3)),
             'num_threads': 8,
             'device_type': 'gpu',
             'verbose': -1,
@@ -434,8 +456,16 @@ def train_neural_model(config: dict, train_path: str, val_path: str,
 
     # compile model, set optimizer and loss
     main_model = torch.compile(main_model, backend='eager')
-    optimizer = AdamW(main_model.parameters(), lr=config['lr'],
-                      weight_decay=config['weight_decay'], amsgrad=config['amsgrad'])
+    if REGULARIZATION == 'noise':
+        from noisy_optimizer import NoisyAdamW
+        optimizer = NoisyAdamW(main_model.parameters(), lr=config['lr'],
+                               noise_std=config['noise_std'], amsgrad=config['amsgrad'])
+    elif REGULARIZATION == 'discrete':
+        from discrete_optimizer import SignSGD
+        optimizer = SignSGD(main_model.parameters(), lr=config['lr'])
+    else:  # 'none' or 'l2': standard AdamW (weight_decay already set by Config)
+        optimizer = AdamW(main_model.parameters(), lr=config['lr'],
+                          weight_decay=config['weight_decay'], amsgrad=config['amsgrad'])
     criterion = nn.MSELoss()
 
     # Early stopping parameters
@@ -469,6 +499,12 @@ def train_neural_model(config: dict, train_path: str, val_path: str,
             else:
                 pred = main_model(xb, specb)
             loss = criterion(pred, yb)  # get loss
+            # Coupled L2 penalty: add λ·||θ||² directly to the loss (only for 'l2' experiment).
+            # This is intentionally different from AdamW weight_decay (decoupled L2):
+            # here the penalty flows through the gradient, matching classical L2 regularization.
+            if REGULARIZATION == 'l2':
+                l2_penalty = sum(p.pow(2).sum() for p in main_model.parameters())
+                loss = loss + config['lambda_l2'] * l2_penalty
             if not torch.isfinite(loss):
                 session.report({"loss": float("inf"), "done": True})
                 return
@@ -596,14 +632,14 @@ def hyperparameter_optimization() -> None:
     pd.DataFrame(params).to_excel(
         'normalization_params.xlsx')  # save normalization parameter (empty, if no normalization is done)
 
-    for step in range(0, 3):  # Iterate over rolling windows
+    for step in range(0, N_WINDOWS):  # Iterate over rolling windows
         print(f"\n{'=' * 60}")
         print(f"Rolling Window Step {step}")
         print(f"{'=' * 60}")
 
         # Retrieve training and validation data for rolling window (training grows by one each rolling window)
-        X_train = pd.concat(dfs[:8 + step])
-        X_val = pd.concat(dfs[8 + step:9 + step])
+        X_train = pd.concat(dfs[:TRAIN_MONTHS + step])
+        X_val = pd.concat(dfs[TRAIN_MONTHS + step:TRAIN_MONTHS + step + 1])
 
         # Get target variable and separate from features
         y_train = X_train['Returns']
@@ -619,7 +655,7 @@ def hyperparameter_optimization() -> None:
         target_col = "Returns"
 
         # Retrieve configuration and sample amount for respective model
-        config, samples_model = Config.get_config(MODEL_TO_TRAIN)
+        config, samples_model = Config.get_config(MODEL_TO_TRAIN, REGULARIZATION)
         default_samples_model = samples_model
         if TRIALS_OVERRIDE is not None:
             samples_model = TRIALS_OVERRIDE
