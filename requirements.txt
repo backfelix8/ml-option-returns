@@ -13,3 +13,4 @@ tqdm
 ray[tune]
 openpyxl
 statsmodels
+xlsxwriter

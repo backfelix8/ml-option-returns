@@ -420,9 +420,9 @@ class CombinedModel:
                 # add line to output if using a single tree-based method
                 if len(self.model_types) == 1 and self.model_types[0] == 'rf':
                     results.loc[len(results)] = [f'Run {str(i)}/{str(j)}', mse, r2_OS, num_trees,
-                                                 x[i].columns[top_indices_sorted], 'err', None]
+                                                 x[i].columns[top_indices_sorted], np.nan, None]
                 else: #add line to output
-                    results.loc[len(results)] = [f'Run {str(i)}/{str(j)}', mse, r2_OS, 'err', None]
+                    results.loc[len(results)] = [f'Run {str(i)}/{str(j)}', mse, r2_OS, np.nan, None]
 
         #Create final row Ensemble
         #(actual model one would use and we generally mention throughout the thesis)
@@ -484,9 +484,9 @@ class CombinedModel:
             top_indices = np.argpartition(-totalImportance, 10)[:10]
             top_indices_sorted = top_indices[np.argsort(-totalImportance[top_indices])]
             results.loc[len(results)] = ['Ensemble', mse, r2_OS, total_num_trees,
-                                         xs[0].columns[top_indices_sorted], 'err', cw_p]
+                                         xs[0].columns[top_indices_sorted], np.nan, cw_p]
         else: #add line to output
-            results.loc[len(results)] = ['Ensemble', mse, r2_OS, 'err', cw_p]
+            results.loc[len(results)] = ['Ensemble', mse, r2_OS, np.nan, cw_p]
         return results
 
     @staticmethod
@@ -573,40 +573,50 @@ class CombinedModel:
             # calculate absolute mean delta change over long-short portfolio
             nu = np.abs(np.mean(group['Delta_change']))
 
-            # calculate realized costs for opening the option position
-            group['tc_open_opt'] = (rho * group['optspread'] * group['price']) / 2
-            # calculate realized costs for closing the option position
-            group['tc_close_opt'] = (rho * group['optspread_nex'] * group['price_nex']) / 2
-            # calculate realized costs for opening option and underlying position
-            group['tc_open_all'] = (rho*group['optspread']*group['price'] +
-                                    nu*group['undspread']*group['underlyingprice'])/2
-            # calculate realized costs for closing option and underlying position
-            group['tc_close_all'] = (rho*group['optspread_nex']*group['price_nex'] +
-                                     nu*group['undspread_nex']*group['underlyingprice_nex'])/2
+            # Trading-cost and spread-adjusted return columns.
+            # When price data is available (full dataset): compute tc_* and spread-adjusted returns.
+            # When price data is absent (selected-features dataset): set spread returns to NaN so that
+            # the basic evaluation (opt_spread=False, rho=0) still works without price columns.
+            _has_price = 'price' in group.columns
+            if _has_price:
+                # --- compute trading costs ---
+                group['tc_open_opt'] = (rho * group['optspread'] * group['price']) / 2
+                group['tc_close_opt'] = (rho * group['optspread_nex'] * group['price_nex']) / 2
+                group['tc_open_all'] = (rho*group['optspread']*group['price'] +
+                                        nu*group['undspread']*group['underlyingprice'])/2
+                group['tc_close_all'] = (rho*group['optspread_nex']*group['price_nex'] +
+                                         nu*group['undspread_nex']*group['underlyingprice_nex'])/2
+                # negate costs for options we short
+                group.loc[group['subgroup'] == 0,
+                    ['tc_open_opt', 'tc_close_opt', 'tc_open_all', 'tc_close_all']] *= -1
 
-            #negate costs for options we short
-            group.loc[group['subgroup'] == 0,
-                ['tc_open_opt', 'tc_close_opt', 'tc_open_all', 'tc_close_all']] *= -1
+                # --- compute spread-adjusted returns ---
+                group['Returns_optSpread'] = group['Returns'] * np.abs(group['price']
+                                            - group['delta'] * group['underlyingprice'])
+                group['Returns_allSpread'] = ((group['Returns_optSpread'] - (group['riskfree']/(252*13)) *
+                                            group['tc_open_all'] - group['tc_open_all'] - group['tc_close_all'])
+                                            / (np.abs(group['price'] - group['delta'] * group['underlyingprice'])
+                                            + group['tc_open_all']))
+                group['Returns_optSpread'] = ((group['Returns_optSpread'] - (group['riskfree'] / (252 * 13))
+                                            * group['tc_open_opt'] - group['tc_open_opt'] - group['tc_close_opt'])
+                                            / (np.abs(group['price'] - group['delta'] * group['underlyingprice'])
+                                            + group['tc_open_opt']))
 
-            #Calculate returns using only option spread or both following formulas
-            group['Returns_optSpread'] = group['Returns'] * np.abs(group['price']
-                                        - group['delta'] * group['underlyingprice'])
-            group['Returns_allSpread'] = ((group['Returns_optSpread'] - (group['riskfree']/(252*13)) *
-                                        group['tc_open_all'] - group['tc_open_all'] - group['tc_close_all'])
-                                        / (np.abs(group['price'] - group['delta'] * group['underlyingprice'])
-                                        + group['tc_open_all']))
-            group['Returns_optSpread'] = ((group['Returns_optSpread'] - (group['riskfree'] / (252 * 13))
-                                        * group['tc_open_opt'] - group['tc_open_opt'] - group['tc_close_opt'])
-                                        / (np.abs(group['price'] - group['delta'] * group['underlyingprice'])
-                                        + group['tc_open_opt']))
+                # negate values for shorting portfolio
+                group.loc[group['subgroup'] == 0,
+                    ['Prediction', 'Returns', 'Returns_optSpread', 'Returns_allSpread']] *= -1
 
-            #negate values for shorting portfolio
-            group.loc[group['subgroup'] == 0,
-                ['Prediction', 'Returns', 'Returns_optSpread', 'Returns_allSpread']] *= -1
-
-            #calculate excess return of underlying
-            group['underlying_excess_return'] = ((group['underlyingprice_nex']/group['underlyingprice']) -
-                                                 1 - (group['riskfree']/(252*13)))
+                # excess return of underlying
+                group['underlying_excess_return'] = ((group['underlyingprice_nex']/group['underlyingprice']) -
+                                                     1 - (group['riskfree']/(252*13)))
+            else:
+                # --- no price data: fill spread columns with NaN, still negate basic returns ---
+                group['Returns_optSpread'] = np.nan
+                group['Returns_allSpread'] = np.nan
+                # negate Prediction and Returns for the short leg (price-independent)
+                group.loc[group['subgroup'] == 0,
+                    ['Prediction', 'Returns']] *= -1
+                group['underlying_excess_return'] = np.nan
 
             #return average prediction, returns, etc. for long-short portfolio.
             # Times two used for long and short position
@@ -813,10 +823,8 @@ class CombinedModel:
         #A strategy with previous positive returns, that results in negative predicted returns after
         # accounting for trading costs, will be set to zero, so that we don't short this strategy,
         # and vice versa.
-
-        # Only compute this when actually needed, that way we can also evaluate without the full dataset given by the supervisor
-        # can remove this if full dataset is present
-        print("Optional: ", opt_spread, "Underlying: ", und_spread)
+        # Only computed when actually needed (opt_spread or und_spread), so that evaluation
+        # works even when price/underlyingprice are not present in the data.
         if opt_spread or und_spread:
             x['tc_opt'] = (rho * x['optspread'] * x['price']) / 2
             x['tc_all'] = (rho * x['optspread'] * x['price'] + nu*x['undspread']*x['underlyingprice']) / 2
