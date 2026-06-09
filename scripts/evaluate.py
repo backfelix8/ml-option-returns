@@ -34,12 +34,14 @@ def apply_saved_zscore(dfs, params_path='./normalization_params.xlsx'):
 # These are the features we payed special attention to in some models. Always the same across the thesis
 IMPORTANT_COLUMNS = ['theta', 'bid_size', 'ask_size','implVol','vega','normalizedMoneyness','time','Underlying_Ret_D2','Underlying_Ret_H1','delta']
 
-FOLDER = '.'  # This specifies where to find the saved model files
+FOLDER = 'Z:/Dokumente/dev/ml-option-returns/scripts/gbrt_standard'  # This specifies where to find the saved model files
 ONLY_PUT = False
 ONLY_CALL = False
 MODULATOR_FIRST = False
 EVALUATION_TYPE ='performance'
 PERFORMANCE_BASIC_ONLY = True
+
+#Z:\Dokumente\dev\ml-option-returns\scripts\gbrt_standard\gbrt_standard_model0_0.pkl
 
 # MODEL_TYPES = [
 #   'rf', 'rf', 'rf', 'rf',
@@ -76,10 +78,10 @@ PERFORMANCE_BASIC_ONLY = True
 #   True
 # ]
 
-MODEL_TYPES = ['rf','fusionComplex','attention']
-MODEL_NAMES = ['gbrt_standard','tripleNet','attention']
-MODEL_WEIGHTS = [0.3333, 0.3333, 0.3333]
-NORMALIZE = [False, True, True]
+MODEL_TYPES = ['rf']
+MODEL_NAMES = ['gbrt_standard']
+MODEL_WEIGHTS = [1]
+NORMALIZE = [False]
 
 SCRIPT_DIR = Path(__file__).resolve().parent
 
@@ -99,8 +101,8 @@ for p in [OUTPUT_BASE_DIR, FIG_DIR, ROB_DIR, PERF_FIG_DIR]:
     p.mkdir(parents=True, exist_ok=True)
 
 # Data paths
-SELECTED_DATA_PATH = '/root/autodl-tmp/rerun_jakob_code/jakob-code/data/month/selected_data/'
-FULL_DATA_PATH = '/root/autodl-tmp/rerun_jakob_code/jakob-code/data/month/'
+SELECTED_DATA_PATH = 'Z:\Dokumente\dev\ml-option-returns\data'
+FULL_DATA_PATH = 'Z:\Dokumente\dev\ml-option-returns\data'
 
 
 def preprocess_for_model(full_dataset: bool, reorder_modulators: bool = True) -> tuple[list[pd.DataFrame], list[pd.Series]]:

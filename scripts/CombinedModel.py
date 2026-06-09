@@ -813,9 +813,14 @@ class CombinedModel:
         #A strategy with previous positive returns, that results in negative predicted returns after
         # accounting for trading costs, will be set to zero, so that we don't short this strategy,
         # and vice versa.
-        x['tc_opt'] = (rho * x['optspread'] * x['price']) / 2
-        x['tc_all'] = (rho * x['optspread'] * x['price'] + nu*x['undspread']*x['underlyingprice']) / 2
-        x['Prediction_Less_Denominator'] = x['Prediction'] * np.abs(x['price'] - x['delta'] * x['underlyingprice'])
+
+        # Only compute this when actually needed, that way we can also evaluate without the full dataset given by the supervisor
+        # can remove this if full dataset is present
+        print("Optional: ", opt_spread, "Underlying: ", und_spread)
+        if opt_spread or und_spread:
+            x['tc_opt'] = (rho * x['optspread'] * x['price']) / 2
+            x['tc_all'] = (rho * x['optspread'] * x['price'] + nu*x['undspread']*x['underlyingprice']) / 2
+            x['Prediction_Less_Denominator'] = x['Prediction'] * np.abs(x['price'] - x['delta'] * x['underlyingprice'])
         if opt_spread and not und_spread:
             x['Prediction'] = np.where(np.sign(x['Prediction']) > 0, np.maximum(0,
                             (x['Prediction_Less_Denominator'] - (2+(x['riskfree'] / (252 * 13)))*

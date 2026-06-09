@@ -62,10 +62,10 @@ from optuna.samplers import TPESampler
 
 # Which model to train. Possible 'TransformerModel', 'AutoencoderModel', 'FFN', 'GBR', 'GBR-AV', 'RF',
 # 'RF-AV', 'Hypernetwork', 'DoubleNet', 'TripleNet', 'fusion', 'fusionContextFirst'
-MODEL_TO_TRAIN = 'GBR-AV'
+MODEL_TO_TRAIN = 'GBR'
 # Set to an integer to force-override the default Optuna/Ray trial count.
 # Set to None to keep the default returned by Config.get_config(MODEL_TO_TRAIN).
-TRIALS_OVERRIDE = 20
+TRIALS_OVERRIDE = 30
 # These are the features we payed special attention to in some models. Always the same across the thesis
 IMPORTANT_COLUMNS = ['theta', 'bid_size', 'ask_size','implVol','vega','normalizedMoneyness','time','Underlying_Ret_D2','Underlying_Ret_H1','delta']
 # Whether the model is trained with normalized features or not (True for Neural Network based models
@@ -81,9 +81,9 @@ REGULARIZATION = 'none'
 # Validation for window `step` covers month TRAIN_MONTHS + step + 1.
 # The last available month should be reserved for testing in evaluate.py.
 # Default (full dataset): MONTHS_AVAILABLE=11, TRAIN_MONTHS=8, N_WINDOWS=3
-MONTHS_AVAILABLE = 5
-TRAIN_MONTHS = 3
-N_WINDOWS = 1
+MONTHS_AVAILABLE = 11
+TRAIN_MONTHS = 8
+N_WINDOWS = 3
 MODEL_NAME_MAP = {
     'TransformerModel': 'attention',
     'AutoencoderModel': 'autoencoder',
@@ -113,7 +113,7 @@ def preprocess() -> tuple[list[pd.DataFrame], pd.DataFrame | None]:
     # Iterate over months in training and validation (last month reserved for testing in evaluate.py)
     for i in range(1, MONTHS_AVAILABLE + 1):
         df = pd.read_parquet(
-            f'/root/autodl-tmp/rerun_jakob_code/jakob-code/data/month/selected_data/data_month_{i}.parquet')
+            f'Z:/Dokumente/dev/ml-option-returns/data/data_month_{i}.parquet')
         # Transform to float32 and int32 for memory reasons
         float_cols = df.select_dtypes(include=['float']).columns
         df[float_cols] = df[float_cols].astype(np.float32)
