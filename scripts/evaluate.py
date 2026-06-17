@@ -34,7 +34,7 @@ def apply_saved_zscore(dfs, params_path='./normalization_params.xlsx'):
 # These are the features we payed special attention to in some models. Always the same across the thesis
 IMPORTANT_COLUMNS = ['theta', 'bid_size', 'ask_size','implVol','vega','normalizedMoneyness','time','Underlying_Ret_D2','Underlying_Ret_H1','delta']
 
-FOLDER = 'Z:/Dokumente/dev/ml-option-returns/scripts/gbrt_standard'  # This specifies where to find the saved model files
+FOLDER = 'Z:/Dokumente/dev/ml-option-returns/scripts/ffn_discrete'  # This specifies where to find the saved model files
 ONLY_PUT = False
 ONLY_CALL = False
 MODULATOR_FIRST = False
@@ -78,10 +78,10 @@ PERFORMANCE_BASIC_ONLY = True
 #   True
 # ]
 
-MODEL_TYPES = ['rf']
-MODEL_NAMES = ['gbrt_standard']
+MODEL_TYPES = ['ffn']
+MODEL_NAMES = ['ffn_discrete']
 MODEL_WEIGHTS = [1]
-NORMALIZE = [False]
+NORMALIZE = [True]
 
 SCRIPT_DIR = Path(__file__).resolve().parent
 
