@@ -49,7 +49,7 @@ ONLY_PUT = False
 ONLY_CALL = False
 MODULATOR_FIRST = False
 EVALUATION_TYPE = _eval_type  # Options: 'robustness', 'shapley', 'performance'
-PERFORMANCE_BASIC_ONLY = True
+PERFORMANCE_BASIC_ONLY = False
 
 #Z:\Dokumente\dev\ml-option-returns\scripts\gbrt_standard\gbrt_standard_model0_0.pkl
 

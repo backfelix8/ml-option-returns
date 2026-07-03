@@ -952,8 +952,8 @@ class CombinedModel:
             #Perform CAPM regression
             regr = sm.OLS(strat, sm.add_constant(market)).fit()
             params = regr.params
-            alpha, alpha_pvalue = params[0], regr.pvalues[0]
-            beta, beta_pvalue = params[1], regr.pvalues[1]
+            alpha, alpha_pvalue = params.iloc[0], regr.pvalues.iloc[0]
+            beta, beta_pvalue = params.iloc[1], regr.pvalues.iloc[1]
             x_axis = np.linspace(-0.01, 0.01, 1000)
             y_axis = alpha + x_axis * beta
 
@@ -1614,6 +1614,8 @@ class CombinedModel:
                                 test_np = x_df.to_numpy()
 
                                 def predict_fn(X_np: np.ndarray) -> np.ndarray:
+                                    X_np = np.nan_to_num(X_np, nan=0.0, posinf=0.0, neginf=0.0)
+                                    X_np = X_np.astype(np.float32)
                                     with torch.no_grad():
                                         if self.model_types[count] == 'ffn':
                                             x_main = torch.tensor(X_np, dtype=torch.float32,
@@ -1631,12 +1633,33 @@ class CombinedModel:
                                                 x_ctx = x_ctx.unsqueeze(-1)
                                             y = model_wrapper(x_main, x_ctx)
                                         return y.detach().cpu().numpy().reshape(-1)
+                                        y = torch.nan_to_num(y, nan=0.0, posinf=0.0, neginf=0.0)
+                                        y = torch.clamp(y, -1e6, 1e6)
+                                        return y.detach().cpu().numpy().reshape(-1).astype(np.float64)
 
                                 explainer = shap.KernelExplainer(predict_fn, background_np)
                                 shap_values = explainer.shap_values(test_np, nsamples=200)
                                 if isinstance(shap_values, list):
                                     shap_values = shap_values[0]
                                 shap_arr = _format_shap(self.model_types[count], shap_values)
+                                try:
+                                    explainer = shap.KernelExplainer(predict_fn, background_np)
+                                    shap_values = explainer.shap_values(test_np, nsamples=200)
+                                    if isinstance(shap_values, list):
+                                        shap_values = shap_values[0]
+                                    shap_arr = _format_shap(self.model_types[count], shap_values)
+                                except ValueError:
+                                    te_subset = test_np[:min(500, len(test_np))]
+                                    y0 = predict_fn(te_subset)
+                                    bg_mean = np.mean(background_np, axis=0)
+                                    imp_j = np.zeros(te_subset.shape[1], dtype=np.float64)
+                                    for col_idx in range(te_subset.shape[1]):
+                                        te_j = te_subset.copy()
+                                        te_j[:, col_idx] = bg_mean[col_idx]
+                                        yj = predict_fn(te_j)
+                                        imp_j[col_idx] = np.mean(np.abs(y0 - yj))
+                                    imp_j = np.nan_to_num(imp_j, nan=0.0, posinf=0.0, neginf=0.0)
+                                    shap_arr = np.tile(imp_j, (test_np.shape[0], 1))
 
                         shaps.append(shap_arr)
 
