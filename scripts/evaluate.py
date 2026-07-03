@@ -15,6 +15,8 @@ import pandas as pd
 import numpy as np
 from CombinedModel import CombinedModel
 
+# arg 1: model name, e.g. gbrt_standard, ffn, fusion, fusion_context_first, doubleNet, tripleNet, hypernet, attention, autoencoder
+# arg 2: evaluation type, e.g. robustness, shapley, performance
 argv = sys.argv
 _model_name = sys.argv[1]
 _model_type = 'ffn' if 'ffn' in _model_name else 'rf'
