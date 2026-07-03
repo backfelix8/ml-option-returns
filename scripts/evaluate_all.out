@@ -1,0 +1,938 @@
+Starte Jobs... 
+[INFO] model_name: ffn, model_type: ffn, normalize: True, eval_type: shapley
+[output] base dir: \\studhome.informatik.kit.edu\s_back\Dokumente\dev\ml-option-returns\scripts\ffn
+[output] figures dir: \\studhome.informatik.kit.edu\s_back\Dokumente\dev\ml-option-returns\scripts\ffn\figures
+[output] shap dir: \\studhome.informatik.kit.edu\s_back\Dokumente\dev\ml-option-returns\scripts\ffn\shap\figures
+[output] robustness dir: \\studhome.informatik.kit.edu\s_back\Dokumente\dev\ml-option-returns\scripts\ffn\robustness
+Features for model prediction:
+['daystomaturity', 'openinterest', 'implVol', 'yld', 'delta', 'gamma', 'rho', 'theta', 'vega', 'normalizedMoneyness', 'time', 'bid_size', 'bid', 'ask_size', 'ask', 'underlying_bid', 'underlying_ask', 'embedlev', 'optspread', 'undspread', 'putcall_P', 'bakshiImplVol_annual', 'bakshiSkew', 'bakshiKurt', 'disaster_RIX_annual', 'implERP_SVIX2_annual', 'P_implQ_var', 'P_implQ_skew', 'P_implQ_kurt', 'P_var', 'P_skew', 'P_kurt', 'VaRQ_pct_0_1', 'VaRQ_pct_1', 'VaRQ_pct_99', 'VaRQ_pct_99_9', 'AVaRQ_pct_0_1', 'AVaRQ_pct_5', 'RP_mu', 'RP_var', 'RP_skew', 'RP_kurt', 'RP_moments_1', 'RP_moments_2', 'RP_moments_3', 'RP_moments_4', 'BTX_alpha_minus', 'BTX_alpha_plus', 'BTX_EQCV_k', 'BTX_EQJV_10', 'BTX_EQJV_k', 'BTX_EQV_relLeftTail_10', 'BTX_EQV_relLeftTail_k', 'BTX_EQV_relRightTail_10', 'BTX_EQV_relRightTail_k', 'BTX_EQV_relTail_10', 'BTX_EQV_relTail_k', 'BTX_implCrashFearVol_10_annual', 'BTX_implEuphoriaVol_10_annual', 'BTX_implTailVol_10_annual', 'BTX_k', 'BTX_LJV_10', 'BTX_LJV_7_5', 'BTX_LJV_k', 'BTX_MLJI_10_annual', 'BTX_MLJI_20_annual', 'BTX_MLJI_7_5_annual', 'BTX_MRJI_10_annual', 'BTX_PLJ_k', 'BTX_PRJ_k', 'BTX_RJV_10', 'BTX_RJV_k', 'Underlying_Ret_H1', 'Underlying_Ret_H3', 'Underlying_STD_H3', 'Underlying_Ret_D2', 'Underlying_Ret_D4_D2', 'Underlying_Ret_W5_D4', 'Bucket_PR_Ret_H1', 'Bucket_PR_Ret_H3', 'Bucket_PR_STD_H3', 'Bucket_PR_Ret_D2', 'Bucket_PR_Ret_D4_D2', 'Bucket_PR_Ret_W5_D4']
+Number of features: 84
+W0701 12:38:37.800000 14908 site-packages\torch\utils\flop_counter.py:29] triton not found; flop counting will not work for triton kernels
+Shapley values for model: ffn
+W0701 12:43:30.255000 14908 site-packages\torch\_dynamo\convert_frame.py:1743] [0/8] torch._dynamo hit config.recompile_limit (8)
+W0701 12:43:30.255000 14908 site-packages\torch\_dynamo\convert_frame.py:1743] [0/8]    function: 'forward' (Z:\Dokumente\dev\ml-option-returns\scripts\model.py:239)
+W0701 12:43:30.255000 14908 site-packages\torch\_dynamo\convert_frame.py:1743] [0/8]    last reason: 0/1: tensor 'x' requires_grad mismatch. expected requires_grad=1
+W0701 12:43:30.255000 14908 site-packages\torch\_dynamo\convert_frame.py:1743] [0/8] To log all recompilation reasons, use TORCH_LOGS="recompiles".
+W0701 12:43:30.255000 14908 site-packages\torch\_dynamo\convert_frame.py:1743] [0/8] To diagnose recompilation issues, see https://docs.pytorch.org/docs/main/user_guide/torch_compiler/compile/programming_model.recompilation.html
+Z:\Dokumente\dev\ml-option-returns\scripts\CombinedModel.py:1719: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout(rect=[0, 0, 0.85, 1])
+[INFO] model_name: ffn_discrete, model_type: ffn, normalize: True, eval_type: robustness
+[output] base dir: \\studhome.informatik.kit.edu\s_back\Dokumente\dev\ml-option-returns\scripts\ffn_discrete
+[output] figures dir: \\studhome.informatik.kit.edu\s_back\Dokumente\dev\ml-option-returns\scripts\ffn_discrete\figures
+[output] shap dir: \\studhome.informatik.kit.edu\s_back\Dokumente\dev\ml-option-returns\scripts\ffn_discrete\shap\figures
+[output] robustness dir: \\studhome.informatik.kit.edu\s_back\Dokumente\dev\ml-option-returns\scripts\ffn_discrete\robustness
+Features for model prediction:
+['daystomaturity', 'openinterest', 'implVol', 'yld', 'delta', 'gamma', 'rho', 'theta', 'vega', 'normalizedMoneyness', 'time', 'bid_size', 'bid', 'ask_size', 'ask', 'underlying_bid', 'underlying_ask', 'embedlev', 'optspread', 'undspread', 'putcall_P', 'bakshiImplVol_annual', 'bakshiSkew', 'bakshiKurt', 'disaster_RIX_annual', 'implERP_SVIX2_annual', 'P_implQ_var', 'P_implQ_skew', 'P_implQ_kurt', 'P_var', 'P_skew', 'P_kurt', 'VaRQ_pct_0_1', 'VaRQ_pct_1', 'VaRQ_pct_99', 'VaRQ_pct_99_9', 'AVaRQ_pct_0_1', 'AVaRQ_pct_5', 'RP_mu', 'RP_var', 'RP_skew', 'RP_kurt', 'RP_moments_1', 'RP_moments_2', 'RP_moments_3', 'RP_moments_4', 'BTX_alpha_minus', 'BTX_alpha_plus', 'BTX_EQCV_k', 'BTX_EQJV_10', 'BTX_EQJV_k', 'BTX_EQV_relLeftTail_10', 'BTX_EQV_relLeftTail_k', 'BTX_EQV_relRightTail_10', 'BTX_EQV_relRightTail_k', 'BTX_EQV_relTail_10', 'BTX_EQV_relTail_k', 'BTX_implCrashFearVol_10_annual', 'BTX_implEuphoriaVol_10_annual', 'BTX_implTailVol_10_annual', 'BTX_k', 'BTX_LJV_10', 'BTX_LJV_7_5', 'BTX_LJV_k', 'BTX_MLJI_10_annual', 'BTX_MLJI_20_annual', 'BTX_MLJI_7_5_annual', 'BTX_MRJI_10_annual', 'BTX_PLJ_k', 'BTX_PRJ_k', 'BTX_RJV_10', 'BTX_RJV_k', 'Underlying_Ret_H1', 'Underlying_Ret_H3', 'Underlying_STD_H3', 'Underlying_Ret_D2', 'Underlying_Ret_D4_D2', 'Underlying_Ret_W5_D4', 'Bucket_PR_Ret_H1', 'Bucket_PR_Ret_H3', 'Bucket_PR_STD_H3', 'Bucket_PR_Ret_D2', 'Bucket_PR_Ret_D4_D2', 'Bucket_PR_Ret_W5_D4']
+Number of features: 84
+W0701 12:59:42.442000 6576 site-packages\torch\utils\flop_counter.py:29] triton not found; flop counting will not work for triton kernels
+W0701 12:59:44.139000 6576 site-packages\torch\_dynamo\convert_frame.py:1743] [0/8] torch._dynamo hit config.recompile_limit (8)
+W0701 12:59:44.139000 6576 site-packages\torch\_dynamo\convert_frame.py:1743] [0/8]    function: 'forward' (Z:\Dokumente\dev\ml-option-returns\scripts\model.py:239)
+W0701 12:59:44.139000 6576 site-packages\torch\_dynamo\convert_frame.py:1743] [0/8]    last reason: 0/7: len(self._modules['net']._modules) != 16
+W0701 12:59:44.139000 6576 site-packages\torch\_dynamo\convert_frame.py:1743] [0/8] To log all recompilation reasons, use TORCH_LOGS="recompiles".
+W0701 12:59:44.139000 6576 site-packages\torch\_dynamo\convert_frame.py:1743] [0/8] To diagnose recompilation issues, see https://docs.pytorch.org/docs/main/user_guide/torch_compiler/compile/programming_model.recompilation.html
+Robustness for noise level 0.001, Monte Carlo run 0
+Robustness for noise level 0.001, Monte Carlo run 1
+Robustness for noise level 0.001, Monte Carlo run 2
+Robustness for noise level 0.001, Monte Carlo run 3
+Robustness for noise level 0.001, Monte Carlo run 4
+Robustness for noise level 0.001, Monte Carlo run 5
+Robustness for noise level 0.001, Monte Carlo run 6
+Robustness for noise level 0.001, Monte Carlo run 7
+Robustness for noise level 0.001, Monte Carlo run 8
+Robustness for noise level 0.001, Monte Carlo run 9
+Robustness for noise level 0.001, Monte Carlo run 10
+Robustness for noise level 0.001, Monte Carlo run 11
+Robustness for noise level 0.001, Monte Carlo run 12
+Robustness for noise level 0.001, Monte Carlo run 13
+Robustness for noise level 0.001, Monte Carlo run 14
+Robustness for noise level 0.001, Monte Carlo run 15
+Robustness for noise level 0.001, Monte Carlo run 16
+Robustness for noise level 0.001, Monte Carlo run 17
+Robustness for noise level 0.001, Monte Carlo run 18
+Robustness for noise level 0.001, Monte Carlo run 19
+Robustness for noise level 0.001, Monte Carlo run 20
+Robustness for noise level 0.001, Monte Carlo run 21
+Robustness for noise level 0.001, Monte Carlo run 22
+Robustness for noise level 0.001, Monte Carlo run 23
+Robustness for noise level 0.001, Monte Carlo run 24
+Robustness for noise level 0.0025, Monte Carlo run 0
+Robustness for noise level 0.0025, Monte Carlo run 1
+Robustness for noise level 0.0025, Monte Carlo run 2
+Robustness for noise level 0.0025, Monte Carlo run 3
+Robustness for noise level 0.0025, Monte Carlo run 4
+Robustness for noise level 0.0025, Monte Carlo run 5
+Robustness for noise level 0.0025, Monte Carlo run 6
+Robustness for noise level 0.0025, Monte Carlo run 7
+Robustness for noise level 0.0025, Monte Carlo run 8
+Robustness for noise level 0.0025, Monte Carlo run 9
+Robustness for noise level 0.0025, Monte Carlo run 10
+Robustness for noise level 0.0025, Monte Carlo run 11
+Robustness for noise level 0.0025, Monte Carlo run 12
+Robustness for noise level 0.0025, Monte Carlo run 13
+Robustness for noise level 0.0025, Monte Carlo run 14
+Robustness for noise level 0.0025, Monte Carlo run 15
+Robustness for noise level 0.0025, Monte Carlo run 16
+Robustness for noise level 0.0025, Monte Carlo run 17
+Robustness for noise level 0.0025, Monte Carlo run 18
+Robustness for noise level 0.0025, Monte Carlo run 19
+Robustness for noise level 0.0025, Monte Carlo run 20
+Robustness for noise level 0.0025, Monte Carlo run 21
+Robustness for noise level 0.0025, Monte Carlo run 22
+Robustness for noise level 0.0025, Monte Carlo run 23
+Robustness for noise level 0.0025, Monte Carlo run 24
+Robustness for noise level 0.005, Monte Carlo run 0
+Robustness for noise level 0.005, Monte Carlo run 1
+Robustness for noise level 0.005, Monte Carlo run 2
+Robustness for noise level 0.005, Monte Carlo run 3
+Robustness for noise level 0.005, Monte Carlo run 4
+Robustness for noise level 0.005, Monte Carlo run 5
+Robustness for noise level 0.005, Monte Carlo run 6
+Robustness for noise level 0.005, Monte Carlo run 7
+Robustness for noise level 0.005, Monte Carlo run 8
+Robustness for noise level 0.005, Monte Carlo run 9
+Robustness for noise level 0.005, Monte Carlo run 10
+Robustness for noise level 0.005, Monte Carlo run 11
+Robustness for noise level 0.005, Monte Carlo run 12
+Robustness for noise level 0.005, Monte Carlo run 13
+Robustness for noise level 0.005, Monte Carlo run 14
+Robustness for noise level 0.005, Monte Carlo run 15
+Robustness for noise level 0.005, Monte Carlo run 16
+Robustness for noise level 0.005, Monte Carlo run 17
+Robustness for noise level 0.005, Monte Carlo run 18
+Robustness for noise level 0.005, Monte Carlo run 19
+Robustness for noise level 0.005, Monte Carlo run 20
+Robustness for noise level 0.005, Monte Carlo run 21
+Robustness for noise level 0.005, Monte Carlo run 22
+Robustness for noise level 0.005, Monte Carlo run 23
+Robustness for noise level 0.005, Monte Carlo run 24
+Robustness for noise level 0.01, Monte Carlo run 0
+Robustness for noise level 0.01, Monte Carlo run 1
+Robustness for noise level 0.01, Monte Carlo run 2
+Robustness for noise level 0.01, Monte Carlo run 3
+Robustness for noise level 0.01, Monte Carlo run 4
+Robustness for noise level 0.01, Monte Carlo run 5
+Robustness for noise level 0.01, Monte Carlo run 6
+Robustness for noise level 0.01, Monte Carlo run 7
+Robustness for noise level 0.01, Monte Carlo run 8
+Robustness for noise level 0.01, Monte Carlo run 9
+Robustness for noise level 0.01, Monte Carlo run 10
+Robustness for noise level 0.01, Monte Carlo run 11
+Robustness for noise level 0.01, Monte Carlo run 12
+Robustness for noise level 0.01, Monte Carlo run 13
+Robustness for noise level 0.01, Monte Carlo run 14
+Robustness for noise level 0.01, Monte Carlo run 15
+Robustness for noise level 0.01, Monte Carlo run 16
+Robustness for noise level 0.01, Monte Carlo run 17
+Robustness for noise level 0.01, Monte Carlo run 18
+Robustness for noise level 0.01, Monte Carlo run 19
+Robustness for noise level 0.01, Monte Carlo run 20
+Robustness for noise level 0.01, Monte Carlo run 21
+Robustness for noise level 0.01, Monte Carlo run 22
+Robustness for noise level 0.01, Monte Carlo run 23
+Robustness for noise level 0.01, Monte Carlo run 24
+[robustness] wrote: \\studhome.informatik.kit.edu\s_back\Dokumente\dev\ml-option-returns\scripts\ffn_discrete\robustness\robustness_runs.parquet
+[robustness] wrote: \\studhome.informatik.kit.edu\s_back\Dokumente\dev\ml-option-returns\scripts\ffn_discrete\robustness\robustness_summary.xlsx
+[robustness] wrote: \\studhome.informatik.kit.edu\s_back\Dokumente\dev\ml-option-returns\scripts\ffn_discrete\robustness\robustness.png
+[robustness] outputs saved to: \\studhome.informatik.kit.edu\s_back\Dokumente\dev\ml-option-returns\scripts\ffn_discrete\robustness
+[INFO] model_name: ffn_discrete, model_type: ffn, normalize: True, eval_type: shapley
+[output] base dir: \\studhome.informatik.kit.edu\s_back\Dokumente\dev\ml-option-returns\scripts\ffn_discrete
+[output] figures dir: \\studhome.informatik.kit.edu\s_back\Dokumente\dev\ml-option-returns\scripts\ffn_discrete\figures
+[output] shap dir: \\studhome.informatik.kit.edu\s_back\Dokumente\dev\ml-option-returns\scripts\ffn_discrete\shap\figures
+[output] robustness dir: \\studhome.informatik.kit.edu\s_back\Dokumente\dev\ml-option-returns\scripts\ffn_discrete\robustness
+Features for model prediction:
+['daystomaturity', 'openinterest', 'implVol', 'yld', 'delta', 'gamma', 'rho', 'theta', 'vega', 'normalizedMoneyness', 'time', 'bid_size', 'bid', 'ask_size', 'ask', 'underlying_bid', 'underlying_ask', 'embedlev', 'optspread', 'undspread', 'putcall_P', 'bakshiImplVol_annual', 'bakshiSkew', 'bakshiKurt', 'disaster_RIX_annual', 'implERP_SVIX2_annual', 'P_implQ_var', 'P_implQ_skew', 'P_implQ_kurt', 'P_var', 'P_skew', 'P_kurt', 'VaRQ_pct_0_1', 'VaRQ_pct_1', 'VaRQ_pct_99', 'VaRQ_pct_99_9', 'AVaRQ_pct_0_1', 'AVaRQ_pct_5', 'RP_mu', 'RP_var', 'RP_skew', 'RP_kurt', 'RP_moments_1', 'RP_moments_2', 'RP_moments_3', 'RP_moments_4', 'BTX_alpha_minus', 'BTX_alpha_plus', 'BTX_EQCV_k', 'BTX_EQJV_10', 'BTX_EQJV_k', 'BTX_EQV_relLeftTail_10', 'BTX_EQV_relLeftTail_k', 'BTX_EQV_relRightTail_10', 'BTX_EQV_relRightTail_k', 'BTX_EQV_relTail_10', 'BTX_EQV_relTail_k', 'BTX_implCrashFearVol_10_annual', 'BTX_implEuphoriaVol_10_annual', 'BTX_implTailVol_10_annual', 'BTX_k', 'BTX_LJV_10', 'BTX_LJV_7_5', 'BTX_LJV_k', 'BTX_MLJI_10_annual', 'BTX_MLJI_20_annual', 'BTX_MLJI_7_5_annual', 'BTX_MRJI_10_annual', 'BTX_PLJ_k', 'BTX_PRJ_k', 'BTX_RJV_10', 'BTX_RJV_k', 'Underlying_Ret_H1', 'Underlying_Ret_H3', 'Underlying_STD_H3', 'Underlying_Ret_D2', 'Underlying_Ret_D4_D2', 'Underlying_Ret_W5_D4', 'Bucket_PR_Ret_H1', 'Bucket_PR_Ret_H3', 'Bucket_PR_STD_H3', 'Bucket_PR_Ret_D2', 'Bucket_PR_Ret_D4_D2', 'Bucket_PR_Ret_W5_D4']
+Number of features: 84
+W0701 13:18:42.498000 14324 site-packages\torch\utils\flop_counter.py:29] triton not found; flop counting will not work for triton kernels
+Shapley values for model: ffn_discrete
+W0701 13:23:24.959000 14324 site-packages\torch\_dynamo\convert_frame.py:1743] [0/8] torch._dynamo hit config.recompile_limit (8)
+W0701 13:23:24.959000 14324 site-packages\torch\_dynamo\convert_frame.py:1743] [0/8]    function: 'forward' (Z:\Dokumente\dev\ml-option-returns\scripts\model.py:239)
+W0701 13:23:24.959000 14324 site-packages\torch\_dynamo\convert_frame.py:1743] [0/8]    last reason: 0/1: tensor 'x' requires_grad mismatch. expected requires_grad=1
+W0701 13:23:24.959000 14324 site-packages\torch\_dynamo\convert_frame.py:1743] [0/8] To log all recompilation reasons, use TORCH_LOGS="recompiles".
+W0701 13:23:24.959000 14324 site-packages\torch\_dynamo\convert_frame.py:1743] [0/8] To diagnose recompilation issues, see https://docs.pytorch.org/docs/main/user_guide/torch_compiler/compile/programming_model.recompilation.html
+Z:\Dokumente\dev\ml-option-returns\scripts\CombinedModel.py:1719: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout(rect=[0, 0, 0.85, 1])
+[INFO] model_name: ffn_l2, model_type: ffn, normalize: True, eval_type: robustness
+[output] base dir: \\studhome.informatik.kit.edu\s_back\Dokumente\dev\ml-option-returns\scripts\ffn_l2
+[output] figures dir: \\studhome.informatik.kit.edu\s_back\Dokumente\dev\ml-option-returns\scripts\ffn_l2\figures
+[output] shap dir: \\studhome.informatik.kit.edu\s_back\Dokumente\dev\ml-option-returns\scripts\ffn_l2\shap\figures
+[output] robustness dir: \\studhome.informatik.kit.edu\s_back\Dokumente\dev\ml-option-returns\scripts\ffn_l2\robustness
+Features for model prediction:
+['daystomaturity', 'openinterest', 'implVol', 'yld', 'delta', 'gamma', 'rho', 'theta', 'vega', 'normalizedMoneyness', 'time', 'bid_size', 'bid', 'ask_size', 'ask', 'underlying_bid', 'underlying_ask', 'embedlev', 'optspread', 'undspread', 'putcall_P', 'bakshiImplVol_annual', 'bakshiSkew', 'bakshiKurt', 'disaster_RIX_annual', 'implERP_SVIX2_annual', 'P_implQ_var', 'P_implQ_skew', 'P_implQ_kurt', 'P_var', 'P_skew', 'P_kurt', 'VaRQ_pct_0_1', 'VaRQ_pct_1', 'VaRQ_pct_99', 'VaRQ_pct_99_9', 'AVaRQ_pct_0_1', 'AVaRQ_pct_5', 'RP_mu', 'RP_var', 'RP_skew', 'RP_kurt', 'RP_moments_1', 'RP_moments_2', 'RP_moments_3', 'RP_moments_4', 'BTX_alpha_minus', 'BTX_alpha_plus', 'BTX_EQCV_k', 'BTX_EQJV_10', 'BTX_EQJV_k', 'BTX_EQV_relLeftTail_10', 'BTX_EQV_relLeftTail_k', 'BTX_EQV_relRightTail_10', 'BTX_EQV_relRightTail_k', 'BTX_EQV_relTail_10', 'BTX_EQV_relTail_k', 'BTX_implCrashFearVol_10_annual', 'BTX_implEuphoriaVol_10_annual', 'BTX_implTailVol_10_annual', 'BTX_k', 'BTX_LJV_10', 'BTX_LJV_7_5', 'BTX_LJV_k', 'BTX_MLJI_10_annual', 'BTX_MLJI_20_annual', 'BTX_MLJI_7_5_annual', 'BTX_MRJI_10_annual', 'BTX_PLJ_k', 'BTX_PRJ_k', 'BTX_RJV_10', 'BTX_RJV_k', 'Underlying_Ret_H1', 'Underlying_Ret_H3', 'Underlying_STD_H3', 'Underlying_Ret_D2', 'Underlying_Ret_D4_D2', 'Underlying_Ret_W5_D4', 'Bucket_PR_Ret_H1', 'Bucket_PR_Ret_H3', 'Bucket_PR_STD_H3', 'Bucket_PR_Ret_D2', 'Bucket_PR_Ret_D4_D2', 'Bucket_PR_Ret_W5_D4']
+Number of features: 84
+W0701 13:39:26.412000 7236 site-packages\torch\utils\flop_counter.py:29] triton not found; flop counting will not work for triton kernels
+W0701 13:39:28.265000 7236 site-packages\torch\_dynamo\convert_frame.py:1743] [0/8] torch._dynamo hit config.recompile_limit (8)
+W0701 13:39:28.265000 7236 site-packages\torch\_dynamo\convert_frame.py:1743] [0/8]    function: 'forward' (Z:\Dokumente\dev\ml-option-returns\scripts\model.py:239)
+W0701 13:39:28.265000 7236 site-packages\torch\_dynamo\convert_frame.py:1743] [0/8]    last reason: 0/7: tensor 'self._modules['net']._modules['0']._parameters['bias']' size mismatch at index 0. expected 32, actual 16. Guard failed on a parameter, consider using torch._dynamo.config.force_parameter_static_shapes = False to allow dynamism on parameters.
+W0701 13:39:28.265000 7236 site-packages\torch\_dynamo\convert_frame.py:1743] [0/8] To log all recompilation reasons, use TORCH_LOGS="recompiles".
+W0701 13:39:28.265000 7236 site-packages\torch\_dynamo\convert_frame.py:1743] [0/8] To diagnose recompilation issues, see https://docs.pytorch.org/docs/main/user_guide/torch_compiler/compile/programming_model.recompilation.html
+Robustness for noise level 0.001, Monte Carlo run 0
+Robustness for noise level 0.001, Monte Carlo run 1
+Robustness for noise level 0.001, Monte Carlo run 2
+Robustness for noise level 0.001, Monte Carlo run 3
+Robustness for noise level 0.001, Monte Carlo run 4
+Robustness for noise level 0.001, Monte Carlo run 5
+Robustness for noise level 0.001, Monte Carlo run 6
+Robustness for noise level 0.001, Monte Carlo run 7
+Robustness for noise level 0.001, Monte Carlo run 8
+Robustness for noise level 0.001, Monte Carlo run 9
+Robustness for noise level 0.001, Monte Carlo run 10
+Robustness for noise level 0.001, Monte Carlo run 11
+Robustness for noise level 0.001, Monte Carlo run 12
+Robustness for noise level 0.001, Monte Carlo run 13
+Robustness for noise level 0.001, Monte Carlo run 14
+Robustness for noise level 0.001, Monte Carlo run 15
+Robustness for noise level 0.001, Monte Carlo run 16
+Robustness for noise level 0.001, Monte Carlo run 17
+Robustness for noise level 0.001, Monte Carlo run 18
+Robustness for noise level 0.001, Monte Carlo run 19
+Robustness for noise level 0.001, Monte Carlo run 20
+Robustness for noise level 0.001, Monte Carlo run 21
+Robustness for noise level 0.001, Monte Carlo run 22
+Robustness for noise level 0.001, Monte Carlo run 23
+Robustness for noise level 0.001, Monte Carlo run 24
+Robustness for noise level 0.0025, Monte Carlo run 0
+Robustness for noise level 0.0025, Monte Carlo run 1
+Robustness for noise level 0.0025, Monte Carlo run 2
+Robustness for noise level 0.0025, Monte Carlo run 3
+Robustness for noise level 0.0025, Monte Carlo run 4
+Robustness for noise level 0.0025, Monte Carlo run 5
+Robustness for noise level 0.0025, Monte Carlo run 6
+Robustness for noise level 0.0025, Monte Carlo run 7
+Robustness for noise level 0.0025, Monte Carlo run 8
+Robustness for noise level 0.0025, Monte Carlo run 9
+Robustness for noise level 0.0025, Monte Carlo run 10
+Robustness for noise level 0.0025, Monte Carlo run 11
+Robustness for noise level 0.0025, Monte Carlo run 12
+Robustness for noise level 0.0025, Monte Carlo run 13
+Robustness for noise level 0.0025, Monte Carlo run 14
+Robustness for noise level 0.0025, Monte Carlo run 15
+Robustness for noise level 0.0025, Monte Carlo run 16
+Robustness for noise level 0.0025, Monte Carlo run 17
+Robustness for noise level 0.0025, Monte Carlo run 18
+Robustness for noise level 0.0025, Monte Carlo run 19
+Robustness for noise level 0.0025, Monte Carlo run 20
+Robustness for noise level 0.0025, Monte Carlo run 21
+Robustness for noise level 0.0025, Monte Carlo run 22
+Robustness for noise level 0.0025, Monte Carlo run 23
+Robustness for noise level 0.0025, Monte Carlo run 24
+Robustness for noise level 0.005, Monte Carlo run 0
+Robustness for noise level 0.005, Monte Carlo run 1
+Robustness for noise level 0.005, Monte Carlo run 2
+Robustness for noise level 0.005, Monte Carlo run 3
+Robustness for noise level 0.005, Monte Carlo run 4
+Robustness for noise level 0.005, Monte Carlo run 5
+Robustness for noise level 0.005, Monte Carlo run 6
+Robustness for noise level 0.005, Monte Carlo run 7
+Robustness for noise level 0.005, Monte Carlo run 8
+Robustness for noise level 0.005, Monte Carlo run 9
+Robustness for noise level 0.005, Monte Carlo run 10
+Robustness for noise level 0.005, Monte Carlo run 11
+Robustness for noise level 0.005, Monte Carlo run 12
+Robustness for noise level 0.005, Monte Carlo run 13
+Robustness for noise level 0.005, Monte Carlo run 14
+Robustness for noise level 0.005, Monte Carlo run 15
+Robustness for noise level 0.005, Monte Carlo run 16
+Robustness for noise level 0.005, Monte Carlo run 17
+Robustness for noise level 0.005, Monte Carlo run 18
+Robustness for noise level 0.005, Monte Carlo run 19
+Robustness for noise level 0.005, Monte Carlo run 20
+Robustness for noise level 0.005, Monte Carlo run 21
+Robustness for noise level 0.005, Monte Carlo run 22
+Robustness for noise level 0.005, Monte Carlo run 23
+Robustness for noise level 0.005, Monte Carlo run 24
+Robustness for noise level 0.01, Monte Carlo run 0
+Robustness for noise level 0.01, Monte Carlo run 1
+Robustness for noise level 0.01, Monte Carlo run 2
+Robustness for noise level 0.01, Monte Carlo run 3
+Robustness for noise level 0.01, Monte Carlo run 4
+Robustness for noise level 0.01, Monte Carlo run 5
+Robustness for noise level 0.01, Monte Carlo run 6
+Robustness for noise level 0.01, Monte Carlo run 7
+Robustness for noise level 0.01, Monte Carlo run 8
+Robustness for noise level 0.01, Monte Carlo run 9
+Robustness for noise level 0.01, Monte Carlo run 10
+Robustness for noise level 0.01, Monte Carlo run 11
+Robustness for noise level 0.01, Monte Carlo run 12
+Robustness for noise level 0.01, Monte Carlo run 13
+Robustness for noise level 0.01, Monte Carlo run 14
+Robustness for noise level 0.01, Monte Carlo run 15
+Robustness for noise level 0.01, Monte Carlo run 16
+Robustness for noise level 0.01, Monte Carlo run 17
+Robustness for noise level 0.01, Monte Carlo run 18
+Robustness for noise level 0.01, Monte Carlo run 19
+Robustness for noise level 0.01, Monte Carlo run 20
+Robustness for noise level 0.01, Monte Carlo run 21
+Robustness for noise level 0.01, Monte Carlo run 22
+Robustness for noise level 0.01, Monte Carlo run 23
+Robustness for noise level 0.01, Monte Carlo run 24
+[robustness] wrote: \\studhome.informatik.kit.edu\s_back\Dokumente\dev\ml-option-returns\scripts\ffn_l2\robustness\robustness_runs.parquet
+[robustness] wrote: \\studhome.informatik.kit.edu\s_back\Dokumente\dev\ml-option-returns\scripts\ffn_l2\robustness\robustness_summary.xlsx
+[robustness] wrote: \\studhome.informatik.kit.edu\s_back\Dokumente\dev\ml-option-returns\scripts\ffn_l2\robustness\robustness.png
+[robustness] outputs saved to: \\studhome.informatik.kit.edu\s_back\Dokumente\dev\ml-option-returns\scripts\ffn_l2\robustness
+[INFO] model_name: ffn_l2, model_type: ffn, normalize: True, eval_type: shapley
+[output] base dir: \\studhome.informatik.kit.edu\s_back\Dokumente\dev\ml-option-returns\scripts\ffn_l2
+[output] figures dir: \\studhome.informatik.kit.edu\s_back\Dokumente\dev\ml-option-returns\scripts\ffn_l2\figures
+[output] shap dir: \\studhome.informatik.kit.edu\s_back\Dokumente\dev\ml-option-returns\scripts\ffn_l2\shap\figures
+[output] robustness dir: \\studhome.informatik.kit.edu\s_back\Dokumente\dev\ml-option-returns\scripts\ffn_l2\robustness
+Features for model prediction:
+['daystomaturity', 'openinterest', 'implVol', 'yld', 'delta', 'gamma', 'rho', 'theta', 'vega', 'normalizedMoneyness', 'time', 'bid_size', 'bid', 'ask_size', 'ask', 'underlying_bid', 'underlying_ask', 'embedlev', 'optspread', 'undspread', 'putcall_P', 'bakshiImplVol_annual', 'bakshiSkew', 'bakshiKurt', 'disaster_RIX_annual', 'implERP_SVIX2_annual', 'P_implQ_var', 'P_implQ_skew', 'P_implQ_kurt', 'P_var', 'P_skew', 'P_kurt', 'VaRQ_pct_0_1', 'VaRQ_pct_1', 'VaRQ_pct_99', 'VaRQ_pct_99_9', 'AVaRQ_pct_0_1', 'AVaRQ_pct_5', 'RP_mu', 'RP_var', 'RP_skew', 'RP_kurt', 'RP_moments_1', 'RP_moments_2', 'RP_moments_3', 'RP_moments_4', 'BTX_alpha_minus', 'BTX_alpha_plus', 'BTX_EQCV_k', 'BTX_EQJV_10', 'BTX_EQJV_k', 'BTX_EQV_relLeftTail_10', 'BTX_EQV_relLeftTail_k', 'BTX_EQV_relRightTail_10', 'BTX_EQV_relRightTail_k', 'BTX_EQV_relTail_10', 'BTX_EQV_relTail_k', 'BTX_implCrashFearVol_10_annual', 'BTX_implEuphoriaVol_10_annual', 'BTX_implTailVol_10_annual', 'BTX_k', 'BTX_LJV_10', 'BTX_LJV_7_5', 'BTX_LJV_k', 'BTX_MLJI_10_annual', 'BTX_MLJI_20_annual', 'BTX_MLJI_7_5_annual', 'BTX_MRJI_10_annual', 'BTX_PLJ_k', 'BTX_PRJ_k', 'BTX_RJV_10', 'BTX_RJV_k', 'Underlying_Ret_H1', 'Underlying_Ret_H3', 'Underlying_STD_H3', 'Underlying_Ret_D2', 'Underlying_Ret_D4_D2', 'Underlying_Ret_W5_D4', 'Bucket_PR_Ret_H1', 'Bucket_PR_Ret_H3', 'Bucket_PR_STD_H3', 'Bucket_PR_Ret_D2', 'Bucket_PR_Ret_D4_D2', 'Bucket_PR_Ret_W5_D4']
+Number of features: 84
+W0701 13:58:27.017000 14520 site-packages\torch\utils\flop_counter.py:29] triton not found; flop counting will not work for triton kernels
+Shapley values for model: ffn_l2
+Using 200 background data samples could cause slower run times. Consider using shap.sample(data, K) or shap.kmeans(data, K) to summarize the background as K samples.
+  0%|          | 0/1000 [00:00<?, ?it/s]  0%|          | 0/1000 [00:00<?, ?it/s]
+Traceback (most recent call last):
+  File "Z:\Dokumente\dev\ml-option-returns\scripts\evaluate.py", line 301, in <module>
+    run_evaluation()
+  File "Z:\Dokumente\dev\ml-option-returns\scripts\evaluate.py", line 282, in run_evaluation
+    models.shapley_values(X_test_cleans_norm, X_test_cleans, fig_dir=FIG_DIR,
+  File "Z:\Dokumente\dev\ml-option-returns\scripts\CombinedModel.py", line 1636, in shapley_values
+    shap_values = explainer.shap_values(test_np, nsamples=200)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\s_back\AppData\Local\Programs\Python\Python312\Lib\site-packages\shap\explainers\_kernel.py", line 323, in shap_values
+    explanations.append(self.explain(data, **kwargs))
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\s_back\AppData\Local\Programs\Python\Python312\Lib\site-packages\shap\explainers\_kernel.py", line 533, in explain
+    vphi, vphi_var = self.solve(self.nsamples / self.max_samples, d)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\s_back\AppData\Local\Programs\Python\Python312\Lib\site-packages\shap\explainers\_kernel.py", line 716, in solve
+    nonzero_inds = lars_path(mask_aug, eyAdj_aug, max_iter=r)[1]
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\s_back\AppData\Local\Programs\Python\Python312\Lib\site-packages\sklearn\utils\_param_validation.py", line 218, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\s_back\AppData\Local\Programs\Python\Python312\Lib\site-packages\sklearn\linear_model\_least_angle.py", line 220, in lars_path
+    return _lars_path_solver(
+           ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\s_back\AppData\Local\Programs\Python\Python312\Lib\site-packages\sklearn\linear_model\_least_angle.py", line 688, in _lars_path_solver
+    sign_active[n_active] = np.sign(C_)
+    ~~~~~~~~~~~^^^^^^^^^^
+ValueError: cannot convert float NaN to integer
+[INFO] model_name: gbrt_standard, model_type: rf, normalize: False, eval_type: robustness
+[output] base dir: \\studhome.informatik.kit.edu\s_back\Dokumente\dev\ml-option-returns\scripts\gbrt_standard
+[output] figures dir: \\studhome.informatik.kit.edu\s_back\Dokumente\dev\ml-option-returns\scripts\gbrt_standard\figures
+[output] shap dir: \\studhome.informatik.kit.edu\s_back\Dokumente\dev\ml-option-returns\scripts\gbrt_standard\shap\figures
+[output] robustness dir: \\studhome.informatik.kit.edu\s_back\Dokumente\dev\ml-option-returns\scripts\gbrt_standard\robustness
+Features for model prediction:
+['Bucket_PR_Ret_W5_D4', 'daystomaturity', 'openinterest', 'yld', 'gamma', 'rho', 'bid', 'ask', 'underlying_bid', 'underlying_ask', 'embedlev', 'optspread', 'undspread', 'putcall_P', 'bakshiImplVol_annual', 'bakshiSkew', 'bakshiKurt', 'disaster_RIX_annual', 'implERP_SVIX2_annual', 'P_implQ_var', 'P_implQ_skew', 'P_implQ_kurt', 'P_var', 'P_skew', 'P_kurt', 'VaRQ_pct_0_1', 'VaRQ_pct_1', 'VaRQ_pct_99', 'VaRQ_pct_99_9', 'AVaRQ_pct_0_1', 'AVaRQ_pct_5', 'RP_mu', 'RP_var', 'RP_skew', 'RP_kurt', 'RP_moments_1', 'RP_moments_2', 'RP_moments_3', 'RP_moments_4', 'BTX_alpha_minus', 'BTX_alpha_plus', 'BTX_EQCV_k', 'BTX_EQJV_10', 'BTX_EQJV_k', 'BTX_EQV_relLeftTail_10', 'BTX_EQV_relLeftTail_k', 'BTX_EQV_relRightTail_10', 'BTX_EQV_relRightTail_k', 'BTX_EQV_relTail_10', 'BTX_EQV_relTail_k', 'BTX_implCrashFearVol_10_annual', 'BTX_implEuphoriaVol_10_annual', 'BTX_implTailVol_10_annual', 'BTX_k', 'BTX_LJV_10', 'BTX_LJV_7_5', 'BTX_LJV_k', 'BTX_MLJI_10_annual', 'BTX_MLJI_20_annual', 'BTX_MLJI_7_5_annual', 'BTX_MRJI_10_annual', 'BTX_PLJ_k', 'BTX_PRJ_k', 'BTX_RJV_10', 'BTX_RJV_k', 'Underlying_Ret_H3', 'Underlying_STD_H3', 'Underlying_Ret_D4_D2', 'Underlying_Ret_W5_D4', 'Bucket_PR_Ret_H1', 'Bucket_PR_Ret_H3', 'Bucket_PR_STD_H3', 'Bucket_PR_Ret_D2', 'Bucket_PR_Ret_D4_D2', 'theta', 'bid_size', 'ask_size', 'implVol', 'vega', 'normalizedMoneyness', 'time', 'Underlying_Ret_D2', 'Underlying_Ret_H1', 'delta']
+Number of features: 84
+Robustness for noise level 0.001, Monte Carlo run 0
+Robustness for noise level 0.001, Monte Carlo run 1
+Robustness for noise level 0.001, Monte Carlo run 2
+Robustness for noise level 0.001, Monte Carlo run 3
+Robustness for noise level 0.001, Monte Carlo run 4
+Robustness for noise level 0.001, Monte Carlo run 5
+Robustness for noise level 0.001, Monte Carlo run 6
+Robustness for noise level 0.001, Monte Carlo run 7
+Robustness for noise level 0.001, Monte Carlo run 8
+Robustness for noise level 0.001, Monte Carlo run 9
+Robustness for noise level 0.001, Monte Carlo run 10
+Robustness for noise level 0.001, Monte Carlo run 11
+Robustness for noise level 0.001, Monte Carlo run 12
+Robustness for noise level 0.001, Monte Carlo run 13
+Robustness for noise level 0.001, Monte Carlo run 14
+Robustness for noise level 0.001, Monte Carlo run 15
+Robustness for noise level 0.001, Monte Carlo run 16
+Robustness for noise level 0.001, Monte Carlo run 17
+Robustness for noise level 0.001, Monte Carlo run 18
+Robustness for noise level 0.001, Monte Carlo run 19
+Robustness for noise level 0.001, Monte Carlo run 20
+Robustness for noise level 0.001, Monte Carlo run 21
+Robustness for noise level 0.001, Monte Carlo run 22
+Robustness for noise level 0.001, Monte Carlo run 23
+Robustness for noise level 0.001, Monte Carlo run 24
+Robustness for noise level 0.0025, Monte Carlo run 0
+Robustness for noise level 0.0025, Monte Carlo run 1
+Robustness for noise level 0.0025, Monte Carlo run 2
+Robustness for noise level 0.0025, Monte Carlo run 3
+Robustness for noise level 0.0025, Monte Carlo run 4
+Robustness for noise level 0.0025, Monte Carlo run 5
+Robustness for noise level 0.0025, Monte Carlo run 6
+Robustness for noise level 0.0025, Monte Carlo run 7
+Robustness for noise level 0.0025, Monte Carlo run 8
+Robustness for noise level 0.0025, Monte Carlo run 9
+Robustness for noise level 0.0025, Monte Carlo run 10
+Robustness for noise level 0.0025, Monte Carlo run 11
+Robustness for noise level 0.0025, Monte Carlo run 12
+Robustness for noise level 0.0025, Monte Carlo run 13
+Robustness for noise level 0.0025, Monte Carlo run 14
+Robustness for noise level 0.0025, Monte Carlo run 15
+Robustness for noise level 0.0025, Monte Carlo run 16
+Robustness for noise level 0.0025, Monte Carlo run 17
+Robustness for noise level 0.0025, Monte Carlo run 18
+Robustness for noise level 0.0025, Monte Carlo run 19
+Robustness for noise level 0.0025, Monte Carlo run 20
+Robustness for noise level 0.0025, Monte Carlo run 21
+Robustness for noise level 0.0025, Monte Carlo run 22
+Robustness for noise level 0.0025, Monte Carlo run 23
+Robustness for noise level 0.0025, Monte Carlo run 24
+Robustness for noise level 0.005, Monte Carlo run 0
+Robustness for noise level 0.005, Monte Carlo run 1
+Robustness for noise level 0.005, Monte Carlo run 2
+Robustness for noise level 0.005, Monte Carlo run 3
+Robustness for noise level 0.005, Monte Carlo run 4
+Robustness for noise level 0.005, Monte Carlo run 5
+Robustness for noise level 0.005, Monte Carlo run 6
+Robustness for noise level 0.005, Monte Carlo run 7
+Robustness for noise level 0.005, Monte Carlo run 8
+Robustness for noise level 0.005, Monte Carlo run 9
+Robustness for noise level 0.005, Monte Carlo run 10
+Robustness for noise level 0.005, Monte Carlo run 11
+Robustness for noise level 0.005, Monte Carlo run 12
+Robustness for noise level 0.005, Monte Carlo run 13
+Robustness for noise level 0.005, Monte Carlo run 14
+Robustness for noise level 0.005, Monte Carlo run 15
+Robustness for noise level 0.005, Monte Carlo run 16
+Robustness for noise level 0.005, Monte Carlo run 17
+Robustness for noise level 0.005, Monte Carlo run 18
+Robustness for noise level 0.005, Monte Carlo run 19
+Robustness for noise level 0.005, Monte Carlo run 20
+Robustness for noise level 0.005, Monte Carlo run 21
+Robustness for noise level 0.005, Monte Carlo run 22
+Robustness for noise level 0.005, Monte Carlo run 23
+Robustness for noise level 0.005, Monte Carlo run 24
+Robustness for noise level 0.01, Monte Carlo run 0
+Robustness for noise level 0.01, Monte Carlo run 1
+Robustness for noise level 0.01, Monte Carlo run 2
+Robustness for noise level 0.01, Monte Carlo run 3
+Robustness for noise level 0.01, Monte Carlo run 4
+Robustness for noise level 0.01, Monte Carlo run 5
+Robustness for noise level 0.01, Monte Carlo run 6
+Robustness for noise level 0.01, Monte Carlo run 7
+Robustness for noise level 0.01, Monte Carlo run 8
+Robustness for noise level 0.01, Monte Carlo run 9
+Robustness for noise level 0.01, Monte Carlo run 10
+Robustness for noise level 0.01, Monte Carlo run 11
+Robustness for noise level 0.01, Monte Carlo run 12
+Robustness for noise level 0.01, Monte Carlo run 13
+Robustness for noise level 0.01, Monte Carlo run 14
+Robustness for noise level 0.01, Monte Carlo run 15
+Robustness for noise level 0.01, Monte Carlo run 16
+Robustness for noise level 0.01, Monte Carlo run 17
+Robustness for noise level 0.01, Monte Carlo run 18
+Robustness for noise level 0.01, Monte Carlo run 19
+Robustness for noise level 0.01, Monte Carlo run 20
+Robustness for noise level 0.01, Monte Carlo run 21
+Robustness for noise level 0.01, Monte Carlo run 22
+Robustness for noise level 0.01, Monte Carlo run 23
+Robustness for noise level 0.01, Monte Carlo run 24
+[robustness] wrote: \\studhome.informatik.kit.edu\s_back\Dokumente\dev\ml-option-returns\scripts\gbrt_standard\robustness\robustness_runs.parquet
+[robustness] wrote: \\studhome.informatik.kit.edu\s_back\Dokumente\dev\ml-option-returns\scripts\gbrt_standard\robustness\robustness_summary.xlsx
+[robustness] wrote: \\studhome.informatik.kit.edu\s_back\Dokumente\dev\ml-option-returns\scripts\gbrt_standard\robustness\robustness.png
+[robustness] outputs saved to: \\studhome.informatik.kit.edu\s_back\Dokumente\dev\ml-option-returns\scripts\gbrt_standard\robustness
+[INFO] model_name: gbrt_standard, model_type: rf, normalize: False, eval_type: shapley
+[output] base dir: \\studhome.informatik.kit.edu\s_back\Dokumente\dev\ml-option-returns\scripts\gbrt_standard
+[output] figures dir: \\studhome.informatik.kit.edu\s_back\Dokumente\dev\ml-option-returns\scripts\gbrt_standard\figures
+[output] shap dir: \\studhome.informatik.kit.edu\s_back\Dokumente\dev\ml-option-returns\scripts\gbrt_standard\shap\figures
+[output] robustness dir: \\studhome.informatik.kit.edu\s_back\Dokumente\dev\ml-option-returns\scripts\gbrt_standard\robustness
+Features for model prediction:
+['Bucket_PR_Ret_W5_D4', 'daystomaturity', 'openinterest', 'yld', 'gamma', 'rho', 'bid', 'ask', 'underlying_bid', 'underlying_ask', 'embedlev', 'optspread', 'undspread', 'putcall_P', 'bakshiImplVol_annual', 'bakshiSkew', 'bakshiKurt', 'disaster_RIX_annual', 'implERP_SVIX2_annual', 'P_implQ_var', 'P_implQ_skew', 'P_implQ_kurt', 'P_var', 'P_skew', 'P_kurt', 'VaRQ_pct_0_1', 'VaRQ_pct_1', 'VaRQ_pct_99', 'VaRQ_pct_99_9', 'AVaRQ_pct_0_1', 'AVaRQ_pct_5', 'RP_mu', 'RP_var', 'RP_skew', 'RP_kurt', 'RP_moments_1', 'RP_moments_2', 'RP_moments_3', 'RP_moments_4', 'BTX_alpha_minus', 'BTX_alpha_plus', 'BTX_EQCV_k', 'BTX_EQJV_10', 'BTX_EQJV_k', 'BTX_EQV_relLeftTail_10', 'BTX_EQV_relLeftTail_k', 'BTX_EQV_relRightTail_10', 'BTX_EQV_relRightTail_k', 'BTX_EQV_relTail_10', 'BTX_EQV_relTail_k', 'BTX_implCrashFearVol_10_annual', 'BTX_implEuphoriaVol_10_annual', 'BTX_implTailVol_10_annual', 'BTX_k', 'BTX_LJV_10', 'BTX_LJV_7_5', 'BTX_LJV_k', 'BTX_MLJI_10_annual', 'BTX_MLJI_20_annual', 'BTX_MLJI_7_5_annual', 'BTX_MRJI_10_annual', 'BTX_PLJ_k', 'BTX_PRJ_k', 'BTX_RJV_10', 'BTX_RJV_k', 'Underlying_Ret_H3', 'Underlying_STD_H3', 'Underlying_Ret_D4_D2', 'Underlying_Ret_W5_D4', 'Bucket_PR_Ret_H1', 'Bucket_PR_Ret_H3', 'Bucket_PR_STD_H3', 'Bucket_PR_Ret_D2', 'Bucket_PR_Ret_D4_D2', 'theta', 'bid_size', 'ask_size', 'implVol', 'vega', 'normalizedMoneyness', 'time', 'Underlying_Ret_D2', 'Underlying_Ret_H1', 'delta']
+Number of features: 84
+Shapley values for model: gbrt_standard
+Z:\Dokumente\dev\ml-option-returns\scripts\CombinedModel.py:1719: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout(rect=[0, 0, 0.85, 1])
+[INFO] model_name: gbrt_standard_l2, model_type: rf, normalize: False, eval_type: robustness
+[output] base dir: \\studhome.informatik.kit.edu\s_back\Dokumente\dev\ml-option-returns\scripts\gbrt_standard_l2
+[output] figures dir: \\studhome.informatik.kit.edu\s_back\Dokumente\dev\ml-option-returns\scripts\gbrt_standard_l2\figures
+[output] shap dir: \\studhome.informatik.kit.edu\s_back\Dokumente\dev\ml-option-returns\scripts\gbrt_standard_l2\shap\figures
+[output] robustness dir: \\studhome.informatik.kit.edu\s_back\Dokumente\dev\ml-option-returns\scripts\gbrt_standard_l2\robustness
+Features for model prediction:
+['Bucket_PR_Ret_W5_D4', 'daystomaturity', 'openinterest', 'yld', 'gamma', 'rho', 'bid', 'ask', 'underlying_bid', 'underlying_ask', 'embedlev', 'optspread', 'undspread', 'putcall_P', 'bakshiImplVol_annual', 'bakshiSkew', 'bakshiKurt', 'disaster_RIX_annual', 'implERP_SVIX2_annual', 'P_implQ_var', 'P_implQ_skew', 'P_implQ_kurt', 'P_var', 'P_skew', 'P_kurt', 'VaRQ_pct_0_1', 'VaRQ_pct_1', 'VaRQ_pct_99', 'VaRQ_pct_99_9', 'AVaRQ_pct_0_1', 'AVaRQ_pct_5', 'RP_mu', 'RP_var', 'RP_skew', 'RP_kurt', 'RP_moments_1', 'RP_moments_2', 'RP_moments_3', 'RP_moments_4', 'BTX_alpha_minus', 'BTX_alpha_plus', 'BTX_EQCV_k', 'BTX_EQJV_10', 'BTX_EQJV_k', 'BTX_EQV_relLeftTail_10', 'BTX_EQV_relLeftTail_k', 'BTX_EQV_relRightTail_10', 'BTX_EQV_relRightTail_k', 'BTX_EQV_relTail_10', 'BTX_EQV_relTail_k', 'BTX_implCrashFearVol_10_annual', 'BTX_implEuphoriaVol_10_annual', 'BTX_implTailVol_10_annual', 'BTX_k', 'BTX_LJV_10', 'BTX_LJV_7_5', 'BTX_LJV_k', 'BTX_MLJI_10_annual', 'BTX_MLJI_20_annual', 'BTX_MLJI_7_5_annual', 'BTX_MRJI_10_annual', 'BTX_PLJ_k', 'BTX_PRJ_k', 'BTX_RJV_10', 'BTX_RJV_k', 'Underlying_Ret_H3', 'Underlying_STD_H3', 'Underlying_Ret_D4_D2', 'Underlying_Ret_W5_D4', 'Bucket_PR_Ret_H1', 'Bucket_PR_Ret_H3', 'Bucket_PR_STD_H3', 'Bucket_PR_Ret_D2', 'Bucket_PR_Ret_D4_D2', 'theta', 'bid_size', 'ask_size', 'implVol', 'vega', 'normalizedMoneyness', 'time', 'Underlying_Ret_D2', 'Underlying_Ret_H1', 'delta']
+Number of features: 84
+Robustness for noise level 0.001, Monte Carlo run 0
+Robustness for noise level 0.001, Monte Carlo run 1
+Robustness for noise level 0.001, Monte Carlo run 2
+Robustness for noise level 0.001, Monte Carlo run 3
+Robustness for noise level 0.001, Monte Carlo run 4
+Robustness for noise level 0.001, Monte Carlo run 5
+Robustness for noise level 0.001, Monte Carlo run 6
+Robustness for noise level 0.001, Monte Carlo run 7
+Robustness for noise level 0.001, Monte Carlo run 8
+Robustness for noise level 0.001, Monte Carlo run 9
+Robustness for noise level 0.001, Monte Carlo run 10
+Robustness for noise level 0.001, Monte Carlo run 11
+Robustness for noise level 0.001, Monte Carlo run 12
+Robustness for noise level 0.001, Monte Carlo run 13
+Robustness for noise level 0.001, Monte Carlo run 14
+Robustness for noise level 0.001, Monte Carlo run 15
+Robustness for noise level 0.001, Monte Carlo run 16
+Robustness for noise level 0.001, Monte Carlo run 17
+Robustness for noise level 0.001, Monte Carlo run 18
+Robustness for noise level 0.001, Monte Carlo run 19
+Robustness for noise level 0.001, Monte Carlo run 20
+Robustness for noise level 0.001, Monte Carlo run 21
+Robustness for noise level 0.001, Monte Carlo run 22
+Robustness for noise level 0.001, Monte Carlo run 23
+Robustness for noise level 0.001, Monte Carlo run 24
+Robustness for noise level 0.0025, Monte Carlo run 0
+Robustness for noise level 0.0025, Monte Carlo run 1
+Robustness for noise level 0.0025, Monte Carlo run 2
+Robustness for noise level 0.0025, Monte Carlo run 3
+Robustness for noise level 0.0025, Monte Carlo run 4
+Robustness for noise level 0.0025, Monte Carlo run 5
+Robustness for noise level 0.0025, Monte Carlo run 6
+Robustness for noise level 0.0025, Monte Carlo run 7
+Robustness for noise level 0.0025, Monte Carlo run 8
+Robustness for noise level 0.0025, Monte Carlo run 9
+Robustness for noise level 0.0025, Monte Carlo run 10
+Robustness for noise level 0.0025, Monte Carlo run 11
+Robustness for noise level 0.0025, Monte Carlo run 12
+Robustness for noise level 0.0025, Monte Carlo run 13
+Robustness for noise level 0.0025, Monte Carlo run 14
+Robustness for noise level 0.0025, Monte Carlo run 15
+Robustness for noise level 0.0025, Monte Carlo run 16
+Robustness for noise level 0.0025, Monte Carlo run 17
+Robustness for noise level 0.0025, Monte Carlo run 18
+Robustness for noise level 0.0025, Monte Carlo run 19
+Robustness for noise level 0.0025, Monte Carlo run 20
+Robustness for noise level 0.0025, Monte Carlo run 21
+Robustness for noise level 0.0025, Monte Carlo run 22
+Robustness for noise level 0.0025, Monte Carlo run 23
+Robustness for noise level 0.0025, Monte Carlo run 24
+Robustness for noise level 0.005, Monte Carlo run 0
+Robustness for noise level 0.005, Monte Carlo run 1
+Robustness for noise level 0.005, Monte Carlo run 2
+Robustness for noise level 0.005, Monte Carlo run 3
+Robustness for noise level 0.005, Monte Carlo run 4
+Robustness for noise level 0.005, Monte Carlo run 5
+Robustness for noise level 0.005, Monte Carlo run 6
+Robustness for noise level 0.005, Monte Carlo run 7
+Robustness for noise level 0.005, Monte Carlo run 8
+Robustness for noise level 0.005, Monte Carlo run 9
+Robustness for noise level 0.005, Monte Carlo run 10
+Robustness for noise level 0.005, Monte Carlo run 11
+Robustness for noise level 0.005, Monte Carlo run 12
+Robustness for noise level 0.005, Monte Carlo run 13
+Robustness for noise level 0.005, Monte Carlo run 14
+Robustness for noise level 0.005, Monte Carlo run 15
+Robustness for noise level 0.005, Monte Carlo run 16
+Robustness for noise level 0.005, Monte Carlo run 17
+Robustness for noise level 0.005, Monte Carlo run 18
+Robustness for noise level 0.005, Monte Carlo run 19
+Robustness for noise level 0.005, Monte Carlo run 20
+Robustness for noise level 0.005, Monte Carlo run 21
+Robustness for noise level 0.005, Monte Carlo run 22
+Robustness for noise level 0.005, Monte Carlo run 23
+Robustness for noise level 0.005, Monte Carlo run 24
+Robustness for noise level 0.01, Monte Carlo run 0
+Robustness for noise level 0.01, Monte Carlo run 1
+Robustness for noise level 0.01, Monte Carlo run 2
+Robustness for noise level 0.01, Monte Carlo run 3
+Robustness for noise level 0.01, Monte Carlo run 4
+Robustness for noise level 0.01, Monte Carlo run 5
+Robustness for noise level 0.01, Monte Carlo run 6
+Robustness for noise level 0.01, Monte Carlo run 7
+Robustness for noise level 0.01, Monte Carlo run 8
+Robustness for noise level 0.01, Monte Carlo run 9
+Robustness for noise level 0.01, Monte Carlo run 10
+Robustness for noise level 0.01, Monte Carlo run 11
+Robustness for noise level 0.01, Monte Carlo run 12
+Robustness for noise level 0.01, Monte Carlo run 13
+Robustness for noise level 0.01, Monte Carlo run 14
+Robustness for noise level 0.01, Monte Carlo run 15
+Robustness for noise level 0.01, Monte Carlo run 16
+Robustness for noise level 0.01, Monte Carlo run 17
+Robustness for noise level 0.01, Monte Carlo run 18
+Robustness for noise level 0.01, Monte Carlo run 19
+Robustness for noise level 0.01, Monte Carlo run 20
+Robustness for noise level 0.01, Monte Carlo run 21
+Robustness for noise level 0.01, Monte Carlo run 22
+Robustness for noise level 0.01, Monte Carlo run 23
+Robustness for noise level 0.01, Monte Carlo run 24
+[robustness] wrote: \\studhome.informatik.kit.edu\s_back\Dokumente\dev\ml-option-returns\scripts\gbrt_standard_l2\robustness\robustness_runs.parquet
+[robustness] wrote: \\studhome.informatik.kit.edu\s_back\Dokumente\dev\ml-option-returns\scripts\gbrt_standard_l2\robustness\robustness_summary.xlsx
+[robustness] wrote: \\studhome.informatik.kit.edu\s_back\Dokumente\dev\ml-option-returns\scripts\gbrt_standard_l2\robustness\robustness.png
+[robustness] outputs saved to: \\studhome.informatik.kit.edu\s_back\Dokumente\dev\ml-option-returns\scripts\gbrt_standard_l2\robustness
+[INFO] model_name: gbrt_standard_l2, model_type: rf, normalize: False, eval_type: shapley
+[output] base dir: \\studhome.informatik.kit.edu\s_back\Dokumente\dev\ml-option-returns\scripts\gbrt_standard_l2
+[output] figures dir: \\studhome.informatik.kit.edu\s_back\Dokumente\dev\ml-option-returns\scripts\gbrt_standard_l2\figures
+[output] shap dir: \\studhome.informatik.kit.edu\s_back\Dokumente\dev\ml-option-returns\scripts\gbrt_standard_l2\shap\figures
+[output] robustness dir: \\studhome.informatik.kit.edu\s_back\Dokumente\dev\ml-option-returns\scripts\gbrt_standard_l2\robustness
+Features for model prediction:
+['Bucket_PR_Ret_W5_D4', 'daystomaturity', 'openinterest', 'yld', 'gamma', 'rho', 'bid', 'ask', 'underlying_bid', 'underlying_ask', 'embedlev', 'optspread', 'undspread', 'putcall_P', 'bakshiImplVol_annual', 'bakshiSkew', 'bakshiKurt', 'disaster_RIX_annual', 'implERP_SVIX2_annual', 'P_implQ_var', 'P_implQ_skew', 'P_implQ_kurt', 'P_var', 'P_skew', 'P_kurt', 'VaRQ_pct_0_1', 'VaRQ_pct_1', 'VaRQ_pct_99', 'VaRQ_pct_99_9', 'AVaRQ_pct_0_1', 'AVaRQ_pct_5', 'RP_mu', 'RP_var', 'RP_skew', 'RP_kurt', 'RP_moments_1', 'RP_moments_2', 'RP_moments_3', 'RP_moments_4', 'BTX_alpha_minus', 'BTX_alpha_plus', 'BTX_EQCV_k', 'BTX_EQJV_10', 'BTX_EQJV_k', 'BTX_EQV_relLeftTail_10', 'BTX_EQV_relLeftTail_k', 'BTX_EQV_relRightTail_10', 'BTX_EQV_relRightTail_k', 'BTX_EQV_relTail_10', 'BTX_EQV_relTail_k', 'BTX_implCrashFearVol_10_annual', 'BTX_implEuphoriaVol_10_annual', 'BTX_implTailVol_10_annual', 'BTX_k', 'BTX_LJV_10', 'BTX_LJV_7_5', 'BTX_LJV_k', 'BTX_MLJI_10_annual', 'BTX_MLJI_20_annual', 'BTX_MLJI_7_5_annual', 'BTX_MRJI_10_annual', 'BTX_PLJ_k', 'BTX_PRJ_k', 'BTX_RJV_10', 'BTX_RJV_k', 'Underlying_Ret_H3', 'Underlying_STD_H3', 'Underlying_Ret_D4_D2', 'Underlying_Ret_W5_D4', 'Bucket_PR_Ret_H1', 'Bucket_PR_Ret_H3', 'Bucket_PR_STD_H3', 'Bucket_PR_Ret_D2', 'Bucket_PR_Ret_D4_D2', 'theta', 'bid_size', 'ask_size', 'implVol', 'vega', 'normalizedMoneyness', 'time', 'Underlying_Ret_D2', 'Underlying_Ret_H1', 'delta']
+Number of features: 84
+Shapley values for model: gbrt_standard_l2
+Z:\Dokumente\dev\ml-option-returns\scripts\CombinedModel.py:1719: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout(rect=[0, 0, 0.85, 1])
+[INFO] model_name: rf_standard, model_type: rf, normalize: False, eval_type: robustness
+[output] base dir: \\studhome.informatik.kit.edu\s_back\Dokumente\dev\ml-option-returns\scripts\rf_standard
+[output] figures dir: \\studhome.informatik.kit.edu\s_back\Dokumente\dev\ml-option-returns\scripts\rf_standard\figures
+[output] shap dir: \\studhome.informatik.kit.edu\s_back\Dokumente\dev\ml-option-returns\scripts\rf_standard\shap\figures
+[output] robustness dir: \\studhome.informatik.kit.edu\s_back\Dokumente\dev\ml-option-returns\scripts\rf_standard\robustness
+Features for model prediction:
+['Bucket_PR_Ret_W5_D4', 'daystomaturity', 'openinterest', 'yld', 'gamma', 'rho', 'bid', 'ask', 'underlying_bid', 'underlying_ask', 'embedlev', 'optspread', 'undspread', 'putcall_P', 'bakshiImplVol_annual', 'bakshiSkew', 'bakshiKurt', 'disaster_RIX_annual', 'implERP_SVIX2_annual', 'P_implQ_var', 'P_implQ_skew', 'P_implQ_kurt', 'P_var', 'P_skew', 'P_kurt', 'VaRQ_pct_0_1', 'VaRQ_pct_1', 'VaRQ_pct_99', 'VaRQ_pct_99_9', 'AVaRQ_pct_0_1', 'AVaRQ_pct_5', 'RP_mu', 'RP_var', 'RP_skew', 'RP_kurt', 'RP_moments_1', 'RP_moments_2', 'RP_moments_3', 'RP_moments_4', 'BTX_alpha_minus', 'BTX_alpha_plus', 'BTX_EQCV_k', 'BTX_EQJV_10', 'BTX_EQJV_k', 'BTX_EQV_relLeftTail_10', 'BTX_EQV_relLeftTail_k', 'BTX_EQV_relRightTail_10', 'BTX_EQV_relRightTail_k', 'BTX_EQV_relTail_10', 'BTX_EQV_relTail_k', 'BTX_implCrashFearVol_10_annual', 'BTX_implEuphoriaVol_10_annual', 'BTX_implTailVol_10_annual', 'BTX_k', 'BTX_LJV_10', 'BTX_LJV_7_5', 'BTX_LJV_k', 'BTX_MLJI_10_annual', 'BTX_MLJI_20_annual', 'BTX_MLJI_7_5_annual', 'BTX_MRJI_10_annual', 'BTX_PLJ_k', 'BTX_PRJ_k', 'BTX_RJV_10', 'BTX_RJV_k', 'Underlying_Ret_H3', 'Underlying_STD_H3', 'Underlying_Ret_D4_D2', 'Underlying_Ret_W5_D4', 'Bucket_PR_Ret_H1', 'Bucket_PR_Ret_H3', 'Bucket_PR_STD_H3', 'Bucket_PR_Ret_D2', 'Bucket_PR_Ret_D4_D2', 'theta', 'bid_size', 'ask_size', 'implVol', 'vega', 'normalizedMoneyness', 'time', 'Underlying_Ret_D2', 'Underlying_Ret_H1', 'delta']
+Number of features: 84
+Robustness for noise level 0.001, Monte Carlo run 0
+Robustness for noise level 0.001, Monte Carlo run 1
+Robustness for noise level 0.001, Monte Carlo run 2
+Robustness for noise level 0.001, Monte Carlo run 3
+Robustness for noise level 0.001, Monte Carlo run 4
+Robustness for noise level 0.001, Monte Carlo run 5
+Robustness for noise level 0.001, Monte Carlo run 6
+Robustness for noise level 0.001, Monte Carlo run 7
+Robustness for noise level 0.001, Monte Carlo run 8
+Robustness for noise level 0.001, Monte Carlo run 9
+Robustness for noise level 0.001, Monte Carlo run 10
+Robustness for noise level 0.001, Monte Carlo run 11
+Robustness for noise level 0.001, Monte Carlo run 12
+Robustness for noise level 0.001, Monte Carlo run 13
+Robustness for noise level 0.001, Monte Carlo run 14
+Robustness for noise level 0.001, Monte Carlo run 15
+Robustness for noise level 0.001, Monte Carlo run 16
+Robustness for noise level 0.001, Monte Carlo run 17
+Robustness for noise level 0.001, Monte Carlo run 18
+Robustness for noise level 0.001, Monte Carlo run 19
+Robustness for noise level 0.001, Monte Carlo run 20
+Robustness for noise level 0.001, Monte Carlo run 21
+Robustness for noise level 0.001, Monte Carlo run 22
+Robustness for noise level 0.001, Monte Carlo run 23
+Robustness for noise level 0.001, Monte Carlo run 24
+Robustness for noise level 0.0025, Monte Carlo run 0
+Robustness for noise level 0.0025, Monte Carlo run 1
+Robustness for noise level 0.0025, Monte Carlo run 2
+Robustness for noise level 0.0025, Monte Carlo run 3
+Robustness for noise level 0.0025, Monte Carlo run 4
+Robustness for noise level 0.0025, Monte Carlo run 5
+Robustness for noise level 0.0025, Monte Carlo run 6
+Robustness for noise level 0.0025, Monte Carlo run 7
+Robustness for noise level 0.0025, Monte Carlo run 8
+Robustness for noise level 0.0025, Monte Carlo run 9
+Robustness for noise level 0.0025, Monte Carlo run 10
+Robustness for noise level 0.0025, Monte Carlo run 11
+Robustness for noise level 0.0025, Monte Carlo run 12
+Robustness for noise level 0.0025, Monte Carlo run 13
+Robustness for noise level 0.0025, Monte Carlo run 14
+Robustness for noise level 0.0025, Monte Carlo run 15
+Robustness for noise level 0.0025, Monte Carlo run 16
+Robustness for noise level 0.0025, Monte Carlo run 17
+Robustness for noise level 0.0025, Monte Carlo run 18
+Robustness for noise level 0.0025, Monte Carlo run 19
+Robustness for noise level 0.0025, Monte Carlo run 20
+Robustness for noise level 0.0025, Monte Carlo run 21
+Robustness for noise level 0.0025, Monte Carlo run 22
+Robustness for noise level 0.0025, Monte Carlo run 23
+Robustness for noise level 0.0025, Monte Carlo run 24
+Robustness for noise level 0.005, Monte Carlo run 0
+Robustness for noise level 0.005, Monte Carlo run 1
+Robustness for noise level 0.005, Monte Carlo run 2
+Robustness for noise level 0.005, Monte Carlo run 3
+Robustness for noise level 0.005, Monte Carlo run 4
+Robustness for noise level 0.005, Monte Carlo run 5
+Robustness for noise level 0.005, Monte Carlo run 6
+Robustness for noise level 0.005, Monte Carlo run 7
+Robustness for noise level 0.005, Monte Carlo run 8
+Robustness for noise level 0.005, Monte Carlo run 9
+Robustness for noise level 0.005, Monte Carlo run 10
+Robustness for noise level 0.005, Monte Carlo run 11
+Robustness for noise level 0.005, Monte Carlo run 12
+Robustness for noise level 0.005, Monte Carlo run 13
+Robustness for noise level 0.005, Monte Carlo run 14
+Robustness for noise level 0.005, Monte Carlo run 15
+Robustness for noise level 0.005, Monte Carlo run 16
+Robustness for noise level 0.005, Monte Carlo run 17
+Robustness for noise level 0.005, Monte Carlo run 18
+Robustness for noise level 0.005, Monte Carlo run 19
+Robustness for noise level 0.005, Monte Carlo run 20
+Robustness for noise level 0.005, Monte Carlo run 21
+Robustness for noise level 0.005, Monte Carlo run 22
+Robustness for noise level 0.005, Monte Carlo run 23
+Robustness for noise level 0.005, Monte Carlo run 24
+Robustness for noise level 0.01, Monte Carlo run 0
+Robustness for noise level 0.01, Monte Carlo run 1
+Robustness for noise level 0.01, Monte Carlo run 2
+Robustness for noise level 0.01, Monte Carlo run 3
+Robustness for noise level 0.01, Monte Carlo run 4
+Robustness for noise level 0.01, Monte Carlo run 5
+Robustness for noise level 0.01, Monte Carlo run 6
+Robustness for noise level 0.01, Monte Carlo run 7
+Robustness for noise level 0.01, Monte Carlo run 8
+Robustness for noise level 0.01, Monte Carlo run 9
+Robustness for noise level 0.01, Monte Carlo run 10
+Robustness for noise level 0.01, Monte Carlo run 11
+Robustness for noise level 0.01, Monte Carlo run 12
+Robustness for noise level 0.01, Monte Carlo run 13
+Robustness for noise level 0.01, Monte Carlo run 14
+Robustness for noise level 0.01, Monte Carlo run 15
+Robustness for noise level 0.01, Monte Carlo run 16
+Robustness for noise level 0.01, Monte Carlo run 17
+Robustness for noise level 0.01, Monte Carlo run 18
+Robustness for noise level 0.01, Monte Carlo run 19
+Robustness for noise level 0.01, Monte Carlo run 20
+Robustness for noise level 0.01, Monte Carlo run 21
+Robustness for noise level 0.01, Monte Carlo run 22
+Robustness for noise level 0.01, Monte Carlo run 23
+Robustness for noise level 0.01, Monte Carlo run 24
+[robustness] wrote: \\studhome.informatik.kit.edu\s_back\Dokumente\dev\ml-option-returns\scripts\rf_standard\robustness\robustness_runs.parquet
+[robustness] wrote: \\studhome.informatik.kit.edu\s_back\Dokumente\dev\ml-option-returns\scripts\rf_standard\robustness\robustness_summary.xlsx
+[robustness] wrote: \\studhome.informatik.kit.edu\s_back\Dokumente\dev\ml-option-returns\scripts\rf_standard\robustness\robustness.png
+[robustness] outputs saved to: \\studhome.informatik.kit.edu\s_back\Dokumente\dev\ml-option-returns\scripts\rf_standard\robustness
+[INFO] model_name: rf_standard, model_type: rf, normalize: False, eval_type: shapley
+[output] base dir: \\studhome.informatik.kit.edu\s_back\Dokumente\dev\ml-option-returns\scripts\rf_standard
+[output] figures dir: \\studhome.informatik.kit.edu\s_back\Dokumente\dev\ml-option-returns\scripts\rf_standard\figures
+[output] shap dir: \\studhome.informatik.kit.edu\s_back\Dokumente\dev\ml-option-returns\scripts\rf_standard\shap\figures
+[output] robustness dir: \\studhome.informatik.kit.edu\s_back\Dokumente\dev\ml-option-returns\scripts\rf_standard\robustness
+Features for model prediction:
+['Bucket_PR_Ret_W5_D4', 'daystomaturity', 'openinterest', 'yld', 'gamma', 'rho', 'bid', 'ask', 'underlying_bid', 'underlying_ask', 'embedlev', 'optspread', 'undspread', 'putcall_P', 'bakshiImplVol_annual', 'bakshiSkew', 'bakshiKurt', 'disaster_RIX_annual', 'implERP_SVIX2_annual', 'P_implQ_var', 'P_implQ_skew', 'P_implQ_kurt', 'P_var', 'P_skew', 'P_kurt', 'VaRQ_pct_0_1', 'VaRQ_pct_1', 'VaRQ_pct_99', 'VaRQ_pct_99_9', 'AVaRQ_pct_0_1', 'AVaRQ_pct_5', 'RP_mu', 'RP_var', 'RP_skew', 'RP_kurt', 'RP_moments_1', 'RP_moments_2', 'RP_moments_3', 'RP_moments_4', 'BTX_alpha_minus', 'BTX_alpha_plus', 'BTX_EQCV_k', 'BTX_EQJV_10', 'BTX_EQJV_k', 'BTX_EQV_relLeftTail_10', 'BTX_EQV_relLeftTail_k', 'BTX_EQV_relRightTail_10', 'BTX_EQV_relRightTail_k', 'BTX_EQV_relTail_10', 'BTX_EQV_relTail_k', 'BTX_implCrashFearVol_10_annual', 'BTX_implEuphoriaVol_10_annual', 'BTX_implTailVol_10_annual', 'BTX_k', 'BTX_LJV_10', 'BTX_LJV_7_5', 'BTX_LJV_k', 'BTX_MLJI_10_annual', 'BTX_MLJI_20_annual', 'BTX_MLJI_7_5_annual', 'BTX_MRJI_10_annual', 'BTX_PLJ_k', 'BTX_PRJ_k', 'BTX_RJV_10', 'BTX_RJV_k', 'Underlying_Ret_H3', 'Underlying_STD_H3', 'Underlying_Ret_D4_D2', 'Underlying_Ret_W5_D4', 'Bucket_PR_Ret_H1', 'Bucket_PR_Ret_H3', 'Bucket_PR_STD_H3', 'Bucket_PR_Ret_D2', 'Bucket_PR_Ret_D4_D2', 'theta', 'bid_size', 'ask_size', 'implVol', 'vega', 'normalizedMoneyness', 'time', 'Underlying_Ret_D2', 'Underlying_Ret_H1', 'delta']
+Number of features: 84
+Shapley values for model: rf_standard
+Z:\Dokumente\dev\ml-option-returns\scripts\CombinedModel.py:1719: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout(rect=[0, 0, 0.85, 1])
+[INFO] model_name: rf_standard_l2, model_type: rf, normalize: False, eval_type: robustness
+[output] base dir: \\studhome.informatik.kit.edu\s_back\Dokumente\dev\ml-option-returns\scripts\rf_standard_l2
+[output] figures dir: \\studhome.informatik.kit.edu\s_back\Dokumente\dev\ml-option-returns\scripts\rf_standard_l2\figures
+[output] shap dir: \\studhome.informatik.kit.edu\s_back\Dokumente\dev\ml-option-returns\scripts\rf_standard_l2\shap\figures
+[output] robustness dir: \\studhome.informatik.kit.edu\s_back\Dokumente\dev\ml-option-returns\scripts\rf_standard_l2\robustness
+Features for model prediction:
+['Bucket_PR_Ret_W5_D4', 'daystomaturity', 'openinterest', 'yld', 'gamma', 'rho', 'bid', 'ask', 'underlying_bid', 'underlying_ask', 'embedlev', 'optspread', 'undspread', 'putcall_P', 'bakshiImplVol_annual', 'bakshiSkew', 'bakshiKurt', 'disaster_RIX_annual', 'implERP_SVIX2_annual', 'P_implQ_var', 'P_implQ_skew', 'P_implQ_kurt', 'P_var', 'P_skew', 'P_kurt', 'VaRQ_pct_0_1', 'VaRQ_pct_1', 'VaRQ_pct_99', 'VaRQ_pct_99_9', 'AVaRQ_pct_0_1', 'AVaRQ_pct_5', 'RP_mu', 'RP_var', 'RP_skew', 'RP_kurt', 'RP_moments_1', 'RP_moments_2', 'RP_moments_3', 'RP_moments_4', 'BTX_alpha_minus', 'BTX_alpha_plus', 'BTX_EQCV_k', 'BTX_EQJV_10', 'BTX_EQJV_k', 'BTX_EQV_relLeftTail_10', 'BTX_EQV_relLeftTail_k', 'BTX_EQV_relRightTail_10', 'BTX_EQV_relRightTail_k', 'BTX_EQV_relTail_10', 'BTX_EQV_relTail_k', 'BTX_implCrashFearVol_10_annual', 'BTX_implEuphoriaVol_10_annual', 'BTX_implTailVol_10_annual', 'BTX_k', 'BTX_LJV_10', 'BTX_LJV_7_5', 'BTX_LJV_k', 'BTX_MLJI_10_annual', 'BTX_MLJI_20_annual', 'BTX_MLJI_7_5_annual', 'BTX_MRJI_10_annual', 'BTX_PLJ_k', 'BTX_PRJ_k', 'BTX_RJV_10', 'BTX_RJV_k', 'Underlying_Ret_H3', 'Underlying_STD_H3', 'Underlying_Ret_D4_D2', 'Underlying_Ret_W5_D4', 'Bucket_PR_Ret_H1', 'Bucket_PR_Ret_H3', 'Bucket_PR_STD_H3', 'Bucket_PR_Ret_D2', 'Bucket_PR_Ret_D4_D2', 'theta', 'bid_size', 'ask_size', 'implVol', 'vega', 'normalizedMoneyness', 'time', 'Underlying_Ret_D2', 'Underlying_Ret_H1', 'delta']
+Number of features: 84
+Robustness for noise level 0.001, Monte Carlo run 0
+Robustness for noise level 0.001, Monte Carlo run 1
+Robustness for noise level 0.001, Monte Carlo run 2
+Robustness for noise level 0.001, Monte Carlo run 3
+Robustness for noise level 0.001, Monte Carlo run 4
+Robustness for noise level 0.001, Monte Carlo run 5
+Robustness for noise level 0.001, Monte Carlo run 6
+Robustness for noise level 0.001, Monte Carlo run 7
+Robustness for noise level 0.001, Monte Carlo run 8
+Robustness for noise level 0.001, Monte Carlo run 9
+Robustness for noise level 0.001, Monte Carlo run 10
+Robustness for noise level 0.001, Monte Carlo run 11
+Robustness for noise level 0.001, Monte Carlo run 12
+Robustness for noise level 0.001, Monte Carlo run 13
+Robustness for noise level 0.001, Monte Carlo run 14
+Robustness for noise level 0.001, Monte Carlo run 15
+Robustness for noise level 0.001, Monte Carlo run 16
+Robustness for noise level 0.001, Monte Carlo run 17
+Robustness for noise level 0.001, Monte Carlo run 18
+Robustness for noise level 0.001, Monte Carlo run 19
+Robustness for noise level 0.001, Monte Carlo run 20
+Robustness for noise level 0.001, Monte Carlo run 21
+Robustness for noise level 0.001, Monte Carlo run 22
+Robustness for noise level 0.001, Monte Carlo run 23
+Robustness for noise level 0.001, Monte Carlo run 24
+Robustness for noise level 0.0025, Monte Carlo run 0
+Robustness for noise level 0.0025, Monte Carlo run 1
+Robustness for noise level 0.0025, Monte Carlo run 2
+Robustness for noise level 0.0025, Monte Carlo run 3
+Robustness for noise level 0.0025, Monte Carlo run 4
+Robustness for noise level 0.0025, Monte Carlo run 5
+Robustness for noise level 0.0025, Monte Carlo run 6
+Robustness for noise level 0.0025, Monte Carlo run 7
+Robustness for noise level 0.0025, Monte Carlo run 8
+Robustness for noise level 0.0025, Monte Carlo run 9
+Robustness for noise level 0.0025, Monte Carlo run 10
+Robustness for noise level 0.0025, Monte Carlo run 11
+Robustness for noise level 0.0025, Monte Carlo run 12
+Robustness for noise level 0.0025, Monte Carlo run 13
+Robustness for noise level 0.0025, Monte Carlo run 14
+Robustness for noise level 0.0025, Monte Carlo run 15
+Robustness for noise level 0.0025, Monte Carlo run 16
+Robustness for noise level 0.0025, Monte Carlo run 17
+Robustness for noise level 0.0025, Monte Carlo run 18
+Robustness for noise level 0.0025, Monte Carlo run 19
+Robustness for noise level 0.0025, Monte Carlo run 20
+Robustness for noise level 0.0025, Monte Carlo run 21
+Robustness for noise level 0.0025, Monte Carlo run 22
+Robustness for noise level 0.0025, Monte Carlo run 23
+Robustness for noise level 0.0025, Monte Carlo run 24
+Robustness for noise level 0.005, Monte Carlo run 0
+Robustness for noise level 0.005, Monte Carlo run 1
+Robustness for noise level 0.005, Monte Carlo run 2
+Robustness for noise level 0.005, Monte Carlo run 3
+Robustness for noise level 0.005, Monte Carlo run 4
+Robustness for noise level 0.005, Monte Carlo run 5
+Robustness for noise level 0.005, Monte Carlo run 6
+Robustness for noise level 0.005, Monte Carlo run 7
+Robustness for noise level 0.005, Monte Carlo run 8
+Robustness for noise level 0.005, Monte Carlo run 9
+Robustness for noise level 0.005, Monte Carlo run 10
+Robustness for noise level 0.005, Monte Carlo run 11
+Robustness for noise level 0.005, Monte Carlo run 12
+Robustness for noise level 0.005, Monte Carlo run 13
+Robustness for noise level 0.005, Monte Carlo run 14
+Robustness for noise level 0.005, Monte Carlo run 15
+Robustness for noise level 0.005, Monte Carlo run 16
+Robustness for noise level 0.005, Monte Carlo run 17
+Robustness for noise level 0.005, Monte Carlo run 18
+Robustness for noise level 0.005, Monte Carlo run 19
+Robustness for noise level 0.005, Monte Carlo run 20
+Robustness for noise level 0.005, Monte Carlo run 21
+Robustness for noise level 0.005, Monte Carlo run 22
+Robustness for noise level 0.005, Monte Carlo run 23
+Robustness for noise level 0.005, Monte Carlo run 24
+Robustness for noise level 0.01, Monte Carlo run 0
+Robustness for noise level 0.01, Monte Carlo run 1
+Robustness for noise level 0.01, Monte Carlo run 2
+Robustness for noise level 0.01, Monte Carlo run 3
+Robustness for noise level 0.01, Monte Carlo run 4
+Robustness for noise level 0.01, Monte Carlo run 5
+Robustness for noise level 0.01, Monte Carlo run 6
+Robustness for noise level 0.01, Monte Carlo run 7
+Robustness for noise level 0.01, Monte Carlo run 8
+Robustness for noise level 0.01, Monte Carlo run 9
+Robustness for noise level 0.01, Monte Carlo run 10
+Robustness for noise level 0.01, Monte Carlo run 11
+Robustness for noise level 0.01, Monte Carlo run 12
+Robustness for noise level 0.01, Monte Carlo run 13
+Robustness for noise level 0.01, Monte Carlo run 14
+Robustness for noise level 0.01, Monte Carlo run 15
+Robustness for noise level 0.01, Monte Carlo run 16
+Robustness for noise level 0.01, Monte Carlo run 17
+Robustness for noise level 0.01, Monte Carlo run 18
+Robustness for noise level 0.01, Monte Carlo run 19
+Robustness for noise level 0.01, Monte Carlo run 20
+Robustness for noise level 0.01, Monte Carlo run 21
+Robustness for noise level 0.01, Monte Carlo run 22
+Robustness for noise level 0.01, Monte Carlo run 23
+Robustness for noise level 0.01, Monte Carlo run 24
+[robustness] wrote: \\studhome.informatik.kit.edu\s_back\Dokumente\dev\ml-option-returns\scripts\rf_standard_l2\robustness\robustness_runs.parquet
+[robustness] wrote: \\studhome.informatik.kit.edu\s_back\Dokumente\dev\ml-option-returns\scripts\rf_standard_l2\robustness\robustness_summary.xlsx
+[robustness] wrote: \\studhome.informatik.kit.edu\s_back\Dokumente\dev\ml-option-returns\scripts\rf_standard_l2\robustness\robustness.png
+[robustness] outputs saved to: \\studhome.informatik.kit.edu\s_back\Dokumente\dev\ml-option-returns\scripts\rf_standard_l2\robustness
+[INFO] model_name: rf_standard_l2, model_type: rf, normalize: False, eval_type: shapley
+[output] base dir: \\studhome.informatik.kit.edu\s_back\Dokumente\dev\ml-option-returns\scripts\rf_standard_l2
+[output] figures dir: \\studhome.informatik.kit.edu\s_back\Dokumente\dev\ml-option-returns\scripts\rf_standard_l2\figures
+[output] shap dir: \\studhome.informatik.kit.edu\s_back\Dokumente\dev\ml-option-returns\scripts\rf_standard_l2\shap\figures
+[output] robustness dir: \\studhome.informatik.kit.edu\s_back\Dokumente\dev\ml-option-returns\scripts\rf_standard_l2\robustness
+Features for model prediction:
+['Bucket_PR_Ret_W5_D4', 'daystomaturity', 'openinterest', 'yld', 'gamma', 'rho', 'bid', 'ask', 'underlying_bid', 'underlying_ask', 'embedlev', 'optspread', 'undspread', 'putcall_P', 'bakshiImplVol_annual', 'bakshiSkew', 'bakshiKurt', 'disaster_RIX_annual', 'implERP_SVIX2_annual', 'P_implQ_var', 'P_implQ_skew', 'P_implQ_kurt', 'P_var', 'P_skew', 'P_kurt', 'VaRQ_pct_0_1', 'VaRQ_pct_1', 'VaRQ_pct_99', 'VaRQ_pct_99_9', 'AVaRQ_pct_0_1', 'AVaRQ_pct_5', 'RP_mu', 'RP_var', 'RP_skew', 'RP_kurt', 'RP_moments_1', 'RP_moments_2', 'RP_moments_3', 'RP_moments_4', 'BTX_alpha_minus', 'BTX_alpha_plus', 'BTX_EQCV_k', 'BTX_EQJV_10', 'BTX_EQJV_k', 'BTX_EQV_relLeftTail_10', 'BTX_EQV_relLeftTail_k', 'BTX_EQV_relRightTail_10', 'BTX_EQV_relRightTail_k', 'BTX_EQV_relTail_10', 'BTX_EQV_relTail_k', 'BTX_implCrashFearVol_10_annual', 'BTX_implEuphoriaVol_10_annual', 'BTX_implTailVol_10_annual', 'BTX_k', 'BTX_LJV_10', 'BTX_LJV_7_5', 'BTX_LJV_k', 'BTX_MLJI_10_annual', 'BTX_MLJI_20_annual', 'BTX_MLJI_7_5_annual', 'BTX_MRJI_10_annual', 'BTX_PLJ_k', 'BTX_PRJ_k', 'BTX_RJV_10', 'BTX_RJV_k', 'Underlying_Ret_H3', 'Underlying_STD_H3', 'Underlying_Ret_D4_D2', 'Underlying_Ret_W5_D4', 'Bucket_PR_Ret_H1', 'Bucket_PR_Ret_H3', 'Bucket_PR_STD_H3', 'Bucket_PR_Ret_D2', 'Bucket_PR_Ret_D4_D2', 'theta', 'bid_size', 'ask_size', 'implVol', 'vega', 'normalizedMoneyness', 'time', 'Underlying_Ret_D2', 'Underlying_Ret_H1', 'delta']
+Number of features: 84
+Shapley values for model: rf_standard_l2
+Z:\Dokumente\dev\ml-option-returns\scripts\CombinedModel.py:1719: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout(rect=[0, 0, 0.85, 1])
+[INFO] model_name: ffn_noise, model_type: ffn, normalize: True, eval_type: robustness
+[output] base dir: \\studhome.informatik.kit.edu\s_back\Dokumente\dev\ml-option-returns\scripts\ffn_noise
+[output] figures dir: \\studhome.informatik.kit.edu\s_back\Dokumente\dev\ml-option-returns\scripts\ffn_noise\figures
+[output] shap dir: \\studhome.informatik.kit.edu\s_back\Dokumente\dev\ml-option-returns\scripts\ffn_noise\shap\figures
+[output] robustness dir: \\studhome.informatik.kit.edu\s_back\Dokumente\dev\ml-option-returns\scripts\ffn_noise\robustness
+Features for model prediction:
+['daystomaturity', 'openinterest', 'implVol', 'yld', 'delta', 'gamma', 'rho', 'theta', 'vega', 'normalizedMoneyness', 'time', 'bid_size', 'bid', 'ask_size', 'ask', 'underlying_bid', 'underlying_ask', 'embedlev', 'optspread', 'undspread', 'putcall_P', 'bakshiImplVol_annual', 'bakshiSkew', 'bakshiKurt', 'disaster_RIX_annual', 'implERP_SVIX2_annual', 'P_implQ_var', 'P_implQ_skew', 'P_implQ_kurt', 'P_var', 'P_skew', 'P_kurt', 'VaRQ_pct_0_1', 'VaRQ_pct_1', 'VaRQ_pct_99', 'VaRQ_pct_99_9', 'AVaRQ_pct_0_1', 'AVaRQ_pct_5', 'RP_mu', 'RP_var', 'RP_skew', 'RP_kurt', 'RP_moments_1', 'RP_moments_2', 'RP_moments_3', 'RP_moments_4', 'BTX_alpha_minus', 'BTX_alpha_plus', 'BTX_EQCV_k', 'BTX_EQJV_10', 'BTX_EQJV_k', 'BTX_EQV_relLeftTail_10', 'BTX_EQV_relLeftTail_k', 'BTX_EQV_relRightTail_10', 'BTX_EQV_relRightTail_k', 'BTX_EQV_relTail_10', 'BTX_EQV_relTail_k', 'BTX_implCrashFearVol_10_annual', 'BTX_implEuphoriaVol_10_annual', 'BTX_implTailVol_10_annual', 'BTX_k', 'BTX_LJV_10', 'BTX_LJV_7_5', 'BTX_LJV_k', 'BTX_MLJI_10_annual', 'BTX_MLJI_20_annual', 'BTX_MLJI_7_5_annual', 'BTX_MRJI_10_annual', 'BTX_PLJ_k', 'BTX_PRJ_k', 'BTX_RJV_10', 'BTX_RJV_k', 'Underlying_Ret_H1', 'Underlying_Ret_H3', 'Underlying_STD_H3', 'Underlying_Ret_D2', 'Underlying_Ret_D4_D2', 'Underlying_Ret_W5_D4', 'Bucket_PR_Ret_H1', 'Bucket_PR_Ret_H3', 'Bucket_PR_STD_H3', 'Bucket_PR_Ret_D2', 'Bucket_PR_Ret_D4_D2', 'Bucket_PR_Ret_W5_D4']
+Number of features: 84
+W0701 17:35:06.120000 17232 site-packages\torch\utils\flop_counter.py:29] triton not found; flop counting will not work for triton kernels
+W0701 17:35:07.909000 17232 site-packages\torch\_dynamo\convert_frame.py:1743] [0/8] torch._dynamo hit config.recompile_limit (8)
+W0701 17:35:07.909000 17232 site-packages\torch\_dynamo\convert_frame.py:1743] [0/8]    function: 'forward' (Z:\Dokumente\dev\ml-option-returns\scripts\model.py:239)
+W0701 17:35:07.909000 17232 site-packages\torch\_dynamo\convert_frame.py:1743] [0/8]    last reason: 0/7: len(self._modules['net']._modules) != 13
+W0701 17:35:07.909000 17232 site-packages\torch\_dynamo\convert_frame.py:1743] [0/8] To log all recompilation reasons, use TORCH_LOGS="recompiles".
+W0701 17:35:07.909000 17232 site-packages\torch\_dynamo\convert_frame.py:1743] [0/8] To diagnose recompilation issues, see https://docs.pytorch.org/docs/main/user_guide/torch_compiler/compile/programming_model.recompilation.html
+Robustness for noise level 0.001, Monte Carlo run 0
+Robustness for noise level 0.001, Monte Carlo run 1
+Robustness for noise level 0.001, Monte Carlo run 2
+Robustness for noise level 0.001, Monte Carlo run 3
+Robustness for noise level 0.001, Monte Carlo run 4
+Robustness for noise level 0.001, Monte Carlo run 5
+Robustness for noise level 0.001, Monte Carlo run 6
+Robustness for noise level 0.001, Monte Carlo run 7
+Robustness for noise level 0.001, Monte Carlo run 8
+Robustness for noise level 0.001, Monte Carlo run 9
+Robustness for noise level 0.001, Monte Carlo run 10
+Robustness for noise level 0.001, Monte Carlo run 11
+Robustness for noise level 0.001, Monte Carlo run 12
+Robustness for noise level 0.001, Monte Carlo run 13
+Robustness for noise level 0.001, Monte Carlo run 14
+Robustness for noise level 0.001, Monte Carlo run 15
+Robustness for noise level 0.001, Monte Carlo run 16
+Robustness for noise level 0.001, Monte Carlo run 17
+Robustness for noise level 0.001, Monte Carlo run 18
+Robustness for noise level 0.001, Monte Carlo run 19
+Robustness for noise level 0.001, Monte Carlo run 20
+Robustness for noise level 0.001, Monte Carlo run 21
+Robustness for noise level 0.001, Monte Carlo run 22
+Robustness for noise level 0.001, Monte Carlo run 23
+Robustness for noise level 0.001, Monte Carlo run 24
+Robustness for noise level 0.0025, Monte Carlo run 0
+Robustness for noise level 0.0025, Monte Carlo run 1
+Robustness for noise level 0.0025, Monte Carlo run 2
+Robustness for noise level 0.0025, Monte Carlo run 3
+Robustness for noise level 0.0025, Monte Carlo run 4
+Robustness for noise level 0.0025, Monte Carlo run 5
+Robustness for noise level 0.0025, Monte Carlo run 6
+Robustness for noise level 0.0025, Monte Carlo run 7
+Robustness for noise level 0.0025, Monte Carlo run 8
+Robustness for noise level 0.0025, Monte Carlo run 9
+Robustness for noise level 0.0025, Monte Carlo run 10
+Robustness for noise level 0.0025, Monte Carlo run 11
+Robustness for noise level 0.0025, Monte Carlo run 12
+Robustness for noise level 0.0025, Monte Carlo run 13
+Robustness for noise level 0.0025, Monte Carlo run 14
+Robustness for noise level 0.0025, Monte Carlo run 15
+Robustness for noise level 0.0025, Monte Carlo run 16
+Robustness for noise level 0.0025, Monte Carlo run 17
+Robustness for noise level 0.0025, Monte Carlo run 18
+Robustness for noise level 0.0025, Monte Carlo run 19
+Robustness for noise level 0.0025, Monte Carlo run 20
+Robustness for noise level 0.0025, Monte Carlo run 21
+Robustness for noise level 0.0025, Monte Carlo run 22
+Robustness for noise level 0.0025, Monte Carlo run 23
+Robustness for noise level 0.0025, Monte Carlo run 24
+Robustness for noise level 0.005, Monte Carlo run 0
+Robustness for noise level 0.005, Monte Carlo run 1
+Robustness for noise level 0.005, Monte Carlo run 2
+Robustness for noise level 0.005, Monte Carlo run 3
+Robustness for noise level 0.005, Monte Carlo run 4
+Robustness for noise level 0.005, Monte Carlo run 5
+Robustness for noise level 0.005, Monte Carlo run 6
+Robustness for noise level 0.005, Monte Carlo run 7
+Robustness for noise level 0.005, Monte Carlo run 8
+Robustness for noise level 0.005, Monte Carlo run 9
+Robustness for noise level 0.005, Monte Carlo run 10
+Robustness for noise level 0.005, Monte Carlo run 11
+Robustness for noise level 0.005, Monte Carlo run 12
+Robustness for noise level 0.005, Monte Carlo run 13
+Robustness for noise level 0.005, Monte Carlo run 14
+Robustness for noise level 0.005, Monte Carlo run 15
+Robustness for noise level 0.005, Monte Carlo run 16
+Robustness for noise level 0.005, Monte Carlo run 17
+Robustness for noise level 0.005, Monte Carlo run 18
+Robustness for noise level 0.005, Monte Carlo run 19
+Robustness for noise level 0.005, Monte Carlo run 20
+Robustness for noise level 0.005, Monte Carlo run 21
+Robustness for noise level 0.005, Monte Carlo run 22
+Robustness for noise level 0.005, Monte Carlo run 23
+Robustness for noise level 0.005, Monte Carlo run 24
+Robustness for noise level 0.01, Monte Carlo run 0
+Robustness for noise level 0.01, Monte Carlo run 1
+Robustness for noise level 0.01, Monte Carlo run 2
+Robustness for noise level 0.01, Monte Carlo run 3
+Robustness for noise level 0.01, Monte Carlo run 4
+Robustness for noise level 0.01, Monte Carlo run 5
+Robustness for noise level 0.01, Monte Carlo run 6
+Robustness for noise level 0.01, Monte Carlo run 7
+Robustness for noise level 0.01, Monte Carlo run 8
+Robustness for noise level 0.01, Monte Carlo run 9
+Robustness for noise level 0.01, Monte Carlo run 10
+Robustness for noise level 0.01, Monte Carlo run 11
+Robustness for noise level 0.01, Monte Carlo run 12
+Robustness for noise level 0.01, Monte Carlo run 13
+Robustness for noise level 0.01, Monte Carlo run 14
+Robustness for noise level 0.01, Monte Carlo run 15
+Robustness for noise level 0.01, Monte Carlo run 16
+Robustness for noise level 0.01, Monte Carlo run 17
+Robustness for noise level 0.01, Monte Carlo run 18
+Robustness for noise level 0.01, Monte Carlo run 19
+Robustness for noise level 0.01, Monte Carlo run 20
+Robustness for noise level 0.01, Monte Carlo run 21
+Robustness for noise level 0.01, Monte Carlo run 22
+Robustness for noise level 0.01, Monte Carlo run 23
+Robustness for noise level 0.01, Monte Carlo run 24
+[robustness] wrote: \\studhome.informatik.kit.edu\s_back\Dokumente\dev\ml-option-returns\scripts\ffn_noise\robustness\robustness_runs.parquet
+[robustness] wrote: \\studhome.informatik.kit.edu\s_back\Dokumente\dev\ml-option-returns\scripts\ffn_noise\robustness\robustness_summary.xlsx
+[robustness] wrote: \\studhome.informatik.kit.edu\s_back\Dokumente\dev\ml-option-returns\scripts\ffn_noise\robustness\robustness.png
+[robustness] outputs saved to: \\studhome.informatik.kit.edu\s_back\Dokumente\dev\ml-option-returns\scripts\ffn_noise\robustness
+[INFO] model_name: ffn_noise, model_type: ffn, normalize: True, eval_type: shapley
+[output] base dir: \\studhome.informatik.kit.edu\s_back\Dokumente\dev\ml-option-returns\scripts\ffn_noise
+[output] figures dir: \\studhome.informatik.kit.edu\s_back\Dokumente\dev\ml-option-returns\scripts\ffn_noise\figures
+[output] shap dir: \\studhome.informatik.kit.edu\s_back\Dokumente\dev\ml-option-returns\scripts\ffn_noise\shap\figures
+[output] robustness dir: \\studhome.informatik.kit.edu\s_back\Dokumente\dev\ml-option-returns\scripts\ffn_noise\robustness
+Features for model prediction:
+['daystomaturity', 'openinterest', 'implVol', 'yld', 'delta', 'gamma', 'rho', 'theta', 'vega', 'normalizedMoneyness', 'time', 'bid_size', 'bid', 'ask_size', 'ask', 'underlying_bid', 'underlying_ask', 'embedlev', 'optspread', 'undspread', 'putcall_P', 'bakshiImplVol_annual', 'bakshiSkew', 'bakshiKurt', 'disaster_RIX_annual', 'implERP_SVIX2_annual', 'P_implQ_var', 'P_implQ_skew', 'P_implQ_kurt', 'P_var', 'P_skew', 'P_kurt', 'VaRQ_pct_0_1', 'VaRQ_pct_1', 'VaRQ_pct_99', 'VaRQ_pct_99_9', 'AVaRQ_pct_0_1', 'AVaRQ_pct_5', 'RP_mu', 'RP_var', 'RP_skew', 'RP_kurt', 'RP_moments_1', 'RP_moments_2', 'RP_moments_3', 'RP_moments_4', 'BTX_alpha_minus', 'BTX_alpha_plus', 'BTX_EQCV_k', 'BTX_EQJV_10', 'BTX_EQJV_k', 'BTX_EQV_relLeftTail_10', 'BTX_EQV_relLeftTail_k', 'BTX_EQV_relRightTail_10', 'BTX_EQV_relRightTail_k', 'BTX_EQV_relTail_10', 'BTX_EQV_relTail_k', 'BTX_implCrashFearVol_10_annual', 'BTX_implEuphoriaVol_10_annual', 'BTX_implTailVol_10_annual', 'BTX_k', 'BTX_LJV_10', 'BTX_LJV_7_5', 'BTX_LJV_k', 'BTX_MLJI_10_annual', 'BTX_MLJI_20_annual', 'BTX_MLJI_7_5_annual', 'BTX_MRJI_10_annual', 'BTX_PLJ_k', 'BTX_PRJ_k', 'BTX_RJV_10', 'BTX_RJV_k', 'Underlying_Ret_H1', 'Underlying_Ret_H3', 'Underlying_STD_H3', 'Underlying_Ret_D2', 'Underlying_Ret_D4_D2', 'Underlying_Ret_W5_D4', 'Bucket_PR_Ret_H1', 'Bucket_PR_Ret_H3', 'Bucket_PR_STD_H3', 'Bucket_PR_Ret_D2', 'Bucket_PR_Ret_D4_D2', 'Bucket_PR_Ret_W5_D4']
+Number of features: 84
+W0701 17:54:49.425000 19412 site-packages\torch\utils\flop_counter.py:29] triton not found; flop counting will not work for triton kernels
+Shapley values for model: ffn_noise
+W0701 17:59:43.206000 19412 site-packages\torch\_dynamo\convert_frame.py:1743] [0/8] torch._dynamo hit config.recompile_limit (8)
+W0701 17:59:43.206000 19412 site-packages\torch\_dynamo\convert_frame.py:1743] [0/8]    function: 'forward' (Z:\Dokumente\dev\ml-option-returns\scripts\model.py:239)
+W0701 17:59:43.206000 19412 site-packages\torch\_dynamo\convert_frame.py:1743] [0/8]    last reason: 0/1: tensor 'x' requires_grad mismatch. expected requires_grad=1
+W0701 17:59:43.206000 19412 site-packages\torch\_dynamo\convert_frame.py:1743] [0/8] To log all recompilation reasons, use TORCH_LOGS="recompiles".
+W0701 17:59:43.206000 19412 site-packages\torch\_dynamo\convert_frame.py:1743] [0/8] To diagnose recompilation issues, see https://docs.pytorch.org/docs/main/user_guide/torch_compiler/compile/programming_model.recompilation.html
+Z:\Dokumente\dev\ml-option-returns\scripts\CombinedModel.py:1719: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout(rect=[0, 0, 0.85, 1])
+Fertig! 

@@ -7,6 +7,7 @@ This file can be used to run multiple evaluations of trained models.
 
 import os
 os.environ["MPLBACKEND"] = "Agg"
+import sys
 
 from pathlib import Path
 
@@ -14,6 +15,13 @@ import pandas as pd
 import numpy as np
 from CombinedModel import CombinedModel
 
+argv = sys.argv
+_model_name = sys.argv[1]
+_model_type = 'ffn' if 'ffn' in _model_name else 'rf'
+_normalize = True if 'ffn' in _model_name else False
+_eval_type = sys.argv[2]
+
+print(f"[INFO] model_name: {_model_name}, model_type: {_model_type}, normalize: {_normalize}, eval_type: {_eval_type}")
 
 def apply_saved_zscore(dfs, params_path='./normalization_params.xlsx'):
     params = pd.read_excel(params_path, index_col=0)
@@ -34,11 +42,11 @@ def apply_saved_zscore(dfs, params_path='./normalization_params.xlsx'):
 # These are the features we payed special attention to in some models. Always the same across the thesis
 IMPORTANT_COLUMNS = ['theta', 'bid_size', 'ask_size','implVol','vega','normalizedMoneyness','time','Underlying_Ret_D2','Underlying_Ret_H1','delta']
 
-FOLDER = 'Z:/Dokumente/dev/ml-option-returns/scripts/ffn_discrete'  # This specifies where to find the saved model files
+FOLDER = f'Z:/Dokumente/dev/ml-option-returns/scripts/{_model_name}'  # This specifies where to find the saved model files
 ONLY_PUT = False
 ONLY_CALL = False
 MODULATOR_FIRST = False
-EVALUATION_TYPE ='performance'
+EVALUATION_TYPE = _eval_type  # Options: 'robustness', 'shapley', 'performance'
 PERFORMANCE_BASIC_ONLY = True
 
 #Z:\Dokumente\dev\ml-option-returns\scripts\gbrt_standard\gbrt_standard_model0_0.pkl
@@ -78,10 +86,11 @@ PERFORMANCE_BASIC_ONLY = True
 #   True
 # ]
 
-MODEL_TYPES = ['ffn']
-MODEL_NAMES = ['ffn_discrete']
+
+MODEL_TYPES = [_model_type]
+MODEL_NAMES = [_model_name]
 MODEL_WEIGHTS = [1]
-NORMALIZE = [True]
+NORMALIZE = [_normalize]
 
 SCRIPT_DIR = Path(__file__).resolve().parent
 
@@ -101,8 +110,8 @@ for p in [OUTPUT_BASE_DIR, FIG_DIR, ROB_DIR, PERF_FIG_DIR]:
     p.mkdir(parents=True, exist_ok=True)
 
 # Data paths
-SELECTED_DATA_PATH = 'Z:\Dokumente\dev\ml-option-returns\data'
-FULL_DATA_PATH = 'Z:\Dokumente\dev\ml-option-returns\data'
+SELECTED_DATA_PATH = 'Z:/Dokumente/dev/ml-option-returns/data/selected'
+FULL_DATA_PATH = 'Z:/Dokumente/dev/ml-option-returns/data/full'
 
 
 def preprocess_for_model(full_dataset: bool, reorder_modulators: bool = True) -> tuple[list[pd.DataFrame], list[pd.Series]]:

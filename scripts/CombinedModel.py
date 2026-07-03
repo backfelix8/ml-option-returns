@@ -1808,7 +1808,8 @@ class CombinedModel:
         print(f"[INFO] DM max antisymmetry error: {max_antisym_error}")
 
         #Create excel file
-        with pd.ExcelWriter('../analysis/diebold_mariano.xlsx', engine='xlsxwriter') as writer:
+        # with pd.ExcelWriter('../analysis/diebold_mariano.xlsx', engine='xlsxwriter') as writer:
+        with pd.ExcelWriter('./analysis/diebold_mariano.xlsx', engine='xlsxwriter') as writer:
             results_stat.to_excel(
                 writer, sheet_name='Statistic', index=True, index_label='Model'
             )

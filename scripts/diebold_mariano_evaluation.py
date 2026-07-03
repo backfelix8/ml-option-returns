@@ -22,9 +22,9 @@ from CombinedModel import CombinedModel
 # =========================================================
 # 1. Basic panel settings
 # =========================================================
-PANEL_ROOT = Path(__file__).resolve().parent          # e.g. .../selected_data/J10
-SELECTED_DATA_PATH = PANEL_ROOT.parent                # .../selected_data
-ANALYSIS_DIR = SELECTED_DATA_PATH / "analysis"
+PANEL_ROOT = Path("Z:/Dokumente/dev/ml-option-returns/scripts")         # e.g. .../selected_data/J10
+SELECTED_DATA_PATH = Path("Z:/Dokumente/dev/ml-option-returns/data/selected")                # .../selected_data
+ANALYSIS_DIR = PANEL_ROOT / "analysis"
 ANALYSIS_DIR.mkdir(parents=True, exist_ok=True)
 
 TEST_MONTHS = [10, 11, 12]
@@ -60,43 +60,26 @@ IMPORTANT_COLUMNS = [
 # 3. Model settings
 # =========================================================
 MODEL_TYPES = [
-    'rf', 'rf', 'rf', 'rf',
-    'ffn',
-    'fusion', 'fusionContextFirst',
-    'fusionComplex', 'fusionComplex',
-    'hypernet',
-    'attention',
-    'autoencoder'
+    'rf', 'rf', 
+    'rf', 'rf',
+    'ffn', 'ffn', 'ffn', 'ffn',
 ]
 
 MODEL_NAMES = [
-    'gbrt_standard',   # GBR
-    'gbrt',            # GBR-AV
-    'rf_standard',     # RF
-    'rf',              # RF-AV
-    'ffn',
-    'fusion',
-    'fusion_context_first',
-    'doubleNet',
-    'tripleNet',
-    'hypernet',
-    'attention',
-    'autoencoder'
+    'gbrt_standard', 'gbrt_standard_l2',            # GBR-AV
+    'rf_standard', 'rf_standard_l2',     # RF              # RF-AV
+    'ffn', 'ffn_l2', 'ffn_noise', 'ffn_discrete'
 ]
 
 NORMALIZE = [
-    False, False, False, False,
-    True,
-    True, True,
-    True, True,
-    True,
-    True,
-    True
+    False, False, 
+    False, False,
+    True, True, True, True
 ]
 
 # equal-weight ensemble for current paper version
-ENSEMBLE_MODELS = ['gbrt_standard', 'tripleNet', 'attention']
-WEIGHTS = [1/3, 1/3, 1/3]
+ENSEMBLE_MODELS = ['gbrt_standard', 'gbrt_standard_l2', 'rf_standard', 'rf_standard_l2', 'ffn', 'ffn_l2', 'ffn_noise', 'ffn_discrete']
+WEIGHTS = [1/8, 1/8, 1/8, 1/8, 1/8, 1/8, 1/8, 1/8]
 
 
 # =========================================================
