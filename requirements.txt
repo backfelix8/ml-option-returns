@@ -14,3 +14,4 @@ ray[tune]==2.55.1
 openpyxl
 statsmodels
 xlsxwriter
+shap

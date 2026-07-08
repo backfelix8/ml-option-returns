@@ -1,0 +1,1168 @@
+Starte Jobs... 
+[INFO] model_name: gbrt_standard, model_type: rf, normalize: False, eval_type: performance
+[output] base dir: \\studhome.informatik.kit.edu\s_back\Dokumente\dev\ml-option-returns\scripts\gbrt_standard
+[output] figures dir: \\studhome.informatik.kit.edu\s_back\Dokumente\dev\ml-option-returns\scripts\gbrt_standard\figures
+[output] shap dir: \\studhome.informatik.kit.edu\s_back\Dokumente\dev\ml-option-returns\scripts\gbrt_standard\shap\figures
+[output] robustness dir: \\studhome.informatik.kit.edu\s_back\Dokumente\dev\ml-option-returns\scripts\gbrt_standard\robustness
+Features for model prediction:
+['Bucket_PR_Ret_W5_D4', 'daystomaturity', 'openinterest', 'yld', 'gamma', 'rho', 'bid', 'ask', 'underlying_bid', 'underlying_ask', 'embedlev', 'optspread', 'undspread', 'putcall_P', 'bakshiImplVol_annual', 'bakshiSkew', 'bakshiKurt', 'disaster_RIX_annual', 'implERP_SVIX2_annual', 'P_implQ_var', 'P_implQ_skew', 'P_implQ_kurt', 'P_var', 'P_skew', 'P_kurt', 'VaRQ_pct_0_1', 'VaRQ_pct_1', 'VaRQ_pct_99', 'VaRQ_pct_99_9', 'AVaRQ_pct_0_1', 'AVaRQ_pct_5', 'RP_mu', 'RP_var', 'RP_skew', 'RP_kurt', 'RP_moments_1', 'RP_moments_2', 'RP_moments_3', 'RP_moments_4', 'BTX_alpha_minus', 'BTX_alpha_plus', 'BTX_EQCV_k', 'BTX_EQJV_10', 'BTX_EQJV_k', 'BTX_EQV_relLeftTail_10', 'BTX_EQV_relLeftTail_k', 'BTX_EQV_relRightTail_10', 'BTX_EQV_relRightTail_k', 'BTX_EQV_relTail_10', 'BTX_EQV_relTail_k', 'BTX_implCrashFearVol_10_annual', 'BTX_implEuphoriaVol_10_annual', 'BTX_implTailVol_10_annual', 'BTX_k', 'BTX_LJV_10', 'BTX_LJV_7_5', 'BTX_LJV_k', 'BTX_MLJI_10_annual', 'BTX_MLJI_20_annual', 'BTX_MLJI_7_5_annual', 'BTX_MRJI_10_annual', 'BTX_PLJ_k', 'BTX_PRJ_k', 'BTX_RJV_10', 'BTX_RJV_k', 'Underlying_Ret_H3', 'Underlying_STD_H3', 'Underlying_Ret_D4_D2', 'Underlying_Ret_W5_D4', 'Bucket_PR_Ret_H1', 'Bucket_PR_Ret_H3', 'Bucket_PR_STD_H3', 'Bucket_PR_Ret_D2', 'Bucket_PR_Ret_D4_D2', 'theta', 'bid_size', 'ask_size', 'implVol', 'vega', 'normalizedMoneyness', 'time', 'Underlying_Ret_D2', 'Underlying_Ret_H1', 'delta']
+Number of features: 84
+Current model evaluated: gbrt_standard
+Current model evaluated: gbrt_standard
+Current model evaluated: gbrt_standard
+Current model evaluated: gbrt_standard
+Current model evaluated: gbrt_standard
+Current model evaluated: gbrt_standard
+Current model evaluated: gbrt_standard
+Current model evaluated: gbrt_standard
+Current model evaluated: gbrt_standard
+Current model evaluated: gbrt_standard
+Current model evaluated: gbrt_standard
+Current model evaluated: gbrt_standard
+Current model evaluated: gbrt_standard
+Current model evaluated: gbrt_standard
+Current model evaluated: gbrt_standard
+Portfolios 10, Rho 0: Strategy vs S&P 500 t = -1.1355864938791125, p = 0.25708708182395523
+Portfolios 10, Rho 0: Strategy vs S&P 500 t = -1.1075728408113428, p = 0.2689835034017879
+Portfolios 10, Rho 0: Strategy vs S&P 500 t = -1.121034022606821, p = 0.26322039919796436
+Portfolios 10, Rho 0: Strategy vs S&P 500 t = -1.2194442307205595, p = 0.2236874155533231
+Portfolios 10, Rho 0: Strategy vs S&P 500 t = -1.1505616435881008, p = 0.25088045577253737
+Portfolios 10, Rho 0: Strategy vs S&P 500 t = 0.1820427795038261, p = 0.8556955040672495
+Portfolios 10, Rho 0: Strategy vs S&P 500 t = 0.2126485974808293, p = 0.8317729750735716
+Portfolios 10, Rho 0: Strategy vs S&P 500 t = 0.24329255661311278, p = 0.8079766963994204
+Portfolios 10, Rho 0: Strategy vs S&P 500 t = 0.17751618665571417, p = 0.8592455546927766
+Portfolios 10, Rho 0: Strategy vs S&P 500 t = 0.11573675749059854, p = 0.9079533464430678
+Portfolios 10, Rho 0: Strategy vs S&P 500 t = 0.2511912472325203, p = 0.801851155715926
+Portfolios 10, Rho 0: Strategy vs S&P 500 t = 0.32042314435609337, p = 0.7488874327976434
+Portfolios 10, Rho 0: Strategy vs S&P 500 t = 0.2486252983497805, p = 0.8038335496831944
+Portfolios 10, Rho 0: Strategy vs S&P 500 t = 0.28507978561035463, p = 0.7757945217261657
+Portfolios 10, Rho 0: Strategy vs S&P 500 t = 0.22223402513780252, p = 0.8242942986719565
+Cross-section stats: min=2238, median=4401.0, requested max portfolios=1000
+If requested portfolios exceed available contracts in a timepoint, that timepoint will be skipped instead of forcing empty long-short buckets.
+Portfolios 10, Rho 0: Strategy vs S&P 500 t = -0.7553843360900186, p = 0.45023612022055176
+Portfolios 100, Rho 0: Strategy vs S&P 500 t = 0.38347297730191343, p = 0.7014688655942564
+Portfolios 3, Rho 0.05: Strategy vs S&P 500 t = -2.2766703731364086, p = 0.023063766362276847
+Portfolios 4, Rho 0.05: Strategy vs S&P 500 t = -1.8801834261428487, p = 0.06043865551912793
+Portfolios 5, Rho 0.05: Strategy vs S&P 500 t = -1.5648672758514135, p = 0.11800126200587803
+Portfolios 3, Rho 0.05: Strategy vs S&P 500 t = -2.3122905065871415, p = 0.021009435389492546
+Portfolios 4, Rho 0.05: Strategy vs S&P 500 t = -1.8852348134470045, p = 0.059752780338076045
+Portfolios 5, Rho 0.05: Strategy vs S&P 500 t = -1.4199233114555072, p = 0.15601146717426068
+Portfolios 10, Rho 0.05: Strategy vs S&P 500 t = -0.695298444018081, p = 0.48706599582789056
+Portfolios 10, Rho 0.05: Strategy vs S&P 500 t = -0.8338602272669262, p = 0.4046034770929268
+Portfolios 20, Rho 0.05: Strategy vs S&P 500 t = 2.5838844351117185, p = 0.00994198905893985
+Portfolios 40, Rho 0.05: Strategy vs S&P 500 t = 3.3101174066050163, p = 0.0009734458831901265
+Portfolios 100, Rho 0.05: Strategy vs S&P 500 t = 3.620798628845102, p = 0.00031179719227774076
+Portfolios 200, Rho 0.05: Strategy vs S&P 500 t = 3.6635242188079244, p = 0.00026480836588583514
+Portfolios 500, Rho 0.05: Strategy vs S&P 500 t = 3.6434783984611974, p = 0.00028595908528008195
+Portfolios 1000, Rho 0.05: Strategy vs S&P 500 t = 3.8500424726993074, p = 0.00012732382894272177
+Portfolios 20, Rho 0.05: Strategy vs S&P 500 t = 2.767212269394502, p = 0.005781605776700601
+Portfolios 40, Rho 0.05: Strategy vs S&P 500 t = 4.0774132286201805, p = 4.999365726048341e-05
+Portfolios 100, Rho 0.05: Strategy vs S&P 500 t = 4.721511336473866, p = 2.7543097307373616e-06
+Portfolios 200, Rho 0.05: Strategy vs S&P 500 t = 4.811102737651354, p = 1.787440889834683e-06
+Portfolios 500, Rho 0.05: Strategy vs S&P 500 t = 4.697209051384477, p = 3.0932728442366215e-06
+Portfolios 1000, Rho 0.05: Strategy vs S&P 500 t = 4.437120565593736, p = 1.0366423057739159e-05
+Portfolios 3, Rho 0.04: Strategy vs S&P 500 t = -1.7142830318756723, p = 0.08685602405486144
+Portfolios 4, Rho 0.04: Strategy vs S&P 500 t = -0.7590980064661833, p = 0.4480128798019012
+Portfolios 5, Rho 0.04: Strategy vs S&P 500 t = 0.0711035479261651, p = 0.9433327455075572
+Portfolios 3, Rho 0.04: Strategy vs S&P 500 t = -2.0523111239337006, p = 0.04045756605240981
+Portfolios 4, Rho 0.04: Strategy vs S&P 500 t = -1.1670398629132916, p = 0.2435347793649524
+Portfolios 5, Rho 0.04: Strategy vs S&P 500 t = -0.28136986569827843, p = 0.7784979749689624
+Portfolios 10, Rho 0.04: Strategy vs S&P 500 t = 1.4393320790065023, p = 0.15043947236115005
+Portfolios 10, Rho 0.04: Strategy vs S&P 500 t = 1.421523159772229, p = 0.15554632157356446
+Portfolios 20, Rho 0.04: Strategy vs S&P 500 t = 2.0757627324872283, p = 0.038228180882053
+Portfolios 40, Rho 0.04: Strategy vs S&P 500 t = 2.2888115971330905, p = 0.022344715705453884
+Portfolios 100, Rho 0.04: Strategy vs S&P 500 t = 2.367019128966752, p = 0.01816421733135822
+Portfolios 200, Rho 0.04: Strategy vs S&P 500 t = 2.403220670174118, p = 0.016473340803077614
+Portfolios 500, Rho 0.04: Strategy vs S&P 500 t = 2.3802551944817854, p = 0.017529110699028766
+Portfolios 1000, Rho 0.04: Strategy vs S&P 500 t = 2.516402318112253, p = 0.012046514503271346
+Portfolios 20, Rho 0.04: Strategy vs S&P 500 t = 2.453496663498044, p = 0.014355342093149865
+Portfolios 40, Rho 0.04: Strategy vs S&P 500 t = 3.3155016735975242, p = 0.0009551320905403846
+Portfolios 100, Rho 0.04: Strategy vs S&P 500 t = 3.567836400640597, p = 0.00038090915510589744
+Portfolios 200, Rho 0.04: Strategy vs S&P 500 t = 3.7984986496807487, p = 0.00015636854887606178
+Portfolios 500, Rho 0.04: Strategy vs S&P 500 t = 3.871681134595233, p = 0.00011671792692644878
+Portfolios 1000, Rho 0.04: Strategy vs S&P 500 t = 4.015701354279134, p = 6.47285450947798e-05
+Portfolios 3, Rho 0.03: Strategy vs S&P 500 t = -2.5624723788985446, p = 0.010571159337458337
+Portfolios 4, Rho 0.03: Strategy vs S&P 500 t = -2.050731107894961, p = 0.04061165907109596
+Portfolios 5, Rho 0.03: Strategy vs S&P 500 t = -1.5229841862015767, p = 0.12814961257607183
+Portfolios 3, Rho 0.03: Strategy vs S&P 500 t = -2.630533499781979, p = 0.008685622886330084
+Portfolios 4, Rho 0.03: Strategy vs S&P 500 t = -2.0932616622262046, p = 0.036633626859865216
+Portfolios 5, Rho 0.03: Strategy vs S&P 500 t = -1.647513514350101, p = 0.09983705483447941
+Portfolios 10, Rho 0.03: Strategy vs S&P 500 t = -0.15451478977985098, p = 0.8772420119770192
+Portfolios 10, Rho 0.03: Strategy vs S&P 500 t = -0.19439572573821884, p = 0.8459143623332357
+Portfolios 20, Rho 0.03: Strategy vs S&P 500 t = 1.5142827584149352, p = 0.13034089101850285
+Portfolios 40, Rho 0.03: Strategy vs S&P 500 t = 3.181194679793428, p = 0.0015220839882237214
+Portfolios 100, Rho 0.03: Strategy vs S&P 500 t = 4.377596970757083, p = 1.3556807547358484e-05
+Portfolios 200, Rho 0.03: Strategy vs S&P 500 t = 4.736719562669465, p = 2.5606717080854497e-06
+Portfolios 500, Rho 0.03: Strategy vs S&P 500 t = 4.860263191221733, p = 1.4056740198305813e-06
+Portfolios 1000, Rho 0.03: Strategy vs S&P 500 t = 4.822222914715942, p = 1.6932039311917055e-06
+Portfolios 20, Rho 0.03: Strategy vs S&P 500 t = 1.441190859895549, p = 0.14991392046030444
+Portfolios 40, Rho 0.03: Strategy vs S&P 500 t = 3.1539343558818467, p = 0.001669769298339811
+Portfolios 100, Rho 0.03: Strategy vs S&P 500 t = 4.478023782893435, p = 8.605173185462234e-06
+Portfolios 200, Rho 0.03: Strategy vs S&P 500 t = 4.700048971823165, p = 3.0516846492475454e-06
+Portfolios 500, Rho 0.03: Strategy vs S&P 500 t = 4.814242953159267, p = 1.760329714467349e-06
+Portfolios 1000, Rho 0.03: Strategy vs S&P 500 t = 4.6899899353356505, p = 3.201457126806848e-06
+Portfolios 3, Rho 0.02: Strategy vs S&P 500 t = -1.9260157575942163, p = 0.054449099513370125
+Portfolios 4, Rho 0.02: Strategy vs S&P 500 t = -1.5311717679788324, p = 0.1261140400039378
+Portfolios 5, Rho 0.02: Strategy vs S&P 500 t = -1.0830318526355565, p = 0.2791138114415807
+Portfolios 3, Rho 0.02: Strategy vs S&P 500 t = -2.019431205891956, p = 0.04376849488174244
+Portfolios 4, Rho 0.02: Strategy vs S&P 500 t = -1.560797602414402, p = 0.11895876451591296
+Portfolios 5, Rho 0.02: Strategy vs S&P 500 t = -1.114845730701007, p = 0.2652443667308496
+Portfolios 10, Rho 0.02: Strategy vs S&P 500 t = 0.08513606392610645, p = 0.9321740772487965
+Portfolios 10, Rho 0.02: Strategy vs S&P 500 t = 0.0018333716420673991, p = 0.9985376294432368
+Portfolios 20, Rho 0.02: Strategy vs S&P 500 t = 1.2659939096736208, p = 0.20587613051840062
+Portfolios 40, Rho 0.02: Strategy vs S&P 500 t = 1.939553561177967, p = 0.05277787352298614
+Portfolios 100, Rho 0.02: Strategy vs S&P 500 t = 2.2708919075080676, p = 0.023413003903887078
+Portfolios 200, Rho 0.02: Strategy vs S&P 500 t = 2.308633208835002, p = 0.02121273761586637
+Portfolios 500, Rho 0.02: Strategy vs S&P 500 t = 2.3401488689806578, p = 0.019515896632946478
+Portfolios 1000, Rho 0.02: Strategy vs S&P 500 t = 2.2225908913241126, p = 0.026516432091182162
+Portfolios 20, Rho 0.02: Strategy vs S&P 500 t = 1.1834107289803775, p = 0.23699062952589753
+Portfolios 40, Rho 0.02: Strategy vs S&P 500 t = 1.8909119898953433, p = 0.0589896680409692
+Portfolios 100, Rho 0.02: Strategy vs S&P 500 t = 2.394157791331997, p = 0.016883104129073758
+Portfolios 200, Rho 0.02: Strategy vs S&P 500 t = 2.554140005050847, p = 0.01082543158660504
+Portfolios 500, Rho 0.02: Strategy vs S&P 500 t = 2.5040344850428817, p = 0.012472513997697542
+Portfolios 1000, Rho 0.02: Strategy vs S&P 500 t = 2.4128491632133304, p = 0.01604761682154162
+Portfolios 3, Rho 0.01: Strategy vs S&P 500 t = -1.788428817103637, p = 0.0740772925709651
+Portfolios 4, Rho 0.01: Strategy vs S&P 500 t = -1.6591547102463493, p = 0.09746841233066474
+Portfolios 5, Rho 0.01: Strategy vs S&P 500 t = -1.4437899168119903, p = 0.14918141672939567
+Portfolios 3, Rho 0.01: Strategy vs S&P 500 t = -1.965234518891574, p = 0.04972551957902438
+Portfolios 4, Rho 0.01: Strategy vs S&P 500 t = -1.8621384208097918, p = 0.06294239666257087
+Portfolios 5, Rho 0.01: Strategy vs S&P 500 t = -1.646971645722007, p = 0.09994841974774958
+Portfolios 10, Rho 0.01: Strategy vs S&P 500 t = -0.971867599293833, p = 0.3314040592870664
+Portfolios 10, Rho 0.01: Strategy vs S&P 500 t = -1.3373568900778725, p = 0.1814783639683098
+Portfolios 20, Rho 0.01: Strategy vs S&P 500 t = -0.41745726320943033, p = 0.6764536554653352
+Portfolios 40, Rho 0.01: Strategy vs S&P 500 t = 0.1975285093376238, p = 0.8434631062770708
+Portfolios 100, Rho 0.01: Strategy vs S&P 500 t = 1.2911856228409067, p = 0.19700452386021644
+Portfolios 200, Rho 0.01: Strategy vs S&P 500 t = 2.062288079268831, p = 0.039495976616424545
+Portfolios 500, Rho 0.01: Strategy vs S&P 500 t = 2.3916412578075863, p = 0.016998463410668053
+Portfolios 1000, Rho 0.01: Strategy vs S&P 500 t = 2.564496415474091, p = 0.010510202580217521
+Portfolios 20, Rho 0.01: Strategy vs S&P 500 t = -1.0202395213066155, p = 0.307916886482754
+Portfolios 40, Rho 0.01: Strategy vs S&P 500 t = -0.809866397995212, p = 0.41825277745897294
+Portfolios 100, Rho 0.01: Strategy vs S&P 500 t = -0.7000694988788293, p = 0.4840831948236833
+Portfolios 200, Rho 0.01: Strategy vs S&P 500 t = -0.677056050931647, p = 0.498562047442674
+Portfolios 500, Rho 0.01: Strategy vs S&P 500 t = -0.6872098586577858, p = 0.4921455140829271
+Portfolios 1000, Rho 0.01: Strategy vs S&P 500 t = -0.6868582118979533, p = 0.4923669872133146
+Portfolios 3, Rho 0: Strategy vs S&P 500 t = -1.3395503702035965, p = 0.18076406338618511
+Portfolios 4, Rho 0: Strategy vs S&P 500 t = -1.226586433539589, p = 0.22033144564790338
+Portfolios 5, Rho 0: Strategy vs S&P 500 t = -1.1247989216901921, p = 0.2610045937262532
+Portfolios 3, Rho 0: Strategy vs S&P 500 t = -1.3522285358726358, p = 0.17667639235286445
+Portfolios 4, Rho 0: Strategy vs S&P 500 t = -1.2340717411787967, p = 0.2175310355001667
+Portfolios 5, Rho 0: Strategy vs S&P 500 t = -1.1287773273019073, p = 0.2593231133622933
+Portfolios 10, Rho 0: Strategy vs S&P 500 t = -0.7553677249105637, p = 0.450246078781788
+Portfolios 10, Rho 0: Strategy vs S&P 500 t = -0.7770867218682701, p = 0.4373325429922788
+Portfolios 20, Rho 0: Strategy vs S&P 500 t = -0.3679744435898268, p = 0.7129876027531832
+Portfolios 40, Rho 0: Strategy vs S&P 500 t = -0.06306726046337283, p = 0.9497283708235824
+Portfolios 100, Rho 0: Strategy vs S&P 500 t = 0.39347213543581006, p = 0.694073458310646
+Portfolios 200, Rho 0: Strategy vs S&P 500 t = 0.6815887175930511, p = 0.49569220832780175
+Portfolios 500, Rho 0: Strategy vs S&P 500 t = 0.9752460262614068, p = 0.32972690017234885
+Portfolios 1000, Rho 0: Strategy vs S&P 500 t = 1.2506200239283056, p = 0.21143118716844958
+Portfolios 20, Rho 0: Strategy vs S&P 500 t = -0.4061277048665911, p = 0.6847551188104861
+Portfolios 40, Rho 0: Strategy vs S&P 500 t = -0.0985362412041609, p = 0.9215306655619052
+Portfolios 100, Rho 0: Strategy vs S&P 500 t = 0.39335866563333577, p = 0.6941572190313718
+Portfolios 200, Rho 0: Strategy vs S&P 500 t = 0.6195881495737218, p = 0.5357017172066432
+Portfolios 500, Rho 0: Strategy vs S&P 500 t = 0.9710920195327646, p = 0.33178986042902536
+Portfolios 1000, Rho 0: Strategy vs S&P 500 t = 1.5543304480900124, p = 0.12049287904650982
+Warning: skipped cumulative_return_deciles because no decile strategy returns were available.
+Warning: skipped long_short_return_boxplot because one or more return series were empty.
+[INFO] model_name: rf_standard, model_type: rf, normalize: False, eval_type: performance
+[output] base dir: \\studhome.informatik.kit.edu\s_back\Dokumente\dev\ml-option-returns\scripts\rf_standard
+[output] figures dir: \\studhome.informatik.kit.edu\s_back\Dokumente\dev\ml-option-returns\scripts\rf_standard\figures
+[output] shap dir: \\studhome.informatik.kit.edu\s_back\Dokumente\dev\ml-option-returns\scripts\rf_standard\shap\figures
+[output] robustness dir: \\studhome.informatik.kit.edu\s_back\Dokumente\dev\ml-option-returns\scripts\rf_standard\robustness
+Features for model prediction:
+['Bucket_PR_Ret_W5_D4', 'daystomaturity', 'openinterest', 'yld', 'gamma', 'rho', 'bid', 'ask', 'underlying_bid', 'underlying_ask', 'embedlev', 'optspread', 'undspread', 'putcall_P', 'bakshiImplVol_annual', 'bakshiSkew', 'bakshiKurt', 'disaster_RIX_annual', 'implERP_SVIX2_annual', 'P_implQ_var', 'P_implQ_skew', 'P_implQ_kurt', 'P_var', 'P_skew', 'P_kurt', 'VaRQ_pct_0_1', 'VaRQ_pct_1', 'VaRQ_pct_99', 'VaRQ_pct_99_9', 'AVaRQ_pct_0_1', 'AVaRQ_pct_5', 'RP_mu', 'RP_var', 'RP_skew', 'RP_kurt', 'RP_moments_1', 'RP_moments_2', 'RP_moments_3', 'RP_moments_4', 'BTX_alpha_minus', 'BTX_alpha_plus', 'BTX_EQCV_k', 'BTX_EQJV_10', 'BTX_EQJV_k', 'BTX_EQV_relLeftTail_10', 'BTX_EQV_relLeftTail_k', 'BTX_EQV_relRightTail_10', 'BTX_EQV_relRightTail_k', 'BTX_EQV_relTail_10', 'BTX_EQV_relTail_k', 'BTX_implCrashFearVol_10_annual', 'BTX_implEuphoriaVol_10_annual', 'BTX_implTailVol_10_annual', 'BTX_k', 'BTX_LJV_10', 'BTX_LJV_7_5', 'BTX_LJV_k', 'BTX_MLJI_10_annual', 'BTX_MLJI_20_annual', 'BTX_MLJI_7_5_annual', 'BTX_MRJI_10_annual', 'BTX_PLJ_k', 'BTX_PRJ_k', 'BTX_RJV_10', 'BTX_RJV_k', 'Underlying_Ret_H3', 'Underlying_STD_H3', 'Underlying_Ret_D4_D2', 'Underlying_Ret_W5_D4', 'Bucket_PR_Ret_H1', 'Bucket_PR_Ret_H3', 'Bucket_PR_STD_H3', 'Bucket_PR_Ret_D2', 'Bucket_PR_Ret_D4_D2', 'theta', 'bid_size', 'ask_size', 'implVol', 'vega', 'normalizedMoneyness', 'time', 'Underlying_Ret_D2', 'Underlying_Ret_H1', 'delta']
+Number of features: 84
+Current model evaluated: rf_standard
+Current model evaluated: rf_standard
+Current model evaluated: rf_standard
+Current model evaluated: rf_standard
+Current model evaluated: rf_standard
+Current model evaluated: rf_standard
+Current model evaluated: rf_standard
+Current model evaluated: rf_standard
+Current model evaluated: rf_standard
+Current model evaluated: rf_standard
+Current model evaluated: rf_standard
+Current model evaluated: rf_standard
+Current model evaluated: rf_standard
+Current model evaluated: rf_standard
+Current model evaluated: rf_standard
+Portfolios 10, Rho 0: Strategy vs S&P 500 t = -1.336806451692871, p = 0.1823556876483379
+Portfolios 10, Rho 0: Strategy vs S&P 500 t = -1.28308988317228, p = 0.2005066607887507
+Portfolios 10, Rho 0: Strategy vs S&P 500 t = -1.2663452544920495, p = 0.20642717694066898
+Portfolios 10, Rho 0: Strategy vs S&P 500 t = -1.3435336957399315, p = 0.18017172027089803
+Portfolios 10, Rho 0: Strategy vs S&P 500 t = -1.2694455212264033, p = 0.2053214737616844
+Portfolios 10, Rho 0: Strategy vs S&P 500 t = 0.13526651947874066, p = 0.8925091374661414
+Portfolios 10, Rho 0: Strategy vs S&P 500 t = 0.04470091101138813, p = 0.9643811082642526
+Portfolios 10, Rho 0: Strategy vs S&P 500 t = 0.10207806167424147, p = 0.9187758913104686
+Portfolios 10, Rho 0: Strategy vs S&P 500 t = 0.07375771913316342, p = 0.9412616825400142
+Portfolios 10, Rho 0: Strategy vs S&P 500 t = 0.1224948475925788, p = 0.9026047574545093
+Portfolios 10, Rho 0: Strategy vs S&P 500 t = -0.027142383184487088, p = 0.9783655741672682
+Portfolios 10, Rho 0: Strategy vs S&P 500 t = -0.03896807696266547, p = 0.9689437089742114
+Portfolios 10, Rho 0: Strategy vs S&P 500 t = -0.050111967825057974, p = 0.9600690190736935
+Portfolios 10, Rho 0: Strategy vs S&P 500 t = -0.007985127838336204, p = 0.9936345640705494
+Portfolios 10, Rho 0: Strategy vs S&P 500 t = -0.055506326438970986, p = 0.9557748172870673
+Cross-section stats: min=2238, median=4401.0, requested max portfolios=1000
+If requested portfolios exceed available contracts in a timepoint, that timepoint will be skipped instead of forcing empty long-short buckets.
+Portfolios 10, Rho 0: Strategy vs S&P 500 t = -1.0523380697222433, p = 0.29295560993516184
+Portfolios 100, Rho 0: Strategy vs S&P 500 t = -0.2375302225277111, p = 0.8123050273026703
+Portfolios 3, Rho 0.05: Strategy vs S&P 500 t = -2.3679482105231973, p = 0.018118987322432695
+Portfolios 4, Rho 0.05: Strategy vs S&P 500 t = -1.9506369918853443, p = 0.05144181109700294
+Portfolios 5, Rho 0.05: Strategy vs S&P 500 t = -1.680557059867465, p = 0.09323123078734319
+Portfolios 3, Rho 0.05: Strategy vs S&P 500 t = -2.1983357477479144, p = 0.028204942914826905
+Portfolios 4, Rho 0.05: Strategy vs S&P 500 t = -1.8647454066800568, p = 0.0625754545673448
+Portfolios 5, Rho 0.05: Strategy vs S&P 500 t = -1.5287905025839672, p = 0.12670344416402174
+Portfolios 10, Rho 0.05: Strategy vs S&P 500 t = -0.7414070593583877, p = 0.45865971973045355
+Portfolios 10, Rho 0.05: Strategy vs S&P 500 t = -0.7872587543610382, p = 0.4313587257371188
+Portfolios 20, Rho 0.05: Strategy vs S&P 500 t = 2.645539569580769, p = 0.008312821920511023
+Portfolios 40, Rho 0.05: Strategy vs S&P 500 t = 3.5573357111320036, p = 0.0003962147954264471
+Portfolios 100, Rho 0.05: Strategy vs S&P 500 t = 3.96161939803166, p = 8.09449564198393e-05
+Portfolios 200, Rho 0.05: Strategy vs S&P 500 t = 4.030323738660228, p = 6.090442046959092e-05
+Portfolios 500, Rho 0.05: Strategy vs S&P 500 t = 4.011932305469105, p = 6.575054065666741e-05
+Portfolios 1000, Rho 0.05: Strategy vs S&P 500 t = 4.231048283205811, p = 2.5894691396722758e-05
+Portfolios 20, Rho 0.05: Strategy vs S&P 500 t = 2.8879521205251653, p = 0.003980011372853263
+Portfolios 40, Rho 0.05: Strategy vs S&P 500 t = 4.276496100395588, p = 2.1229511046500277e-05
+Portfolios 100, Rho 0.05: Strategy vs S&P 500 t = 5.11504844943395, p = 3.910904112872196e-07
+Portfolios 200, Rho 0.05: Strategy vs S&P 500 t = 5.237762432121668, p = 2.06943571670839e-07
+Portfolios 500, Rho 0.05: Strategy vs S&P 500 t = 5.004439045526001, p = 6.863186261737532e-07
+Portfolios 1000, Rho 0.05: Strategy vs S&P 500 t = 5.0049953489827255, p = 6.843984589896429e-07
+Portfolios 3, Rho 0.04: Strategy vs S&P 500 t = -1.9692902935562808, p = 0.049257295602327264
+Portfolios 4, Rho 0.04: Strategy vs S&P 500 t = -1.0008595916790624, p = 0.31719102810934696
+Portfolios 5, Rho 0.04: Strategy vs S&P 500 t = -0.1713758960100504, p = 0.8639706425043078
+Portfolios 3, Rho 0.04: Strategy vs S&P 500 t = -2.0911622022025633, p = 0.03682188874424213
+Portfolios 4, Rho 0.04: Strategy vs S&P 500 t = -1.2748096279033143, p = 0.2027390585602508
+Portfolios 5, Rho 0.04: Strategy vs S&P 500 t = -0.3643671114376124, p = 0.7156781741721003
+Portfolios 10, Rho 0.04: Strategy vs S&P 500 t = 1.336869251558861, p = 0.1816374468103827
+Portfolios 10, Rho 0.04: Strategy vs S&P 500 t = 1.3570882174329384, p = 0.17512797422192145
+Portfolios 20, Rho 0.04: Strategy vs S&P 500 t = 1.9756153449656368, p = 0.04853449199026178
+Portfolios 40, Rho 0.04: Strategy vs S&P 500 t = 2.236256550877597, p = 0.02560418955111033
+Portfolios 100, Rho 0.04: Strategy vs S&P 500 t = 2.3424411687822078, p = 0.019397244774233036
+Portfolios 200, Rho 0.04: Strategy vs S&P 500 t = 2.3839044163619096, p = 0.017357475933956822
+Portfolios 500, Rho 0.04: Strategy vs S&P 500 t = 2.3733634304524727, p = 0.017857322194457338
+Portfolios 1000, Rho 0.04: Strategy vs S&P 500 t = 2.497743552838949, p = 0.012694285815327569
+Portfolios 20, Rho 0.04: Strategy vs S&P 500 t = 2.4655096804366634, p = 0.013886364674836076
+Portfolios 40, Rho 0.04: Strategy vs S&P 500 t = 3.0145068392393513, p = 0.0026535766367801715
+Portfolios 100, Rho 0.04: Strategy vs S&P 500 t = 3.2490792160446182, p = 0.001205114540279064
+Portfolios 200, Rho 0.04: Strategy vs S&P 500 t = 3.0258570881281828, p = 0.002557041110763261
+Portfolios 500, Rho 0.04: Strategy vs S&P 500 t = 2.80916380411789, p = 0.005085635263496442
+Portfolios 1000, Rho 0.04: Strategy vs S&P 500 t = 3.2478222046768788, p = 0.0012103819895221465
+Portfolios 3, Rho 0.03: Strategy vs S&P 500 t = -2.5573748197409323, p = 0.010726077628838699
+Portfolios 4, Rho 0.03: Strategy vs S&P 500 t = -2.0093253318294, p = 0.04483109306977481
+Portfolios 5, Rho 0.03: Strategy vs S&P 500 t = -1.5561370796159453, p = 0.12006276312343879
+Portfolios 3, Rho 0.03: Strategy vs S&P 500 t = -2.6318668364802376, p = 0.008651902551021256
+Portfolios 4, Rho 0.03: Strategy vs S&P 500 t = -2.1143474943282556, p = 0.03478795828047132
+Portfolios 5, Rho 0.03: Strategy vs S&P 500 t = -1.6920313801306341, p = 0.09102129935099407
+Portfolios 10, Rho 0.03: Strategy vs S&P 500 t = -0.10130147781000567, p = 0.9193359980312056
+Portfolios 10, Rho 0.03: Strategy vs S&P 500 t = -0.08083689442384936, p = 0.9355914640684728
+Portfolios 20, Rho 0.03: Strategy vs S&P 500 t = 1.6974846606029768, p = 0.0899859036307462
+Portfolios 40, Rho 0.03: Strategy vs S&P 500 t = 3.5755338052400982, p = 0.00037004313212840936
+Portfolios 100, Rho 0.03: Strategy vs S&P 500 t = 5.03633602714408, p = 5.842101642532666e-07
+Portfolios 200, Rho 0.03: Strategy vs S&P 500 t = 5.301838523835074, p = 1.476533951100759e-07
+Portfolios 500, Rho 0.03: Strategy vs S&P 500 t = 5.476628222832023, p = 5.773298108868063e-08
+Portfolios 1000, Rho 0.03: Strategy vs S&P 500 t = 5.471724094768286, p = 5.929573504570438e-08
+Portfolios 20, Rho 0.03: Strategy vs S&P 500 t = 1.6590190095871997, p = 0.09749576190545498
+Portfolios 40, Rho 0.03: Strategy vs S&P 500 t = 3.5799395924253115, p = 0.00036395505732296886
+Portfolios 100, Rho 0.03: Strategy vs S&P 500 t = 4.999174730663619, p = 7.047485562438567e-07
+Portfolios 200, Rho 0.03: Strategy vs S&P 500 t = 5.2292692778731285, p = 2.1635542127016796e-07
+Portfolios 500, Rho 0.03: Strategy vs S&P 500 t = 5.554363062122739, p = 3.770103335013574e-08
+Portfolios 1000, Rho 0.03: Strategy vs S&P 500 t = 5.563890884055493, p = 3.576952585863081e-08
+Portfolios 3, Rho 0.02: Strategy vs S&P 500 t = -2.0305485798400476, p = 0.04262423221218488
+Portfolios 4, Rho 0.02: Strategy vs S&P 500 t = -1.5202141438261505, p = 0.12884405636610827
+Portfolios 5, Rho 0.02: Strategy vs S&P 500 t = -1.2108448262573657, p = 0.22630503042843
+Portfolios 3, Rho 0.02: Strategy vs S&P 500 t = -2.1458127960279407, p = 0.032181950673841726
+Portfolios 4, Rho 0.02: Strategy vs S&P 500 t = -1.6864644536049078, p = 0.0920881504964991
+Portfolios 5, Rho 0.02: Strategy vs S&P 500 t = -1.2933469867306153, p = 0.19625663630572085
+Portfolios 10, Rho 0.02: Strategy vs S&P 500 t = 0.048975774653361094, p = 0.960950571740417
+Portfolios 10, Rho 0.02: Strategy vs S&P 500 t = -0.01798841720611905, p = 0.9856524855702027
+Portfolios 20, Rho 0.02: Strategy vs S&P 500 t = 1.233132402707605, p = 0.21788104797770175
+Portfolios 40, Rho 0.02: Strategy vs S&P 500 t = 2.0107403806246977, p = 0.04468100561098272
+Portfolios 100, Rho 0.02: Strategy vs S&P 500 t = 2.4254447519466327, p = 0.015505347980950043
+Portfolios 200, Rho 0.02: Strategy vs S&P 500 t = 2.505761712636957, p = 0.012412229242106455
+Portfolios 500, Rho 0.02: Strategy vs S&P 500 t = 2.5686113171125, p = 0.01038724137891719
+Portfolios 1000, Rho 0.02: Strategy vs S&P 500 t = 2.4473592413690284, p = 0.014600300792844578
+Portfolios 20, Rho 0.02: Strategy vs S&P 500 t = 1.1643599824014557, p = 0.2446180450756466
+Portfolios 40, Rho 0.02: Strategy vs S&P 500 t = 1.9501248270964897, p = 0.051502919404666066
+Portfolios 100, Rho 0.02: Strategy vs S&P 500 t = 2.570642941230474, p = 0.010327006731414023
+Portfolios 200, Rho 0.02: Strategy vs S&P 500 t = 2.69270234952945, p = 0.007232710493117098
+Portfolios 500, Rho 0.02: Strategy vs S&P 500 t = 2.7261483297198823, p = 0.006545041448479387
+Portfolios 1000, Rho 0.02: Strategy vs S&P 500 t = 2.5596316190585466, p = 0.010657244210622774
+Portfolios 3, Rho 0.01: Strategy vs S&P 500 t = -1.8944769618119288, p = 0.05851462895133544
+Portfolios 4, Rho 0.01: Strategy vs S&P 500 t = -1.7095192986352743, p = 0.0877345277158766
+Portfolios 5, Rho 0.01: Strategy vs S&P 500 t = -1.5222885895040965, p = 0.1283237224795521
+Portfolios 3, Rho 0.01: Strategy vs S&P 500 t = -2.096268981212016, p = 0.03636538743189565
+Portfolios 4, Rho 0.01: Strategy vs S&P 500 t = -1.939589023694108, p = 0.05277355276526772
+Portfolios 5, Rho 0.01: Strategy vs S&P 500 t = -1.7765406651919258, p = 0.07601590431281506
+Portfolios 10, Rho 0.01: Strategy vs S&P 500 t = -0.9819353284829468, p = 0.3264223942733551
+Portfolios 10, Rho 0.01: Strategy vs S&P 500 t = -1.3900394732471149, p = 0.16489548760750092
+Portfolios 20, Rho 0.01: Strategy vs S&P 500 t = -0.216525688323978, p = 0.8286320562307947
+Portfolios 40, Rho 0.01: Strategy vs S&P 500 t = 0.7660909470594169, p = 0.44384346602006
+Portfolios 100, Rho 0.01: Strategy vs S&P 500 t = 1.8187546237718115, p = 0.06931485914947134
+Portfolios 200, Rho 0.01: Strategy vs S&P 500 t = 2.170143560046151, p = 0.030283443534154943
+Portfolios 500, Rho 0.01: Strategy vs S&P 500 t = 2.2782657266779656, p = 0.022968148770957906
+Portfolios 1000, Rho 0.01: Strategy vs S&P 500 t = 2.308861810910427, p = 0.021199979943094097
+Portfolios 20, Rho 0.01: Strategy vs S&P 500 t = -0.9671847577821231, p = 0.33373789328118797
+Portfolios 40, Rho 0.01: Strategy vs S&P 500 t = -0.6824970256236365, p = 0.49511818126856516
+Portfolios 100, Rho 0.01: Strategy vs S&P 500 t = -0.28735657833371636, p = 0.7739121729003722
+Portfolios 200, Rho 0.01: Strategy vs S&P 500 t = -0.34240012398741726, p = 0.7321378608782406
+Portfolios 500, Rho 0.01: Strategy vs S&P 500 t = -0.3137845079641292, p = 0.7537648094326744
+Portfolios 1000, Rho 0.01: Strategy vs S&P 500 t = -0.2196870955885219, p = 0.8261697315411011
+Portfolios 3, Rho 0: Strategy vs S&P 500 t = -1.4704472053640454, p = 0.14182567924312053
+Portfolios 4, Rho 0: Strategy vs S&P 500 t = -1.3527987287953562, p = 0.17649418687789598
+Portfolios 5, Rho 0: Strategy vs S&P 500 t = -1.3213293001212238, p = 0.18676149986084914
+Portfolios 3, Rho 0: Strategy vs S&P 500 t = -1.4767388245576152, p = 0.14013099233506054
+Portfolios 4, Rho 0: Strategy vs S&P 500 t = -1.3861094125565272, p = 0.16609167485575785
+Portfolios 5, Rho 0: Strategy vs S&P 500 t = -1.297575667168454, p = 0.19479943489516915
+Portfolios 10, Rho 0: Strategy vs S&P 500 t = -1.0494346380776776, p = 0.2942884505186582
+Portfolios 10, Rho 0: Strategy vs S&P 500 t = -1.0778423371893542, p = 0.2814222554246115
+Portfolios 20, Rho 0: Strategy vs S&P 500 t = -0.7836974836009196, p = 0.43344477281612487
+Portfolios 40, Rho 0: Strategy vs S&P 500 t = -0.4402280904271168, p = 0.6598883576619388
+Portfolios 100, Rho 0: Strategy vs S&P 500 t = -0.21674717043468186, p = 0.8284594952386561
+Portfolios 200, Rho 0: Strategy vs S&P 500 t = -0.03628876999462585, p = 0.9710609686869963
+Portfolios 500, Rho 0: Strategy vs S&P 500 t = 0.3374872542711906, p = 0.7358363060463775
+Portfolios 1000, Rho 0: Strategy vs S&P 500 t = 0.636160902311016, p = 0.5248497236979791
+Portfolios 20, Rho 0: Strategy vs S&P 500 t = -0.8189319421764871, p = 0.41306405160167947
+Portfolios 40, Rho 0: Strategy vs S&P 500 t = -0.49302758276821246, p = 0.6221255815013867
+Portfolios 100, Rho 0: Strategy vs S&P 500 t = -0.23057756409487687, p = 0.817700723417857
+Portfolios 200, Rho 0: Strategy vs S&P 500 t = -0.008096319429284174, p = 0.9935421187865863
+Portfolios 500, Rho 0: Strategy vs S&P 500 t = 0.5566283469969264, p = 0.5779338129348733
+Portfolios 1000, Rho 0: Strategy vs S&P 500 t = 0.7677244055659298, p = 0.44287275411342847
+Warning: skipped cumulative_return_deciles because no decile strategy returns were available.
+Warning: skipped long_short_return_boxplot because one or more return series were empty.
+[INFO] model_name: ffn_discrete, model_type: ffn, normalize: True, eval_type: performance
+[output] base dir: \\studhome.informatik.kit.edu\s_back\Dokumente\dev\ml-option-returns\scripts\ffn_discrete
+[output] figures dir: \\studhome.informatik.kit.edu\s_back\Dokumente\dev\ml-option-returns\scripts\ffn_discrete\figures
+[output] shap dir: \\studhome.informatik.kit.edu\s_back\Dokumente\dev\ml-option-returns\scripts\ffn_discrete\shap\figures
+[output] robustness dir: \\studhome.informatik.kit.edu\s_back\Dokumente\dev\ml-option-returns\scripts\ffn_discrete\robustness
+Features for model prediction:
+['daystomaturity', 'openinterest', 'implVol', 'yld', 'delta', 'gamma', 'rho', 'theta', 'vega', 'normalizedMoneyness', 'time', 'bid_size', 'bid', 'ask_size', 'ask', 'underlying_bid', 'underlying_ask', 'embedlev', 'optspread', 'undspread', 'putcall_P', 'bakshiImplVol_annual', 'bakshiSkew', 'bakshiKurt', 'disaster_RIX_annual', 'implERP_SVIX2_annual', 'P_implQ_var', 'P_implQ_skew', 'P_implQ_kurt', 'P_var', 'P_skew', 'P_kurt', 'VaRQ_pct_0_1', 'VaRQ_pct_1', 'VaRQ_pct_99', 'VaRQ_pct_99_9', 'AVaRQ_pct_0_1', 'AVaRQ_pct_5', 'RP_mu', 'RP_var', 'RP_skew', 'RP_kurt', 'RP_moments_1', 'RP_moments_2', 'RP_moments_3', 'RP_moments_4', 'BTX_alpha_minus', 'BTX_alpha_plus', 'BTX_EQCV_k', 'BTX_EQJV_10', 'BTX_EQJV_k', 'BTX_EQV_relLeftTail_10', 'BTX_EQV_relLeftTail_k', 'BTX_EQV_relRightTail_10', 'BTX_EQV_relRightTail_k', 'BTX_EQV_relTail_10', 'BTX_EQV_relTail_k', 'BTX_implCrashFearVol_10_annual', 'BTX_implEuphoriaVol_10_annual', 'BTX_implTailVol_10_annual', 'BTX_k', 'BTX_LJV_10', 'BTX_LJV_7_5', 'BTX_LJV_k', 'BTX_MLJI_10_annual', 'BTX_MLJI_20_annual', 'BTX_MLJI_7_5_annual', 'BTX_MRJI_10_annual', 'BTX_PLJ_k', 'BTX_PRJ_k', 'BTX_RJV_10', 'BTX_RJV_k', 'Underlying_Ret_H1', 'Underlying_Ret_H3', 'Underlying_STD_H3', 'Underlying_Ret_D2', 'Underlying_Ret_D4_D2', 'Underlying_Ret_W5_D4', 'Bucket_PR_Ret_H1', 'Bucket_PR_Ret_H3', 'Bucket_PR_STD_H3', 'Bucket_PR_Ret_D2', 'Bucket_PR_Ret_D4_D2', 'Bucket_PR_Ret_W5_D4']
+Number of features: 84
+W0703 17:29:36.211000 2460 site-packages\torch\utils\flop_counter.py:29] triton not found; flop counting will not work for triton kernels
+Current model evaluated: ffn_discrete
+Current model evaluated: ffn_discrete
+Current model evaluated: ffn_discrete
+Current model evaluated: ffn_discrete
+Current model evaluated: ffn_discrete
+Current model evaluated: ffn_discrete
+Current model evaluated: ffn_discrete
+Current model evaluated: ffn_discrete
+W0703 17:29:40.533000 2460 site-packages\torch\_dynamo\convert_frame.py:1743] [0/8] torch._dynamo hit config.recompile_limit (8)
+W0703 17:29:40.533000 2460 site-packages\torch\_dynamo\convert_frame.py:1743] [0/8]    function: 'forward' (Z:\Dokumente\dev\ml-option-returns\scripts\model.py:239)
+W0703 17:29:40.533000 2460 site-packages\torch\_dynamo\convert_frame.py:1743] [0/8]    last reason: 0/7: ___as_tensor(self._modules['net']._modules['2'].p).item() == 0.4382048884374009  # (unknown source ___as_tensor(self._modules['net']._modules['2'].p).item(), please file a bug)
+W0703 17:29:40.533000 2460 site-packages\torch\_dynamo\convert_frame.py:1743] [0/8] To log all recompilation reasons, use TORCH_LOGS="recompiles".
+W0703 17:29:40.533000 2460 site-packages\torch\_dynamo\convert_frame.py:1743] [0/8] To diagnose recompilation issues, see https://docs.pytorch.org/docs/main/user_guide/torch_compiler/compile/programming_model.recompilation.html
+Current model evaluated: ffn_discrete
+Current model evaluated: ffn_discrete
+Current model evaluated: ffn_discrete
+Current model evaluated: ffn_discrete
+Current model evaluated: ffn_discrete
+Current model evaluated: ffn_discrete
+Current model evaluated: ffn_discrete
+Portfolios 10, Rho 0: Strategy vs S&P 500 t = -1.2562473390725704, p = 0.21005870066023616
+Portfolios 10, Rho 0: Strategy vs S&P 500 t = -1.3805689308541074, p = 0.16849711051194105
+Portfolios 10, Rho 0: Strategy vs S&P 500 t = -1.3683653186369165, p = 0.1722792838063007
+Portfolios 10, Rho 0: Strategy vs S&P 500 t = -1.3499208911597358, p = 0.17811628376932684
+Portfolios 10, Rho 0: Strategy vs S&P 500 t = -1.2791166312687516, p = 0.2019001095250439
+Portfolios 10, Rho 0: Strategy vs S&P 500 t = -0.15785028115343402, p = 0.8747011869801181
+Portfolios 10, Rho 0: Strategy vs S&P 500 t = -0.16035257661984592, p = 0.8727318073008931
+Portfolios 10, Rho 0: Strategy vs S&P 500 t = -0.15609096714372808, p = 0.876086286861929
+Portfolios 10, Rho 0: Strategy vs S&P 500 t = -0.07210940131763198, p = 0.9425720420798585
+Portfolios 10, Rho 0: Strategy vs S&P 500 t = -0.13118095137308827, p = 0.895736830035341
+Portfolios 10, Rho 0: Strategy vs S&P 500 t = 0.27932216748278343, p = 0.7802045428285076
+Portfolios 10, Rho 0: Strategy vs S&P 500 t = 0.2530870448384625, p = 0.800387327999044
+Portfolios 10, Rho 0: Strategy vs S&P 500 t = 0.2585243901960777, p = 0.7961928424783286
+Portfolios 10, Rho 0: Strategy vs S&P 500 t = 0.20202360086074336, p = 0.8400455006296679
+Portfolios 10, Rho 0: Strategy vs S&P 500 t = 0.22897692381054652, p = 0.8190546057655349
+Cross-section stats: min=2238, median=4401.0, requested max portfolios=1000
+If requested portfolios exceed available contracts in a timepoint, that timepoint will be skipped instead of forcing empty long-short buckets.
+Portfolios 10, Rho 0: Strategy vs S&P 500 t = -0.9626505282308739, p = 0.3360077582013798
+Portfolios 100, Rho 0: Strategy vs S&P 500 t = -0.30536795246684173, p = 0.7601637092911778
+Portfolios 3, Rho 0.05: Strategy vs S&P 500 t = -2.4735218528875786, p = 0.013581159215579862
+Portfolios 4, Rho 0.05: Strategy vs S&P 500 t = -2.098376593820717, p = 0.03617839880928176
+Portfolios 5, Rho 0.05: Strategy vs S&P 500 t = -1.9897963031729717, p = 0.046946326429496484
+Portfolios 3, Rho 0.05: Strategy vs S&P 500 t = -1.8136768478141982, p = 0.07009425564563208
+Portfolios 4, Rho 0.05: Strategy vs S&P 500 t = -1.687668851705612, p = 0.09185648945045803
+Portfolios 5, Rho 0.05: Strategy vs S&P 500 t = -1.670120720288932, p = 0.09527851650254758
+Portfolios 10, Rho 0.05: Strategy vs S&P 500 t = -1.1955020141328883, p = 0.23223783096002296
+Portfolios 10, Rho 0.05: Strategy vs S&P 500 t = -1.2533686442596816, p = 0.2104301371003178
+Portfolios 20, Rho 0.05: Strategy vs S&P 500 t = 0.6891415106221394, p = 0.4909298820732546
+Portfolios 40, Rho 0.05: Strategy vs S&P 500 t = 2.6242294077560437, p = 0.008846653275496873
+Portfolios 100, Rho 0.05: Strategy vs S&P 500 t = 3.012281318420262, p = 0.0026728919460621385
+Portfolios 200, Rho 0.05: Strategy vs S&P 500 t = 3.08932603202103, p = 0.00207404748385729
+Portfolios 500, Rho 0.05: Strategy vs S&P 500 t = 3.0847349621432, p = 0.0021059497369797513
+Portfolios 1000, Rho 0.05: Strategy vs S&P 500 t = 3.2747936266107773, p = 0.0011019081850448915
+Portfolios 20, Rho 0.05: Strategy vs S&P 500 t = 0.5135053302373689, p = 0.6077367186373865
+Portfolios 40, Rho 0.05: Strategy vs S&P 500 t = 3.1116806647457973, p = 0.0019249625697662063
+Portfolios 100, Rho 0.05: Strategy vs S&P 500 t = 3.7683891199266384, p = 0.00017611662294158897
+Portfolios 200, Rho 0.05: Strategy vs S&P 500 t = 3.6919988087142435, p = 0.00023727831016182407
+Portfolios 500, Rho 0.05: Strategy vs S&P 500 t = 3.602832992580661, p = 0.00033380231341760677
+Portfolios 1000, Rho 0.05: Strategy vs S&P 500 t = 3.664242574088434, p = 0.0002640783994337188
+Portfolios 3, Rho 0.04: Strategy vs S&P 500 t = -1.7344745889221802, p = 0.08321107638144329
+Portfolios 4, Rho 0.04: Strategy vs S&P 500 t = -0.9397139042992875, p = 0.3476420699294264
+Portfolios 5, Rho 0.04: Strategy vs S&P 500 t = -0.15159890665503234, p = 0.879540720993391
+Portfolios 3, Rho 0.04: Strategy vs S&P 500 t = -2.0774348569744125, p = 0.03807329941046661
+Portfolios 4, Rho 0.04: Strategy vs S&P 500 t = -1.4173840759978724, p = 0.15675190325710564
+Portfolios 5, Rho 0.04: Strategy vs S&P 500 t = -0.579107549993159, p = 0.5626762324454572
+Portfolios 10, Rho 0.04: Strategy vs S&P 500 t = 1.1156019847800716, p = 0.26492056538082326
+Portfolios 10, Rho 0.04: Strategy vs S&P 500 t = 1.0419794530033653, p = 0.29772943574096733
+Portfolios 20, Rho 0.04: Strategy vs S&P 500 t = 1.8748811717978986, p = 0.06116561304355158
+Portfolios 40, Rho 0.04: Strategy vs S&P 500 t = 2.200618970398878, p = 0.028042133933113954
+Portfolios 100, Rho 0.04: Strategy vs S&P 500 t = 2.28966245670251, p = 0.02229506473458134
+Portfolios 200, Rho 0.04: Strategy vs S&P 500 t = 2.3292223788697743, p = 0.02009023455506035
+Portfolios 500, Rho 0.04: Strategy vs S&P 500 t = 2.3186752639933186, p = 0.02065859356176394
+Portfolios 1000, Rho 0.04: Strategy vs S&P 500 t = 2.4359914712210813, p = 0.015063781762110904
+Portfolios 20, Rho 0.04: Strategy vs S&P 500 t = 2.3450708631498713, p = 0.019261907160486712
+Portfolios 40, Rho 0.04: Strategy vs S&P 500 t = 3.0346343097000084, p = 0.0024846075482831916
+Portfolios 100, Rho 0.04: Strategy vs S&P 500 t = 3.521360736130919, p = 0.0004531275226076626
+Portfolios 200, Rho 0.04: Strategy vs S&P 500 t = 3.6957045993012403, p = 0.00023390007939877244
+Portfolios 500, Rho 0.04: Strategy vs S&P 500 t = 3.570205529115219, p = 0.0003775333583246783
+Portfolios 1000, Rho 0.04: Strategy vs S&P 500 t = 3.4931359142893457, p = 0.0005030363865255153
+Portfolios 3, Rho 0.03: Strategy vs S&P 500 t = -2.497325560345477, p = 0.01270914427672063
+Portfolios 4, Rho 0.03: Strategy vs S&P 500 t = -2.2521166963851385, p = 0.02457966943187702
+Portfolios 5, Rho 0.03: Strategy vs S&P 500 t = -1.9273204801849046, p = 0.05428613040859554
+Portfolios 3, Rho 0.03: Strategy vs S&P 500 t = -2.683747463025819, p = 0.0074275321561130415
+Portfolios 4, Rho 0.03: Strategy vs S&P 500 t = -2.24751595139537, p = 0.024873135613837805
+Portfolios 5, Rho 0.03: Strategy vs S&P 500 t = -2.00791942730164, p = 0.04498063228639218
+Portfolios 10, Rho 0.03: Strategy vs S&P 500 t = -1.1089860199131363, p = 0.2677625456296839
+Portfolios 10, Rho 0.03: Strategy vs S&P 500 t = -1.1048147299139217, p = 0.26956513390599135
+Portfolios 20, Rho 0.03: Strategy vs S&P 500 t = 0.051541819973296696, p = 0.9589063773181172
+Portfolios 40, Rho 0.03: Strategy vs S&P 500 t = 1.9386078775672344, p = 0.0528932050559214
+Portfolios 100, Rho 0.03: Strategy vs S&P 500 t = 3.7549377563605555, p = 0.00018567830055079502
+Portfolios 200, Rho 0.03: Strategy vs S&P 500 t = 4.394213349498583, p = 1.2582461177783708e-05
+Portfolios 500, Rho 0.03: Strategy vs S&P 500 t = 4.675747328717751, p = 3.425652353109133e-06
+Portfolios 1000, Rho 0.03: Strategy vs S&P 500 t = 4.680928295875529, p = 3.3424060849790994e-06
+Portfolios 20, Rho 0.03: Strategy vs S&P 500 t = -0.0019108330514644495, p = 0.9984758431984033
+Portfolios 40, Rho 0.03: Strategy vs S&P 500 t = 1.9011138555142082, p = 0.057638729442249806
+Portfolios 100, Rho 0.03: Strategy vs S&P 500 t = 3.7699345207063133, p = 0.00017504830620864112
+Portfolios 200, Rho 0.03: Strategy vs S&P 500 t = 4.422173303497557, p = 1.1092252557903859e-05
+Portfolios 500, Rho 0.03: Strategy vs S&P 500 t = 4.692444064147747, p = 3.1642784075467785e-06
+Portfolios 1000, Rho 0.03: Strategy vs S&P 500 t = 4.712813850015996, p = 2.871298484652197e-06
+Portfolios 3, Rho 0.02: Strategy vs S&P 500 t = -1.981685372259879, p = 0.04784924325505797
+Portfolios 4, Rho 0.02: Strategy vs S&P 500 t = -1.6181284905864846, p = 0.10602087852751028
+Portfolios 5, Rho 0.02: Strategy vs S&P 500 t = -1.3910997947978483, p = 0.16457387472703658
+Portfolios 3, Rho 0.02: Strategy vs S&P 500 t = -1.9601154907328604, p = 0.05032182529792821
+Portfolios 4, Rho 0.02: Strategy vs S&P 500 t = -1.5540254656356227, p = 0.12056560716597459
+Portfolios 5, Rho 0.02: Strategy vs S&P 500 t = -1.4519464694738944, p = 0.14690038629494362
+Portfolios 10, Rho 0.02: Strategy vs S&P 500 t = -0.3281357746557215, p = 0.7428930814512659
+Portfolios 10, Rho 0.02: Strategy vs S&P 500 t = -0.3573192357302335, p = 0.7209451097609548
+Portfolios 20, Rho 0.02: Strategy vs S&P 500 t = 0.8048752305250445, p = 0.4211258427376225
+Portfolios 40, Rho 0.02: Strategy vs S&P 500 t = 1.6087293623629415, p = 0.10806185350045971
+Portfolios 100, Rho 0.02: Strategy vs S&P 500 t = 1.9942067266854053, p = 0.04646141026109035
+Portfolios 200, Rho 0.02: Strategy vs S&P 500 t = 2.067884655658011, p = 0.038965132171859845
+Portfolios 500, Rho 0.02: Strategy vs S&P 500 t = 2.1128524916541243, p = 0.03491614549704735
+Portfolios 1000, Rho 0.02: Strategy vs S&P 500 t = 1.9925704273121643, p = 0.04664082255362661
+Portfolios 20, Rho 0.02: Strategy vs S&P 500 t = 0.7805715539230133, p = 0.43528062217483826
+Portfolios 40, Rho 0.02: Strategy vs S&P 500 t = 1.6373949468335227, p = 0.10193304854091075
+Portfolios 100, Rho 0.02: Strategy vs S&P 500 t = 2.090666094742564, p = 0.03686649587618518
+Portfolios 200, Rho 0.02: Strategy vs S&P 500 t = 2.105961556024522, p = 0.03551223650621508
+Portfolios 500, Rho 0.02: Strategy vs S&P 500 t = 2.119442365874408, p = 0.034354124453793614
+Portfolios 1000, Rho 0.02: Strategy vs S&P 500 t = 2.0301348160509702, p = 0.04266636053276143
+Portfolios 3, Rho 0.01: Strategy vs S&P 500 t = -2.0241129636802433, p = 0.043283492634408886
+Portfolios 4, Rho 0.01: Strategy vs S&P 500 t = -1.86410553453843, p = 0.06266535421561073
+Portfolios 5, Rho 0.01: Strategy vs S&P 500 t = -1.7599838039606996, p = 0.07878473720274554
+Portfolios 3, Rho 0.01: Strategy vs S&P 500 t = -2.033127051472028, p = 0.04236249245237383
+Portfolios 4, Rho 0.01: Strategy vs S&P 500 t = -1.916456148472889, p = 0.0556556779205118
+Portfolios 5, Rho 0.01: Strategy vs S&P 500 t = -1.8176015125848877, p = 0.06949122348335074
+Portfolios 10, Rho 0.01: Strategy vs S&P 500 t = -1.1536446460865803, p = 0.24898325932478474
+Portfolios 10, Rho 0.01: Strategy vs S&P 500 t = -1.1687164032105257, p = 0.24285880495264583
+Portfolios 20, Rho 0.01: Strategy vs S&P 500 t = -0.6658578756993145, p = 0.5056898980483014
+Portfolios 40, Rho 0.01: Strategy vs S&P 500 t = -0.10908218541670311, p = 0.9131640899387407
+Portfolios 100, Rho 0.01: Strategy vs S&P 500 t = 1.011488035248856, p = 0.3120823648067373
+Portfolios 200, Rho 0.01: Strategy vs S&P 500 t = 1.8633692226240537, p = 0.06276893566783373
+Portfolios 500, Rho 0.01: Strategy vs S&P 500 t = 2.224223595482968, p = 0.026405982644119863
+Portfolios 1000, Rho 0.01: Strategy vs S&P 500 t = 2.3667716517155237, p = 0.018176281834820594
+Portfolios 20, Rho 0.01: Strategy vs S&P 500 t = -0.6980153065317638, p = 0.48536623095062875
+Portfolios 40, Rho 0.01: Strategy vs S&P 500 t = -0.12051914235996918, p = 0.904101548381265
+Portfolios 100, Rho 0.01: Strategy vs S&P 500 t = 0.9631253953196673, p = 0.33576957104482635
+Portfolios 200, Rho 0.01: Strategy vs S&P 500 t = 1.86327328790469, p = 0.06278244182239902
+Portfolios 500, Rho 0.01: Strategy vs S&P 500 t = 2.244070220249738, p = 0.025094913769118862
+Portfolios 1000, Rho 0.01: Strategy vs S&P 500 t = 2.40248819678604, p = 0.016506130253825
+Portfolios 3, Rho 0: Strategy vs S&P 500 t = -1.4561547852923549, p = 0.1457340031595852
+Portfolios 4, Rho 0: Strategy vs S&P 500 t = -1.3620291066311696, p = 0.1735641051749772
+Portfolios 5, Rho 0: Strategy vs S&P 500 t = -1.3246305943225978, p = 0.18566409776359624
+Portfolios 3, Rho 0: Strategy vs S&P 500 t = -1.468676554485805, p = 0.1423054478597351
+Portfolios 4, Rho 0: Strategy vs S&P 500 t = -1.3795415169603353, p = 0.16810531255946143
+Portfolios 5, Rho 0: Strategy vs S&P 500 t = -1.326808512672512, p = 0.18494274315184409
+Portfolios 10, Rho 0: Strategy vs S&P 500 t = -0.9625670775094339, p = 0.33604962725029536
+Portfolios 10, Rho 0: Strategy vs S&P 500 t = -0.9707794023691948, p = 0.3319454496016639
+Portfolios 20, Rho 0: Strategy vs S&P 500 t = -0.7352785765290062, p = 0.46238086497553654
+Portfolios 40, Rho 0: Strategy vs S&P 500 t = -0.5446697272463356, p = 0.5861293213552777
+Portfolios 100, Rho 0: Strategy vs S&P 500 t = -0.3053679522019553, p = 0.7601637094928259
+Portfolios 200, Rho 0: Strategy vs S&P 500 t = -0.30105160287250743, p = 0.7634517446412745
+Portfolios 500, Rho 0: Strategy vs S&P 500 t = -0.2564544667468616, p = 0.797664497676389
+Portfolios 1000, Rho 0: Strategy vs S&P 500 t = -0.4115274071222121, p = 0.6807937812525108
+Portfolios 20, Rho 0: Strategy vs S&P 500 t = -0.7535378548500012, p = 0.4513438686091672
+Portfolios 40, Rho 0: Strategy vs S&P 500 t = -0.5408912965712381, p = 0.5887299466954665
+Portfolios 100, Rho 0: Strategy vs S&P 500 t = -0.3364141432685666, p = 0.7366449723680106
+Portfolios 200, Rho 0: Strategy vs S&P 500 t = -0.27128663003100384, p = 0.7862391179544473
+Portfolios 500, Rho 0: Strategy vs S&P 500 t = -0.20762142096925146, p = 0.8355763176986081
+Portfolios 1000, Rho 0: Strategy vs S&P 500 t = -0.08981588875965157, p = 0.9284555349532195
+Warning: skipped cumulative_return_deciles because no decile strategy returns were available.
+Warning: skipped long_short_return_boxplot because one or more return series were empty.
+[INFO] model_name: ffn_l2, model_type: ffn, normalize: True, eval_type: performance
+[output] base dir: \\studhome.informatik.kit.edu\s_back\Dokumente\dev\ml-option-returns\scripts\ffn_l2
+[output] figures dir: \\studhome.informatik.kit.edu\s_back\Dokumente\dev\ml-option-returns\scripts\ffn_l2\figures
+[output] shap dir: \\studhome.informatik.kit.edu\s_back\Dokumente\dev\ml-option-returns\scripts\ffn_l2\shap\figures
+[output] robustness dir: \\studhome.informatik.kit.edu\s_back\Dokumente\dev\ml-option-returns\scripts\ffn_l2\robustness
+Features for model prediction:
+['daystomaturity', 'openinterest', 'implVol', 'yld', 'delta', 'gamma', 'rho', 'theta', 'vega', 'normalizedMoneyness', 'time', 'bid_size', 'bid', 'ask_size', 'ask', 'underlying_bid', 'underlying_ask', 'embedlev', 'optspread', 'undspread', 'putcall_P', 'bakshiImplVol_annual', 'bakshiSkew', 'bakshiKurt', 'disaster_RIX_annual', 'implERP_SVIX2_annual', 'P_implQ_var', 'P_implQ_skew', 'P_implQ_kurt', 'P_var', 'P_skew', 'P_kurt', 'VaRQ_pct_0_1', 'VaRQ_pct_1', 'VaRQ_pct_99', 'VaRQ_pct_99_9', 'AVaRQ_pct_0_1', 'AVaRQ_pct_5', 'RP_mu', 'RP_var', 'RP_skew', 'RP_kurt', 'RP_moments_1', 'RP_moments_2', 'RP_moments_3', 'RP_moments_4', 'BTX_alpha_minus', 'BTX_alpha_plus', 'BTX_EQCV_k', 'BTX_EQJV_10', 'BTX_EQJV_k', 'BTX_EQV_relLeftTail_10', 'BTX_EQV_relLeftTail_k', 'BTX_EQV_relRightTail_10', 'BTX_EQV_relRightTail_k', 'BTX_EQV_relTail_10', 'BTX_EQV_relTail_k', 'BTX_implCrashFearVol_10_annual', 'BTX_implEuphoriaVol_10_annual', 'BTX_implTailVol_10_annual', 'BTX_k', 'BTX_LJV_10', 'BTX_LJV_7_5', 'BTX_LJV_k', 'BTX_MLJI_10_annual', 'BTX_MLJI_20_annual', 'BTX_MLJI_7_5_annual', 'BTX_MRJI_10_annual', 'BTX_PLJ_k', 'BTX_PRJ_k', 'BTX_RJV_10', 'BTX_RJV_k', 'Underlying_Ret_H1', 'Underlying_Ret_H3', 'Underlying_STD_H3', 'Underlying_Ret_D2', 'Underlying_Ret_D4_D2', 'Underlying_Ret_W5_D4', 'Bucket_PR_Ret_H1', 'Bucket_PR_Ret_H3', 'Bucket_PR_STD_H3', 'Bucket_PR_Ret_D2', 'Bucket_PR_Ret_D4_D2', 'Bucket_PR_Ret_W5_D4']
+Number of features: 84
+W0703 18:01:09.553000 2384 site-packages\torch\utils\flop_counter.py:29] triton not found; flop counting will not work for triton kernels
+Current model evaluated: ffn_l2
+Current model evaluated: ffn_l2
+Current model evaluated: ffn_l2
+Current model evaluated: ffn_l2
+Current model evaluated: ffn_l2
+Current model evaluated: ffn_l2
+Current model evaluated: ffn_l2
+Current model evaluated: ffn_l2
+W0703 18:01:14.058000 2384 site-packages\torch\_dynamo\convert_frame.py:1743] [0/8] torch._dynamo hit config.recompile_limit (8)
+W0703 18:01:14.058000 2384 site-packages\torch\_dynamo\convert_frame.py:1743] [0/8]    function: 'forward' (Z:\Dokumente\dev\ml-option-returns\scripts\model.py:239)
+W0703 18:01:14.058000 2384 site-packages\torch\_dynamo\convert_frame.py:1743] [0/8]    last reason: 0/7: ___as_tensor(self._modules['net']._modules['2'].p).item() == 0.2040797696843316  # (unknown source ___as_tensor(self._modules['net']._modules['2'].p).item(), please file a bug)
+W0703 18:01:14.058000 2384 site-packages\torch\_dynamo\convert_frame.py:1743] [0/8] To log all recompilation reasons, use TORCH_LOGS="recompiles".
+W0703 18:01:14.058000 2384 site-packages\torch\_dynamo\convert_frame.py:1743] [0/8] To diagnose recompilation issues, see https://docs.pytorch.org/docs/main/user_guide/torch_compiler/compile/programming_model.recompilation.html
+Current model evaluated: ffn_l2
+Current model evaluated: ffn_l2
+Current model evaluated: ffn_l2
+Current model evaluated: ffn_l2
+Current model evaluated: ffn_l2
+Current model evaluated: ffn_l2
+Current model evaluated: ffn_l2
+Portfolios 10, Rho 0: Strategy vs S&P 500 t = -1.2236716391274227, p = 0.22209038021223035
+Portfolios 10, Rho 0: Strategy vs S&P 500 t = -1.3715351368739443, p = 0.17129080210502268
+Portfolios 10, Rho 0: Strategy vs S&P 500 t = -1.499662044235441, p = 0.13481276829581487
+Portfolios 10, Rho 0: Strategy vs S&P 500 t = -1.4243982297015207, p = 0.1554290965335562
+Portfolios 10, Rho 0: Strategy vs S&P 500 t = -1.2236716391274227, p = 0.22209038021223035
+Portfolios 10, Rho 0: Strategy vs S&P 500 t = -0.14973969732776676, p = 0.8810897600211041
+Portfolios 10, Rho 0: Strategy vs S&P 500 t = -0.47316012017755116, p = 0.6365085382128673
+Portfolios 10, Rho 0: Strategy vs S&P 500 t = -0.4030760601003516, p = 0.6872340315155873
+Portfolios 10, Rho 0: Strategy vs S&P 500 t = -0.3292190212428075, p = 0.7422636005515273
+Portfolios 10, Rho 0: Strategy vs S&P 500 t = -0.32254465287196343, p = 0.7473075557171636
+Portfolios 10, Rho 0: Strategy vs S&P 500 t = 0.07674909936309929, p = 0.9388781518812153
+Portfolios 10, Rho 0: Strategy vs S&P 500 t = -0.0964486827464419, p = 0.923233472209231
+Portfolios 10, Rho 0: Strategy vs S&P 500 t = -0.07118598569089864, p = 0.943300734784656
+Portfolios 10, Rho 0: Strategy vs S&P 500 t = -0.07584311020200814, p = 0.9395982726633454
+Portfolios 10, Rho 0: Strategy vs S&P 500 t = -0.03405846757490738, p = 0.9728548805792683
+Cross-section stats: min=2238, median=4401.0, requested max portfolios=1000
+If requested portfolios exceed available contracts in a timepoint, that timepoint will be skipped instead of forcing empty long-short buckets.
+Portfolios 10, Rho 0: Strategy vs S&P 500 t = -1.2842628825720335, p = 0.19941403830304955
+Portfolios 100, Rho 0: Strategy vs S&P 500 t = -0.7217444720065542, p = 0.47065809831370037
+Portfolios 3, Rho 0.05: Strategy vs S&P 500 t = -2.350888567793097, p = 0.018965432518320356
+Portfolios 4, Rho 0.05: Strategy vs S&P 500 t = -1.9987921376204307, p = 0.04596174030219128
+Portfolios 5, Rho 0.05: Strategy vs S&P 500 t = -1.8283382945362059, p = 0.06786327582670613
+Portfolios 3, Rho 0.05: Strategy vs S&P 500 t = -2.102860677127793, p = 0.03578329875870556
+Portfolios 4, Rho 0.05: Strategy vs S&P 500 t = -1.815501777855401, p = 0.06981331866024303
+Portfolios 5, Rho 0.05: Strategy vs S&P 500 t = -1.6371000497939197, p = 0.10199465676571771
+Portfolios 10, Rho 0.05: Strategy vs S&P 500 t = -0.9890486046926102, p = 0.3229321815255814
+Portfolios 10, Rho 0.05: Strategy vs S&P 500 t = -1.0403672967444335, p = 0.29847706394418294
+Portfolios 20, Rho 0.05: Strategy vs S&P 500 t = 1.5766869429824975, p = 0.11525468050611289
+Portfolios 40, Rho 0.05: Strategy vs S&P 500 t = 2.4690672570016026, p = 0.01375010590073755
+Portfolios 100, Rho 0.05: Strategy vs S&P 500 t = 2.857641836465013, p = 0.0043764868200524614
+Portfolios 200, Rho 0.05: Strategy vs S&P 500 t = 2.967447560747297, p = 0.0030904661301306086
+Portfolios 500, Rho 0.05: Strategy vs S&P 500 t = 2.9722020247585803, p = 0.0030435160792824253
+Portfolios 1000, Rho 0.05: Strategy vs S&P 500 t = 3.177052040523508, p = 0.001543721726812883
+Portfolios 20, Rho 0.05: Strategy vs S&P 500 t = 1.5853984955366875, p = 0.11326277835868469
+Portfolios 40, Rho 0.05: Strategy vs S&P 500 t = 2.783398334025237, p = 0.005503481109339003
+Portfolios 100, Rho 0.05: Strategy vs S&P 500 t = 3.0841908163726997, p = 0.0021097606145535166
+Portfolios 200, Rho 0.05: Strategy vs S&P 500 t = 2.9803064193848505, p = 0.002964985572706984
+Portfolios 500, Rho 0.05: Strategy vs S&P 500 t = 3.0358637555834354, p = 0.0024746131491407285
+Portfolios 1000, Rho 0.05: Strategy vs S&P 500 t = 3.1822401181270368, p = 0.0015166678832018896
+Portfolios 3, Rho 0.04: Strategy vs S&P 500 t = -1.7391403094318527, p = 0.08238673329932734
+Portfolios 4, Rho 0.04: Strategy vs S&P 500 t = -0.9155100388279585, p = 0.36019406649983166
+Portfolios 5, Rho 0.04: Strategy vs S&P 500 t = -0.13951391660151505, p = 0.8890784433939385
+Portfolios 3, Rho 0.04: Strategy vs S&P 500 t = -2.1459963071624153, p = 0.032167257558978236
+Portfolios 4, Rho 0.04: Strategy vs S&P 500 t = -1.4787438349299062, p = 0.13959422239055969
+Portfolios 5, Rho 0.04: Strategy vs S&P 500 t = -0.6550784731533754, p = 0.5126016232646391
+Portfolios 10, Rho 0.04: Strategy vs S&P 500 t = 1.2732853885042983, p = 0.2032789498246581
+Portfolios 10, Rho 0.04: Strategy vs S&P 500 t = 1.2184111953586814, p = 0.2234194685297186
+Portfolios 20, Rho 0.04: Strategy vs S&P 500 t = 1.9471502477104645, p = 0.05185903217212727
+Portfolios 40, Rho 0.04: Strategy vs S&P 500 t = 2.2182268960135785, p = 0.026813613005210336
+Portfolios 100, Rho 0.04: Strategy vs S&P 500 t = 2.3180174496170554, p = 0.020694502385778975
+Portfolios 200, Rho 0.04: Strategy vs S&P 500 t = 2.3510248672380802, p = 0.018958534786416254
+Portfolios 500, Rho 0.04: Strategy vs S&P 500 t = 2.34223978856084, p = 0.019407643067169945
+Portfolios 1000, Rho 0.04: Strategy vs S&P 500 t = 2.4671834647868978, p = 0.013822108973285762
+Portfolios 20, Rho 0.04: Strategy vs S&P 500 t = 1.9524443677802996, p = 0.05122665192081672
+Portfolios 40, Rho 0.04: Strategy vs S&P 500 t = 2.5207589735578995, p = 0.011899559786050362
+Portfolios 100, Rho 0.04: Strategy vs S&P 500 t = 2.752686681500074, p = 0.006041941437519257
+Portfolios 200, Rho 0.04: Strategy vs S&P 500 t = 2.698623238270426, p = 0.007106432008637817
+Portfolios 500, Rho 0.04: Strategy vs S&P 500 t = 2.498406792492804, p = 0.012670741116065962
+Portfolios 1000, Rho 0.04: Strategy vs S&P 500 t = 2.4359493108632413, p = 0.01506552459445617
+Portfolios 3, Rho 0.03: Strategy vs S&P 500 t = -2.7117321455384897, p = 0.006833879156919542
+Portfolios 4, Rho 0.03: Strategy vs S&P 500 t = -2.4307161134420747, p = 0.015283241985075163
+Portfolios 5, Rho 0.03: Strategy vs S&P 500 t = -2.1223592985622104, p = 0.03410783556663792
+Portfolios 3, Rho 0.03: Strategy vs S&P 500 t = -2.6689286449766576, p = 0.007760305779656183
+Portfolios 4, Rho 0.03: Strategy vs S&P 500 t = -2.229385580759645, p = 0.026059399635924938
+Portfolios 5, Rho 0.03: Strategy vs S&P 500 t = -1.8621589435655763, p = 0.06293950107095593
+Portfolios 10, Rho 0.03: Strategy vs S&P 500 t = -1.0159562167951701, p = 0.30995100054308633
+Portfolios 10, Rho 0.03: Strategy vs S&P 500 t = -1.0576512748249831, p = 0.29052707252449744
+Portfolios 20, Rho 0.03: Strategy vs S&P 500 t = 0.31397695527573954, p = 0.753618692504208
+Portfolios 40, Rho 0.03: Strategy vs S&P 500 t = 2.12756516044374, p = 0.03367203910878841
+Portfolios 100, Rho 0.03: Strategy vs S&P 500 t = 3.92605043516552, p = 9.363258834856942e-05
+Portfolios 200, Rho 0.03: Strategy vs S&P 500 t = 4.485028682881722, p = 8.333846644018014e-06
+Portfolios 500, Rho 0.03: Strategy vs S&P 500 t = 4.764091831135486, p = 2.2446540160510472e-06
+Portfolios 1000, Rho 0.03: Strategy vs S&P 500 t = 4.789658978427653, p = 1.983616047853314e-06
+Portfolios 20, Rho 0.03: Strategy vs S&P 500 t = 0.27542615884490285, p = 0.7830584918111908
+Portfolios 40, Rho 0.03: Strategy vs S&P 500 t = 2.1097256357936507, p = 0.035185560788595374
+Portfolios 100, Rho 0.03: Strategy vs S&P 500 t = 3.917647033308879, p = 9.689365953385587e-05
+Portfolios 200, Rho 0.03: Strategy vs S&P 500 t = 4.5100479237348114, p = 7.430091444103677e-06
+Portfolios 500, Rho 0.03: Strategy vs S&P 500 t = 4.796446487247832, p = 1.9193823918277786e-06
+Portfolios 1000, Rho 0.03: Strategy vs S&P 500 t = 4.815383486642546, p = 1.7505812294031483e-06
+Portfolios 3, Rho 0.02: Strategy vs S&P 500 t = -2.087220524670204, p = 0.03717757568210283
+Portfolios 4, Rho 0.02: Strategy vs S&P 500 t = -1.8678188758648322, p = 0.062145131635243364
+Portfolios 5, Rho 0.02: Strategy vs S&P 500 t = -1.5648951791400085, p = 0.1179947179607029
+Portfolios 3, Rho 0.02: Strategy vs S&P 500 t = -2.2355982482125634, p = 0.02564750236597893
+Portfolios 4, Rho 0.02: Strategy vs S&P 500 t = -1.9626886749767254, p = 0.05002133377300204
+Portfolios 5, Rho 0.02: Strategy vs S&P 500 t = -1.6500281899392693, p = 0.09932153544677928
+Portfolios 10, Rho 0.02: Strategy vs S&P 500 t = -0.5652158072942761, p = 0.5720821577524687
+Portfolios 10, Rho 0.02: Strategy vs S&P 500 t = -0.6660736456887794, p = 0.5055520503770233
+Portfolios 20, Rho 0.02: Strategy vs S&P 500 t = 0.6666470741444227, p = 0.5051858039542879
+Portfolios 40, Rho 0.02: Strategy vs S&P 500 t = 1.4873055592352291, p = 0.13731995011197504
+Portfolios 100, Rho 0.02: Strategy vs S&P 500 t = 1.9423522337541368, p = 0.0524377923662061
+Portfolios 200, Rho 0.02: Strategy vs S&P 500 t = 2.0574581916530734, p = 0.039959031534919115
+Portfolios 500, Rho 0.02: Strategy vs S&P 500 t = 2.1417823428511484, p = 0.03250611142369203
+Portfolios 1000, Rho 0.02: Strategy vs S&P 500 t = 2.019158701002277, p = 0.043796865802671794
+Portfolios 20, Rho 0.02: Strategy vs S&P 500 t = 0.6264618161035967, p = 0.5311870673099435
+Portfolios 40, Rho 0.02: Strategy vs S&P 500 t = 1.504194527981221, p = 0.13291774557494357
+Portfolios 100, Rho 0.02: Strategy vs S&P 500 t = 2.02090009997724, p = 0.04361583361734881
+Portfolios 200, Rho 0.02: Strategy vs S&P 500 t = 2.1342610697520072, p = 0.03311852861877645
+Portfolios 500, Rho 0.02: Strategy vs S&P 500 t = 2.1645279735378518, p = 0.030712846669673954
+Portfolios 1000, Rho 0.02: Strategy vs S&P 500 t = 2.2646560761036585, p = 0.023795033810430143
+Portfolios 3, Rho 0.01: Strategy vs S&P 500 t = -2.170043674704619, p = 0.03029103601927404
+Portfolios 4, Rho 0.01: Strategy vs S&P 500 t = -1.998098566416061, p = 0.046037026091176624
+Portfolios 5, Rho 0.01: Strategy vs S&P 500 t = -1.927709725656274, p = 0.05423758992798123
+Portfolios 3, Rho 0.01: Strategy vs S&P 500 t = -2.26582068664848, p = 0.023723276815010626
+Portfolios 4, Rho 0.01: Strategy vs S&P 500 t = -2.065839243418576, p = 0.03915843460144123
+Portfolios 5, Rho 0.01: Strategy vs S&P 500 t = -2.0272031540020743, p = 0.042965866015903534
+Portfolios 10, Rho 0.01: Strategy vs S&P 500 t = -1.4427052416959285, p = 0.14948678208712574
+Portfolios 10, Rho 0.01: Strategy vs S&P 500 t = -1.4867246977207467, p = 0.13747333495678152
+Portfolios 20, Rho 0.01: Strategy vs S&P 500 t = -1.046385286321954, p = 0.2956926552885384
+Portfolios 40, Rho 0.01: Strategy vs S&P 500 t = -0.3930604220961345, p = 0.6943773931905713
+Portfolios 100, Rho 0.01: Strategy vs S&P 500 t = 0.6587717418599036, p = 0.5102279661462656
+Portfolios 200, Rho 0.01: Strategy vs S&P 500 t = 1.7554603724479512, p = 0.07955533259373596
+Portfolios 500, Rho 0.01: Strategy vs S&P 500 t = 2.274821003697977, p = 0.023175041685863852
+Portfolios 1000, Rho 0.01: Strategy vs S&P 500 t = 2.466775322446947, p = 0.013837753046867947
+Portfolios 20, Rho 0.01: Strategy vs S&P 500 t = -1.0061109797177015, p = 0.31466007014399167
+Portfolios 40, Rho 0.01: Strategy vs S&P 500 t = -0.40422097359585063, p = 0.6861560225924649
+Portfolios 100, Rho 0.01: Strategy vs S&P 500 t = 0.6395811449606411, p = 0.5226242365520296
+Portfolios 200, Rho 0.01: Strategy vs S&P 500 t = 1.7387223613236555, p = 0.08246030517155904
+Portfolios 500, Rho 0.01: Strategy vs S&P 500 t = 2.276955093344432, p = 0.023046676296205815
+Portfolios 1000, Rho 0.01: Strategy vs S&P 500 t = 2.4612560298596726, p = 0.014050850467698895
+Portfolios 3, Rho 0: Strategy vs S&P 500 t = -1.5334090803167348, p = 0.12556221811404591
+Portfolios 4, Rho 0: Strategy vs S&P 500 t = -1.4672496161311874, p = 0.14269299316119752
+Portfolios 5, Rho 0: Strategy vs S&P 500 t = -1.4130078859194712, p = 0.15803425196003396
+Portfolios 3, Rho 0: Strategy vs S&P 500 t = -1.5496553578425094, p = 0.12161151642689814
+Portfolios 4, Rho 0: Strategy vs S&P 500 t = -1.4858819501559732, p = 0.13769610985761208
+Portfolios 5, Rho 0: Strategy vs S&P 500 t = -1.433950276012921, p = 0.15196906007002392
+Portfolios 10, Rho 0: Strategy vs S&P 500 t = -1.284262879192827, p = 0.19941403948445044
+Portfolios 10, Rho 0: Strategy vs S&P 500 t = -1.2956415801960095, p = 0.195464930681106
+Portfolios 20, Rho 0: Strategy vs S&P 500 t = -1.0103099883851203, p = 0.3126459123296328
+Portfolios 40, Rho 0: Strategy vs S&P 500 t = -0.9536269661710186, p = 0.34055455413312513
+Portfolios 100, Rho 0: Strategy vs S&P 500 t = -0.7217444650601559, p = 0.470658102582927
+Portfolios 200, Rho 0: Strategy vs S&P 500 t = -0.5435372560764787, p = 0.586908220346307
+Portfolios 500, Rho 0: Strategy vs S&P 500 t = -0.5158766496227412, p = 0.606080139117097
+Portfolios 1000, Rho 0: Strategy vs S&P 500 t = -0.5845341302129613, p = 0.5590223833296568
+Portfolios 20, Rho 0: Strategy vs S&P 500 t = -1.0266330061069089, p = 0.30489716039351195
+Portfolios 40, Rho 0: Strategy vs S&P 500 t = -0.9423640535383034, p = 0.3462848485278241
+Portfolios 100, Rho 0: Strategy vs S&P 500 t = -0.786757510525053, p = 0.43165198082682943
+Portfolios 200, Rho 0: Strategy vs S&P 500 t = -0.5550110964962329, p = 0.579038986554769
+Portfolios 500, Rho 0: Strategy vs S&P 500 t = -0.5406951925547787, p = 0.5888650671197357
+Portfolios 1000, Rho 0: Strategy vs S&P 500 t = -0.4197733278898242, p = 0.6747614126965494
+Warning: skipped cumulative_return_deciles because no decile strategy returns were available.
+Warning: skipped long_short_return_boxplot because one or more return series were empty.
+[INFO] model_name: gbrt_standard_l2, model_type: rf, normalize: False, eval_type: performance
+[output] base dir: \\studhome.informatik.kit.edu\s_back\Dokumente\dev\ml-option-returns\scripts\gbrt_standard_l2
+[output] figures dir: \\studhome.informatik.kit.edu\s_back\Dokumente\dev\ml-option-returns\scripts\gbrt_standard_l2\figures
+[output] shap dir: \\studhome.informatik.kit.edu\s_back\Dokumente\dev\ml-option-returns\scripts\gbrt_standard_l2\shap\figures
+[output] robustness dir: \\studhome.informatik.kit.edu\s_back\Dokumente\dev\ml-option-returns\scripts\gbrt_standard_l2\robustness
+Features for model prediction:
+['Bucket_PR_Ret_W5_D4', 'daystomaturity', 'openinterest', 'yld', 'gamma', 'rho', 'bid', 'ask', 'underlying_bid', 'underlying_ask', 'embedlev', 'optspread', 'undspread', 'putcall_P', 'bakshiImplVol_annual', 'bakshiSkew', 'bakshiKurt', 'disaster_RIX_annual', 'implERP_SVIX2_annual', 'P_implQ_var', 'P_implQ_skew', 'P_implQ_kurt', 'P_var', 'P_skew', 'P_kurt', 'VaRQ_pct_0_1', 'VaRQ_pct_1', 'VaRQ_pct_99', 'VaRQ_pct_99_9', 'AVaRQ_pct_0_1', 'AVaRQ_pct_5', 'RP_mu', 'RP_var', 'RP_skew', 'RP_kurt', 'RP_moments_1', 'RP_moments_2', 'RP_moments_3', 'RP_moments_4', 'BTX_alpha_minus', 'BTX_alpha_plus', 'BTX_EQCV_k', 'BTX_EQJV_10', 'BTX_EQJV_k', 'BTX_EQV_relLeftTail_10', 'BTX_EQV_relLeftTail_k', 'BTX_EQV_relRightTail_10', 'BTX_EQV_relRightTail_k', 'BTX_EQV_relTail_10', 'BTX_EQV_relTail_k', 'BTX_implCrashFearVol_10_annual', 'BTX_implEuphoriaVol_10_annual', 'BTX_implTailVol_10_annual', 'BTX_k', 'BTX_LJV_10', 'BTX_LJV_7_5', 'BTX_LJV_k', 'BTX_MLJI_10_annual', 'BTX_MLJI_20_annual', 'BTX_MLJI_7_5_annual', 'BTX_MRJI_10_annual', 'BTX_PLJ_k', 'BTX_PRJ_k', 'BTX_RJV_10', 'BTX_RJV_k', 'Underlying_Ret_H3', 'Underlying_STD_H3', 'Underlying_Ret_D4_D2', 'Underlying_Ret_W5_D4', 'Bucket_PR_Ret_H1', 'Bucket_PR_Ret_H3', 'Bucket_PR_STD_H3', 'Bucket_PR_Ret_D2', 'Bucket_PR_Ret_D4_D2', 'theta', 'bid_size', 'ask_size', 'implVol', 'vega', 'normalizedMoneyness', 'time', 'Underlying_Ret_D2', 'Underlying_Ret_H1', 'delta']
+Number of features: 84
+Current model evaluated: gbrt_standard_l2
+Current model evaluated: gbrt_standard_l2
+Current model evaluated: gbrt_standard_l2
+Current model evaluated: gbrt_standard_l2
+Current model evaluated: gbrt_standard_l2
+Current model evaluated: gbrt_standard_l2
+Current model evaluated: gbrt_standard_l2
+Current model evaluated: gbrt_standard_l2
+Current model evaluated: gbrt_standard_l2
+Current model evaluated: gbrt_standard_l2
+Current model evaluated: gbrt_standard_l2
+Current model evaluated: gbrt_standard_l2
+Current model evaluated: gbrt_standard_l2
+Current model evaluated: gbrt_standard_l2
+Current model evaluated: gbrt_standard_l2
+Portfolios 10, Rho 0: Strategy vs S&P 500 t = -1.157158171183823, p = 0.2481800743330962
+Portfolios 10, Rho 0: Strategy vs S&P 500 t = -1.1969051612752126, p = 0.23234167251759366
+Portfolios 10, Rho 0: Strategy vs S&P 500 t = -1.1768672925569539, p = 0.24023388821495145
+Portfolios 10, Rho 0: Strategy vs S&P 500 t = -1.1867987051200022, p = 0.23629882551379244
+Portfolios 10, Rho 0: Strategy vs S&P 500 t = -1.1671929604725209, p = 0.2441115093662342
+Portfolios 10, Rho 0: Strategy vs S&P 500 t = 0.25846905377134416, p = 0.7962559082345873
+Portfolios 10, Rho 0: Strategy vs S&P 500 t = 0.19329095745479027, p = 0.8468868067174595
+Portfolios 10, Rho 0: Strategy vs S&P 500 t = 0.16403591376925508, p = 0.8698343596887332
+Portfolios 10, Rho 0: Strategy vs S&P 500 t = 0.2248086941978667, p = 0.8223102843363279
+Portfolios 10, Rho 0: Strategy vs S&P 500 t = 0.18952290497000013, p = 0.8498355664099569
+Portfolios 10, Rho 0: Strategy vs S&P 500 t = 0.24284293872398124, p = 0.8083055041381307
+Portfolios 10, Rho 0: Strategy vs S&P 500 t = 0.12328849427444097, p = 0.9019674186293763
+Portfolios 10, Rho 0: Strategy vs S&P 500 t = 0.27009998196160867, p = 0.7872830154121485
+Portfolios 10, Rho 0: Strategy vs S&P 500 t = 0.23576688736046705, p = 0.8137865369589105
+Portfolios 10, Rho 0: Strategy vs S&P 500 t = 0.19782402094516405, p = 0.8433268063411598
+Cross-section stats: min=2238, median=4401.0, requested max portfolios=1000
+If requested portfolios exceed available contracts in a timepoint, that timepoint will be skipped instead of forcing empty long-short buckets.
+Portfolios 10, Rho 0: Strategy vs S&P 500 t = -0.7758611810777926, p = 0.43805548322052495
+Portfolios 100, Rho 0: Strategy vs S&P 500 t = 0.1273309193543797, p = 0.8987098214118286
+Portfolios 3, Rho 0.05: Strategy vs S&P 500 t = -2.283101970845629, p = 0.02268039308050331
+Portfolios 4, Rho 0.05: Strategy vs S&P 500 t = -1.9151388311279705, p = 0.055823681296901226
+Portfolios 5, Rho 0.05: Strategy vs S&P 500 t = -1.6188135733820004, p = 0.10587332179275318
+Portfolios 3, Rho 0.05: Strategy vs S&P 500 t = -2.1145741704302754, p = 0.034768557404528604
+Portfolios 4, Rho 0.05: Strategy vs S&P 500 t = -1.9007255919651704, p = 0.057689667805453405
+Portfolios 5, Rho 0.05: Strategy vs S&P 500 t = -1.5925155194565423, p = 0.11165571720839414
+Portfolios 10, Rho 0.05: Strategy vs S&P 500 t = -0.7379080627364927, p = 0.4607822074533067
+Portfolios 10, Rho 0.05: Strategy vs S&P 500 t = -0.9504154766899129, p = 0.3421822445015129
+Portfolios 20, Rho 0.05: Strategy vs S&P 500 t = 2.4554899966476644, p = 0.014276568594810113
+Portfolios 40, Rho 0.05: Strategy vs S&P 500 t = 3.2181488050747746, p = 0.001341086858654185
+Portfolios 100, Rho 0.05: Strategy vs S&P 500 t = 3.539990782560693, p = 0.0004227634594350974
+Portfolios 200, Rho 0.05: Strategy vs S&P 500 t = 3.6089803796807405, p = 0.00032611386781354525
+Portfolios 500, Rho 0.05: Strategy vs S&P 500 t = 3.5918862360421513, p = 0.000347915558319636
+Portfolios 1000, Rho 0.05: Strategy vs S&P 500 t = 3.7995989513761668, p = 0.0001556880292749932
+Portfolios 20, Rho 0.05: Strategy vs S&P 500 t = 2.6292148299597784, p = 0.008719087983774697
+Portfolios 40, Rho 0.05: Strategy vs S&P 500 t = 3.9540913618424045, p = 8.348621553820224e-05
+Portfolios 100, Rho 0.05: Strategy vs S&P 500 t = 4.6297836509841375, p = 4.256732708668676e-06
+Portfolios 200, Rho 0.05: Strategy vs S&P 500 t = 4.7340803234438935, p = 2.5933095710276047e-06
+Portfolios 500, Rho 0.05: Strategy vs S&P 500 t = 4.633423225902457, p = 4.184430651634771e-06
+Portfolios 1000, Rho 0.05: Strategy vs S&P 500 t = 4.4082221237615755, p = 1.181337702426357e-05
+Portfolios 3, Rho 0.04: Strategy vs S&P 500 t = -1.7388098424940714, p = 0.08244490134944153
+Portfolios 4, Rho 0.04: Strategy vs S&P 500 t = -0.8536744673165545, p = 0.39353560321341663
+Portfolios 5, Rho 0.04: Strategy vs S&P 500 t = 0.03160386886463727, p = 0.9747956767989582
+Portfolios 3, Rho 0.04: Strategy vs S&P 500 t = -2.1429769752358685, p = 0.032409738774608794
+Portfolios 4, Rho 0.04: Strategy vs S&P 500 t = -1.2905005364398825, p = 0.19724201716318515
+Portfolios 5, Rho 0.04: Strategy vs S&P 500 t = -0.3740483289049576, p = 0.7084654115856626
+Portfolios 10, Rho 0.04: Strategy vs S&P 500 t = 1.418426908848776, p = 0.1564474928526217
+Portfolios 10, Rho 0.04: Strategy vs S&P 500 t = 1.3646958959953672, p = 0.17272438043443314
+Portfolios 20, Rho 0.04: Strategy vs S&P 500 t = 2.064524897687894, p = 0.03928307741080173
+Portfolios 40, Rho 0.04: Strategy vs S&P 500 t = 2.270347977295954, p = 0.023446113416034343
+Portfolios 100, Rho 0.04: Strategy vs S&P 500 t = 2.3478047365050254, p = 0.01912208522085051
+Portfolios 200, Rho 0.04: Strategy vs S&P 500 t = 2.3885967328712123, p = 0.017138951967094335
+Portfolios 500, Rho 0.04: Strategy vs S&P 500 t = 2.3689538663260827, p = 0.018070140879247285
+Portfolios 1000, Rho 0.04: Strategy vs S&P 500 t = 2.5088252232634196, p = 0.012305940424550056
+Portfolios 20, Rho 0.04: Strategy vs S&P 500 t = 2.350083907506893, p = 0.019006198932643797
+Portfolios 40, Rho 0.04: Strategy vs S&P 500 t = 3.1719271598910765, p = 0.0015708825383300524
+Portfolios 100, Rho 0.04: Strategy vs S&P 500 t = 3.609580077454061, p = 0.00032537279053346626
+Portfolios 200, Rho 0.04: Strategy vs S&P 500 t = 3.547871107140271, p = 0.0004105017180226046
+Portfolios 500, Rho 0.04: Strategy vs S&P 500 t = 3.960161322982558, p = 8.143137076650928e-05
+Portfolios 1000, Rho 0.04: Strategy vs S&P 500 t = 4.1249645667325705, p = 4.0875777739011055e-05
+Portfolios 3, Rho 0.03: Strategy vs S&P 500 t = -2.3757693808985376, p = 0.017742134087197797
+Portfolios 4, Rho 0.03: Strategy vs S&P 500 t = -1.8480437348214531, p = 0.06495725981605875
+Portfolios 5, Rho 0.03: Strategy vs S&P 500 t = -1.3740643477452135, p = 0.16979854281149873
+Portfolios 3, Rho 0.03: Strategy vs S&P 500 t = -2.4841542775593712, p = 0.013185315100163568
+Portfolios 4, Rho 0.03: Strategy vs S&P 500 t = -1.94816452185168, p = 0.05173737341003618
+Portfolios 5, Rho 0.03: Strategy vs S&P 500 t = -1.4949416560395705, p = 0.13531580310525523
+Portfolios 10, Rho 0.03: Strategy vs S&P 500 t = 0.13477525193224274, p = 0.8928227685069393
+Portfolios 10, Rho 0.03: Strategy vs S&P 500 t = 0.020418514135616527, p = 0.9837145002540036
+Portfolios 20, Rho 0.03: Strategy vs S&P 500 t = 1.5407676341666778, p = 0.12376055567456085
+Portfolios 40, Rho 0.03: Strategy vs S&P 500 t = 2.4862451258053913, p = 0.013108686658338201
+Portfolios 100, Rho 0.03: Strategy vs S&P 500 t = 2.9565567519982, p = 0.0032005158483338248
+Portfolios 200, Rho 0.03: Strategy vs S&P 500 t = 3.0777960728653815, p = 0.0021550228641081
+Portfolios 500, Rho 0.03: Strategy vs S&P 500 t = 3.149136378624914, p = 0.00169709082772125
+Portfolios 1000, Rho 0.03: Strategy vs S&P 500 t = 2.940264360972197, p = 0.0033718382090004006
+Portfolios 20, Rho 0.03: Strategy vs S&P 500 t = 1.3841587027068571, p = 0.16668783245062493
+Portfolios 40, Rho 0.03: Strategy vs S&P 500 t = 2.5980115450400687, p = 0.009545393201982473
+Portfolios 100, Rho 0.03: Strategy vs S&P 500 t = 3.2385122933982395, p = 0.0012500630237614037
+Portfolios 200, Rho 0.03: Strategy vs S&P 500 t = 3.294085464173742, p = 0.0010299232373680261
+Portfolios 500, Rho 0.03: Strategy vs S&P 500 t = 3.2896412427121944, p = 0.0010461087714264295
+Portfolios 1000, Rho 0.03: Strategy vs S&P 500 t = 2.9753584242574713, p = 0.003012707753448411
+Portfolios 3, Rho 0.02: Strategy vs S&P 500 t = -2.0424972314843632, p = 0.04142276809534282
+Portfolios 4, Rho 0.02: Strategy vs S&P 500 t = -1.5999810296742902, p = 0.1099893910129016
+Portfolios 5, Rho 0.02: Strategy vs S&P 500 t = -1.2026062674550884, p = 0.22947713035514816
+Portfolios 3, Rho 0.02: Strategy vs S&P 500 t = -2.064979711352966, p = 0.039239908120414786
+Portfolios 4, Rho 0.02: Strategy vs S&P 500 t = -1.6720693341529025, p = 0.09489354398750206
+Portfolios 5, Rho 0.02: Strategy vs S&P 500 t = -1.2512448626919435, p = 0.21120331794215688
+Portfolios 10, Rho 0.02: Strategy vs S&P 500 t = -0.022499377314019804, p = 0.9820551024935322
+Portfolios 10, Rho 0.02: Strategy vs S&P 500 t = -0.06898668619696334, p = 0.9450170976166923
+Portfolios 20, Rho 0.02: Strategy vs S&P 500 t = 1.1754426096476278, p = 0.24016011543603769
+Portfolios 40, Rho 0.02: Strategy vs S&P 500 t = 1.8504663735040154, p = 0.06460719308983484
+Portfolios 100, Rho 0.02: Strategy vs S&P 500 t = 2.214510128559083, p = 0.027068986443951414
+Portfolios 200, Rho 0.02: Strategy vs S&P 500 t = 2.2668266011902665, p = 0.023661449264282812
+Portfolios 500, Rho 0.02: Strategy vs S&P 500 t = 2.3072064381137416, p = 0.021292513388199166
+Portfolios 1000, Rho 0.02: Strategy vs S&P 500 t = 2.1932477745215406, p = 0.028570687200548096
+Portfolios 20, Rho 0.02: Strategy vs S&P 500 t = 1.1069438344473903, p = 0.2686440194693153
+Portfolios 40, Rho 0.02: Strategy vs S&P 500 t = 1.7975858054507035, p = 0.07261181553459796
+Portfolios 100, Rho 0.02: Strategy vs S&P 500 t = 2.3578135292175495, p = 0.018617748708555554
+Portfolios 200, Rho 0.02: Strategy vs S&P 500 t = 2.4603280129329668, p = 0.014086964350224775
+Portfolios 500, Rho 0.02: Strategy vs S&P 500 t = 2.468918298821606, p = 0.013755787333621731
+Portfolios 1000, Rho 0.02: Strategy vs S&P 500 t = 2.3854729329380393, p = 0.017284158350692375
+Portfolios 3, Rho 0.01: Strategy vs S&P 500 t = -1.9397431213021177, p = 0.05275478093167362
+Portfolios 4, Rho 0.01: Strategy vs S&P 500 t = -1.7130559073021718, p = 0.08708164104419215
+Portfolios 5, Rho 0.01: Strategy vs S&P 500 t = -1.5043296439234723, p = 0.13288297349803915
+Portfolios 3, Rho 0.01: Strategy vs S&P 500 t = -2.1240496811186147, p = 0.033965802629252695
+Portfolios 4, Rho 0.01: Strategy vs S&P 500 t = -2.0257382396457704, p = 0.04311619099137118
+Portfolios 5, Rho 0.01: Strategy vs S&P 500 t = -1.8849331659812394, p = 0.05979355552241168
+Portfolios 10, Rho 0.01: Strategy vs S&P 500 t = -0.9975304080576861, p = 0.31880246872233053
+Portfolios 10, Rho 0.01: Strategy vs S&P 500 t = -1.3738003773321739, p = 0.16988046987579145
+Portfolios 20, Rho 0.01: Strategy vs S&P 500 t = -0.5129160209989977, p = 0.6081487177384943
+Portfolios 40, Rho 0.01: Strategy vs S&P 500 t = 0.09864799296386041, p = 0.9214419605397908
+Portfolios 100, Rho 0.01: Strategy vs S&P 500 t = 1.0735945566626013, p = 0.2833214235753118
+Portfolios 200, Rho 0.01: Strategy vs S&P 500 t = 1.8735624075468742, p = 0.061347542566493794
+Portfolios 500, Rho 0.01: Strategy vs S&P 500 t = 2.2252068061898838, p = 0.026339662533940905
+Portfolios 1000, Rho 0.01: Strategy vs S&P 500 t = 2.401511745293448, p = 0.016549930781519173
+Portfolios 20, Rho 0.01: Strategy vs S&P 500 t = -1.0761642877342226, p = 0.2821714688609018
+Portfolios 40, Rho 0.01: Strategy vs S&P 500 t = -0.868957917551869, p = 0.385125342951641
+Portfolios 100, Rho 0.01: Strategy vs S&P 500 t = -0.7405092941909913, p = 0.4592037788745602
+Portfolios 200, Rho 0.01: Strategy vs S&P 500 t = -0.7517708872860467, p = 0.45240535981039226
+Portfolios 500, Rho 0.01: Strategy vs S&P 500 t = -0.7977884076801187, p = 0.4252251006660121
+Portfolios 1000, Rho 0.01: Strategy vs S&P 500 t = -0.7190914164577313, p = 0.4722902160214171
+Portfolios 3, Rho 0: Strategy vs S&P 500 t = -1.3592123703993173, p = 0.1744543603370996
+Portfolios 4, Rho 0: Strategy vs S&P 500 t = -1.2711387703795312, p = 0.20404106743658224
+Portfolios 5, Rho 0: Strategy vs S&P 500 t = -1.1845733374827259, p = 0.23653066515368984
+Portfolios 3, Rho 0: Strategy vs S&P 500 t = -1.3777599414827975, p = 0.16865467536849688
+Portfolios 4, Rho 0: Strategy vs S&P 500 t = -1.278673886189686, p = 0.20137501507677538
+Portfolios 5, Rho 0: Strategy vs S&P 500 t = -1.1785891158063526, p = 0.2389049695359015
+Portfolios 10, Rho 0: Strategy vs S&P 500 t = -0.7776463315143731, p = 0.4370026610751663
+Portfolios 10, Rho 0: Strategy vs S&P 500 t = -0.8042947381593988, p = 0.42146074305944015
+Portfolios 20, Rho 0: Strategy vs S&P 500 t = -0.48557538414993917, p = 0.6273984422990485
+Portfolios 40, Rho 0: Strategy vs S&P 500 t = -0.14607763687154948, p = 0.8838961340436813
+Portfolios 100, Rho 0: Strategy vs S&P 500 t = 0.12889524618083806, p = 0.8974722614169671
+Portfolios 200, Rho 0: Strategy vs S&P 500 t = 0.458129129895309, p = 0.6469814963653725
+Portfolios 500, Rho 0: Strategy vs S&P 500 t = 0.652595783198803, p = 0.514200478639306
+Portfolios 1000, Rho 0: Strategy vs S&P 500 t = 0.9444375852095515, p = 0.3452252912295846
+Portfolios 20, Rho 0: Strategy vs S&P 500 t = -0.5043110152390546, p = 0.6141788128836853
+Portfolios 40, Rho 0: Strategy vs S&P 500 t = -0.19155121359985772, p = 0.848141355126897
+Portfolios 100, Rho 0: Strategy vs S&P 500 t = 0.11179260506343786, p = 0.9110153100368812
+Portfolios 200, Rho 0: Strategy vs S&P 500 t = 0.3930588243689686, p = 0.6943785727601114
+Portfolios 500, Rho 0: Strategy vs S&P 500 t = 0.6302485765753795, p = 0.52870819394094
+Portfolios 1000, Rho 0: Strategy vs S&P 500 t = 0.7670385991371161, p = 0.4432801586638969
+Warning: skipped cumulative_return_deciles because no decile strategy returns were available.
+Warning: skipped long_short_return_boxplot because one or more return series were empty.
+[INFO] model_name: rf_standard_l2, model_type: rf, normalize: False, eval_type: performance
+[output] base dir: \\studhome.informatik.kit.edu\s_back\Dokumente\dev\ml-option-returns\scripts\rf_standard_l2
+[output] figures dir: \\studhome.informatik.kit.edu\s_back\Dokumente\dev\ml-option-returns\scripts\rf_standard_l2\figures
+[output] shap dir: \\studhome.informatik.kit.edu\s_back\Dokumente\dev\ml-option-returns\scripts\rf_standard_l2\shap\figures
+[output] robustness dir: \\studhome.informatik.kit.edu\s_back\Dokumente\dev\ml-option-returns\scripts\rf_standard_l2\robustness
+Features for model prediction:
+['Bucket_PR_Ret_W5_D4', 'daystomaturity', 'openinterest', 'yld', 'gamma', 'rho', 'bid', 'ask', 'underlying_bid', 'underlying_ask', 'embedlev', 'optspread', 'undspread', 'putcall_P', 'bakshiImplVol_annual', 'bakshiSkew', 'bakshiKurt', 'disaster_RIX_annual', 'implERP_SVIX2_annual', 'P_implQ_var', 'P_implQ_skew', 'P_implQ_kurt', 'P_var', 'P_skew', 'P_kurt', 'VaRQ_pct_0_1', 'VaRQ_pct_1', 'VaRQ_pct_99', 'VaRQ_pct_99_9', 'AVaRQ_pct_0_1', 'AVaRQ_pct_5', 'RP_mu', 'RP_var', 'RP_skew', 'RP_kurt', 'RP_moments_1', 'RP_moments_2', 'RP_moments_3', 'RP_moments_4', 'BTX_alpha_minus', 'BTX_alpha_plus', 'BTX_EQCV_k', 'BTX_EQJV_10', 'BTX_EQJV_k', 'BTX_EQV_relLeftTail_10', 'BTX_EQV_relLeftTail_k', 'BTX_EQV_relRightTail_10', 'BTX_EQV_relRightTail_k', 'BTX_EQV_relTail_10', 'BTX_EQV_relTail_k', 'BTX_implCrashFearVol_10_annual', 'BTX_implEuphoriaVol_10_annual', 'BTX_implTailVol_10_annual', 'BTX_k', 'BTX_LJV_10', 'BTX_LJV_7_5', 'BTX_LJV_k', 'BTX_MLJI_10_annual', 'BTX_MLJI_20_annual', 'BTX_MLJI_7_5_annual', 'BTX_MRJI_10_annual', 'BTX_PLJ_k', 'BTX_PRJ_k', 'BTX_RJV_10', 'BTX_RJV_k', 'Underlying_Ret_H3', 'Underlying_STD_H3', 'Underlying_Ret_D4_D2', 'Underlying_Ret_W5_D4', 'Bucket_PR_Ret_H1', 'Bucket_PR_Ret_H3', 'Bucket_PR_STD_H3', 'Bucket_PR_Ret_D2', 'Bucket_PR_Ret_D4_D2', 'theta', 'bid_size', 'ask_size', 'implVol', 'vega', 'normalizedMoneyness', 'time', 'Underlying_Ret_D2', 'Underlying_Ret_H1', 'delta']
+Number of features: 84
+Current model evaluated: rf_standard_l2
+Current model evaluated: rf_standard_l2
+Current model evaluated: rf_standard_l2
+Current model evaluated: rf_standard_l2
+Current model evaluated: rf_standard_l2
+Current model evaluated: rf_standard_l2
+Current model evaluated: rf_standard_l2
+Current model evaluated: rf_standard_l2
+Current model evaluated: rf_standard_l2
+Current model evaluated: rf_standard_l2
+Current model evaluated: rf_standard_l2
+Current model evaluated: rf_standard_l2
+Current model evaluated: rf_standard_l2
+Current model evaluated: rf_standard_l2
+Current model evaluated: rf_standard_l2
+Portfolios 10, Rho 0: Strategy vs S&P 500 t = -1.3163377396346292, p = 0.18912208426684898
+Portfolios 10, Rho 0: Strategy vs S&P 500 t = -1.3189943958362977, p = 0.1882335034378551
+Portfolios 10, Rho 0: Strategy vs S&P 500 t = -1.2964168268970822, p = 0.19588434620073533
+Portfolios 10, Rho 0: Strategy vs S&P 500 t = -1.2795665391929425, p = 0.20174196810186887
+Portfolios 10, Rho 0: Strategy vs S&P 500 t = -1.326069193202545, p = 0.1858822802837483
+Portfolios 10, Rho 0: Strategy vs S&P 500 t = 0.0961796712633011, p = 0.9234543184895775
+Portfolios 10, Rho 0: Strategy vs S&P 500 t = 0.0756084783362322, p = 0.9397905793912241
+Portfolios 10, Rho 0: Strategy vs S&P 500 t = 0.05043490849975982, p = 0.9598157713903386
+Portfolios 10, Rho 0: Strategy vs S&P 500 t = 0.05688076378888348, p = 0.954685251994364
+Portfolios 10, Rho 0: Strategy vs S&P 500 t = 0.06137677479335904, p = 0.9511077983541846
+Portfolios 10, Rho 0: Strategy vs S&P 500 t = -0.12502439936520948, p = 0.9005942697036202
+Portfolios 10, Rho 0: Strategy vs S&P 500 t = -0.04265165850579476, p = 0.9660097231593476
+Portfolios 10, Rho 0: Strategy vs S&P 500 t = -0.04329099427657129, p = 0.9655005359330575
+Portfolios 10, Rho 0: Strategy vs S&P 500 t = 0.013172926537621468, p = 0.9894992438264019
+Portfolios 10, Rho 0: Strategy vs S&P 500 t = -0.05836470793173998, p = 0.9534999057248438
+Cross-section stats: min=2238, median=4401.0, requested max portfolios=1000
+If requested portfolios exceed available contracts in a timepoint, that timepoint will be skipped instead of forcing empty long-short buckets.
+Portfolios 10, Rho 0: Strategy vs S&P 500 t = -1.065653770196407, p = 0.2868950036078551
+Portfolios 100, Rho 0: Strategy vs S&P 500 t = -0.49474191790424316, p = 0.6209153208395508
+Portfolios 3, Rho 0.05: Strategy vs S&P 500 t = -2.3746767347203575, p = 0.017794364887433772
+Portfolios 4, Rho 0.05: Strategy vs S&P 500 t = -2.018400546294786, p = 0.04387588037155173
+Portfolios 5, Rho 0.05: Strategy vs S&P 500 t = -1.7317283867051572, p = 0.08369939895296466
+Portfolios 3, Rho 0.05: Strategy vs S&P 500 t = -2.3476362204314247, p = 0.019130678073467182
+Portfolios 4, Rho 0.05: Strategy vs S&P 500 t = -2.0186287956825946, p = 0.043852079638018494
+Portfolios 5, Rho 0.05: Strategy vs S&P 500 t = -1.742932145657108, p = 0.08172168547821038
+Portfolios 10, Rho 0.05: Strategy vs S&P 500 t = -0.75458597445981, p = 0.45071488703803125
+Portfolios 10, Rho 0.05: Strategy vs S&P 500 t = -0.8651143900675681, p = 0.38722995295558427
+Portfolios 20, Rho 0.05: Strategy vs S&P 500 t = 2.6071010530428858, p = 0.00929775176668837
+Portfolios 40, Rho 0.05: Strategy vs S&P 500 t = 3.5505915496390132, p = 0.0004063465706404118
+Portfolios 100, Rho 0.05: Strategy vs S&P 500 t = 3.943807797233476, p = 8.707994571356243e-05
+Portfolios 200, Rho 0.05: Strategy vs S&P 500 t = 3.9942553906986444, p = 7.075124829349395e-05
+Portfolios 500, Rho 0.05: Strategy vs S&P 500 t = 3.9845628806001483, p = 7.364410805259635e-05
+Portfolios 1000, Rho 0.05: Strategy vs S&P 500 t = 4.207657498476157, p = 2.866156666545585e-05
+Portfolios 20, Rho 0.05: Strategy vs S&P 500 t = 2.65547895309484, p = 0.0080738555732397
+Portfolios 40, Rho 0.05: Strategy vs S&P 500 t = 3.943681131670355, p = 8.71251103089279e-05
+Portfolios 100, Rho 0.05: Strategy vs S&P 500 t = 3.9672221451640834, p = 7.910135670309789e-05
+Portfolios 200, Rho 0.05: Strategy vs S&P 500 t = 4.287953028248561, p = 2.0186717950134263e-05
+Portfolios 500, Rho 0.05: Strategy vs S&P 500 t = 4.166695998532216, p = 3.419770149566694e-05
+Portfolios 1000, Rho 0.05: Strategy vs S&P 500 t = 4.383350507500046, p = 1.321154532144033e-05
+Portfolios 3, Rho 0.04: Strategy vs S&P 500 t = -2.028079911516022, p = 0.042876108361283506
+Portfolios 4, Rho 0.04: Strategy vs S&P 500 t = -1.163261506976286, p = 0.24506305028017644
+Portfolios 5, Rho 0.04: Strategy vs S&P 500 t = -0.29796306028277536, p = 0.7658071123601363
+Portfolios 3, Rho 0.04: Strategy vs S&P 500 t = -2.0861101288105903, p = 0.03727830246725218
+Portfolios 4, Rho 0.04: Strategy vs S&P 500 t = -1.3312760755902422, p = 0.18346953397094168
+Portfolios 5, Rho 0.04: Strategy vs S&P 500 t = -0.4185027833270346, p = 0.6756895382863298
+Portfolios 10, Rho 0.04: Strategy vs S&P 500 t = 1.2646873425509089, p = 0.206344062150015
+Portfolios 10, Rho 0.04: Strategy vs S&P 500 t = 1.2341137184266748, p = 0.2175154035695772
+Portfolios 20, Rho 0.04: Strategy vs S&P 500 t = 1.9964973655711569, p = 0.046211230761358704
+Portfolios 40, Rho 0.04: Strategy vs S&P 500 t = 2.273299812647658, p = 0.023266920510748423
+Portfolios 100, Rho 0.04: Strategy vs S&P 500 t = 2.3659858058126093, p = 0.018214638396666025
+Portfolios 200, Rho 0.04: Strategy vs S&P 500 t = 2.4033310978507942, p = 0.016468402441419363
+Portfolios 500, Rho 0.04: Strategy vs S&P 500 t = 2.3930058325661534, p = 0.01693582483995375
+Portfolios 1000, Rho 0.04: Strategy vs S&P 500 t = 2.5200606415612334, p = 0.011923007581493618
+Portfolios 20, Rho 0.04: Strategy vs S&P 500 t = 2.5759293776822214, p = 0.01017172871411512
+Portfolios 40, Rho 0.04: Strategy vs S&P 500 t = 3.139003147700358, p = 0.0017561521776177436
+Portfolios 100, Rho 0.04: Strategy vs S&P 500 t = 3.342704485355686, p = 0.0008673962169558944
+Portfolios 200, Rho 0.04: Strategy vs S&P 500 t = 3.147427579664121, p = 0.0017069204580307143
+Portfolios 500, Rho 0.04: Strategy vs S&P 500 t = 3.1679819239506304, p = 0.0015920910223819163
+Portfolios 1000, Rho 0.04: Strategy vs S&P 500 t = 3.3990692428781197, p = 0.0007089140359723554
+Portfolios 3, Rho 0.03: Strategy vs S&P 500 t = -2.6323737124143394, p = 0.008639114348005779
+Portfolios 4, Rho 0.03: Strategy vs S&P 500 t = -2.095699992767582, p = 0.03641600964884849
+Portfolios 5, Rho 0.03: Strategy vs S&P 500 t = -1.5647345162648385, p = 0.118032401480892
+Portfolios 3, Rho 0.03: Strategy vs S&P 500 t = -2.6561736283981046, p = 0.008057386585796916
+Portfolios 4, Rho 0.03: Strategy vs S&P 500 t = -2.1513232468143464, p = 0.03174325061276034
+Portfolios 5, Rho 0.03: Strategy vs S&P 500 t = -1.6810900277590313, p = 0.09312763562017559
+Portfolios 10, Rho 0.03: Strategy vs S&P 500 t = 0.13921830268265822, p = 0.8893119554467137
+Portfolios 10, Rho 0.03: Strategy vs S&P 500 t = 0.05869794864887821, p = 0.9532070468303495
+Portfolios 20, Rho 0.03: Strategy vs S&P 500 t = 1.7391496466171437, p = 0.08238509027324127
+Portfolios 40, Rho 0.03: Strategy vs S&P 500 t = 3.0291757581699077, p = 0.0025294294901303683
+Portfolios 100, Rho 0.03: Strategy vs S&P 500 t = 3.5353402542707584, p = 0.00043015955872638254
+Portfolios 200, Rho 0.03: Strategy vs S&P 500 t = 3.5946592340147467, p = 0.00034428847901354394
+Portfolios 500, Rho 0.03: Strategy vs S&P 500 t = 3.6675015841788783, p = 0.0002607903854818645
+Portfolios 1000, Rho 0.03: Strategy vs S&P 500 t = 3.5323673398101554, p = 0.0004349508462026648
+Portfolios 20, Rho 0.03: Strategy vs S&P 500 t = 1.647940961618849, p = 0.09974927578499822
+Portfolios 40, Rho 0.03: Strategy vs S&P 500 t = 3.0509688538834245, p = 0.0023547926685624364
+Portfolios 100, Rho 0.03: Strategy vs S&P 500 t = 3.7407245826528985, p = 0.00019631149328985177
+Portfolios 200, Rho 0.03: Strategy vs S&P 500 t = 3.7497698809908577, p = 0.00018948014644904685
+Portfolios 500, Rho 0.03: Strategy vs S&P 500 t = 3.7047006751631213, p = 0.00022588634389604506
+Portfolios 1000, Rho 0.03: Strategy vs S&P 500 t = 3.5909577653215146, p = 0.0003491379777915493
+Portfolios 3, Rho 0.02: Strategy vs S&P 500 t = -2.165141012261064, p = 0.030665716570817222
+Portfolios 4, Rho 0.02: Strategy vs S&P 500 t = -1.7334489381648903, p = 0.083393183729363
+Portfolios 5, Rho 0.02: Strategy vs S&P 500 t = -1.2713843422379805, p = 0.2039537762619292
+Portfolios 3, Rho 0.02: Strategy vs S&P 500 t = -2.193000594138097, p = 0.028588559295675133
+Portfolios 4, Rho 0.02: Strategy vs S&P 500 t = -1.7681039042468374, p = 0.07741669533928217
+Portfolios 5, Rho 0.02: Strategy vs S&P 500 t = -1.326369421664481, p = 0.1850880083002573
+Portfolios 10, Rho 0.02: Strategy vs S&P 500 t = -0.09246396957991024, p = 0.9263520841979871
+Portfolios 10, Rho 0.02: Strategy vs S&P 500 t = -0.17578136353336504, p = 0.8605092695367157
+Portfolios 20, Rho 0.02: Strategy vs S&P 500 t = 1.2244997838376799, p = 0.22111670255279303
+Portfolios 40, Rho 0.02: Strategy vs S&P 500 t = 2.0322825490137597, p = 0.0424480672022741
+Portfolios 100, Rho 0.02: Strategy vs S&P 500 t = 2.4061051195595002, p = 0.016344773977529856
+Portfolios 200, Rho 0.02: Strategy vs S&P 500 t = 2.4881387345925976, p = 0.013039627684949017
+Portfolios 500, Rho 0.02: Strategy vs S&P 500 t = 2.5574987899851997, p = 0.010722286224809889
+Portfolios 1000, Rho 0.02: Strategy vs S&P 500 t = 2.4310233224898576, p = 0.015270384868161452
+Portfolios 20, Rho 0.02: Strategy vs S&P 500 t = 1.13552128216795, p = 0.25648996928060036
+Portfolios 40, Rho 0.02: Strategy vs S&P 500 t = 2.0236280786016705, p = 0.04333351173626403
+Portfolios 100, Rho 0.02: Strategy vs S&P 500 t = 2.5460470934041433, p = 0.011077595855976164
+Portfolios 200, Rho 0.02: Strategy vs S&P 500 t = 2.681454907404346, p = 0.0074781609990977795
+Portfolios 500, Rho 0.02: Strategy vs S&P 500 t = 2.7420863901460657, p = 0.006238553467035826
+Portfolios 1000, Rho 0.02: Strategy vs S&P 500 t = 2.541980950847176, p = 0.011206253830025993
+Portfolios 3, Rho 0.01: Strategy vs S&P 500 t = -2.1030222184495044, p = 0.03576913415623819
+Portfolios 4, Rho 0.01: Strategy vs S&P 500 t = -1.8899252087902343, p = 0.059121723772588876
+Portfolios 5, Rho 0.01: Strategy vs S&P 500 t = -1.6282168693386774, p = 0.10386443861720013
+Portfolios 3, Rho 0.01: Strategy vs S&P 500 t = -2.2693417678642787, p = 0.023507469602061754
+Portfolios 4, Rho 0.01: Strategy vs S&P 500 t = -2.105380179669492, p = 0.03556292322368877
+Portfolios 5, Rho 0.01: Strategy vs S&P 500 t = -1.8914826455046108, p = 0.05891341221321242
+Portfolios 10, Rho 0.01: Strategy vs S&P 500 t = -0.9460819878024351, p = 0.3443864892736106
+Portfolios 10, Rho 0.01: Strategy vs S&P 500 t = -1.4013533243492833, p = 0.16148818895697858
+Portfolios 20, Rho 0.01: Strategy vs S&P 500 t = -0.2721551182250357, p = 0.7855715127542611
+Portfolios 40, Rho 0.01: Strategy vs S&P 500 t = 0.6175065635046694, p = 0.537072720691887
+Portfolios 100, Rho 0.01: Strategy vs S&P 500 t = 1.6401697482504447, p = 0.10135480498522446
+Portfolios 200, Rho 0.01: Strategy vs S&P 500 t = 1.9818390248104474, p = 0.047832003590809184
+Portfolios 500, Rho 0.01: Strategy vs S&P 500 t = 2.098646148240339, p = 0.036154543110977384
+Portfolios 1000, Rho 0.01: Strategy vs S&P 500 t = 2.1246143633694903, p = 0.03391846870426604
+Portfolios 20, Rho 0.01: Strategy vs S&P 500 t = -0.9931604946227173, p = 0.3209257946947542
+Portfolios 40, Rho 0.01: Strategy vs S&P 500 t = -0.5877080561157505, p = 0.5568906645624623
+Portfolios 100, Rho 0.01: Strategy vs S&P 500 t = -0.4289106041733452, p = 0.6681013505292842
+Portfolios 200, Rho 0.01: Strategy vs S&P 500 t = -0.4284950429574212, p = 0.6684036860490881
+Portfolios 500, Rho 0.01: Strategy vs S&P 500 t = -0.38774712580629317, p = 0.6983041755439179
+Portfolios 1000, Rho 0.01: Strategy vs S&P 500 t = -0.305576244558306, p = 0.7600051493043484
+Portfolios 3, Rho 0: Strategy vs S&P 500 t = -1.4759776991399192, p = 0.14033517254280178
+Portfolios 4, Rho 0: Strategy vs S&P 500 t = -1.3565051710170235, p = 0.17531321026382637
+Portfolios 5, Rho 0: Strategy vs S&P 500 t = -1.2577366061330524, p = 0.20884639724723045
+Portfolios 3, Rho 0: Strategy vs S&P 500 t = -1.4902956090669157, p = 0.13653247573812458
+Portfolios 4, Rho 0: Strategy vs S&P 500 t = -1.3793166667150445, p = 0.16817457259150406
+Portfolios 5, Rho 0: Strategy vs S&P 500 t = -1.293652318038418, p = 0.19615115202388578
+Portfolios 10, Rho 0: Strategy vs S&P 500 t = -1.0684433967440714, p = 0.2856361341206317
+Portfolios 10, Rho 0: Strategy vs S&P 500 t = -1.058891647842677, p = 0.2899620874171438
+Portfolios 20, Rho 0: Strategy vs S&P 500 t = -0.7560917900396739, p = 0.4498121108620324
+Portfolios 40, Rho 0: Strategy vs S&P 500 t = -0.5960519728277117, p = 0.5513056015174265
+Portfolios 100, Rho 0: Strategy vs S&P 500 t = -0.4963609997917801, p = 0.6197732485848517
+Portfolios 200, Rho 0: Strategy vs S&P 500 t = -0.3036574135577724, p = 0.7614662189491468
+Portfolios 500, Rho 0: Strategy vs S&P 500 t = -0.007862657984525354, p = 0.9937284906648067
+Portfolios 1000, Rho 0: Strategy vs S&P 500 t = 0.10852676970583136, p = 0.9136044942040326
+Portfolios 20, Rho 0: Strategy vs S&P 500 t = -0.7811353576184847, p = 0.43494917004001926
+Portfolios 40, Rho 0: Strategy vs S&P 500 t = -0.593035995924832, p = 0.5533211812507542
+Portfolios 100, Rho 0: Strategy vs S&P 500 t = -0.4830577378894471, p = 0.6291841573533458
+Portfolios 200, Rho 0: Strategy vs S&P 500 t = -0.3759311300442711, p = 0.7070656883754127
+Portfolios 500, Rho 0: Strategy vs S&P 500 t = 0.0543582309077645, p = 0.956663045656175
+Portfolios 1000, Rho 0: Strategy vs S&P 500 t = 0.3087369053283534, p = 0.7576003756366001
+Warning: skipped cumulative_return_deciles because no decile strategy returns were available.
+Warning: skipped long_short_return_boxplot because one or more return series were empty.
+[INFO] model_name: ffn_noise, model_type: ffn, normalize: True, eval_type: performance
+[output] base dir: \\studhome.informatik.kit.edu\s_back\Dokumente\dev\ml-option-returns\scripts\ffn_noise
+[output] figures dir: \\studhome.informatik.kit.edu\s_back\Dokumente\dev\ml-option-returns\scripts\ffn_noise\figures
+[output] shap dir: \\studhome.informatik.kit.edu\s_back\Dokumente\dev\ml-option-returns\scripts\ffn_noise\shap\figures
+[output] robustness dir: \\studhome.informatik.kit.edu\s_back\Dokumente\dev\ml-option-returns\scripts\ffn_noise\robustness
+Features for model prediction:
+['daystomaturity', 'openinterest', 'implVol', 'yld', 'delta', 'gamma', 'rho', 'theta', 'vega', 'normalizedMoneyness', 'time', 'bid_size', 'bid', 'ask_size', 'ask', 'underlying_bid', 'underlying_ask', 'embedlev', 'optspread', 'undspread', 'putcall_P', 'bakshiImplVol_annual', 'bakshiSkew', 'bakshiKurt', 'disaster_RIX_annual', 'implERP_SVIX2_annual', 'P_implQ_var', 'P_implQ_skew', 'P_implQ_kurt', 'P_var', 'P_skew', 'P_kurt', 'VaRQ_pct_0_1', 'VaRQ_pct_1', 'VaRQ_pct_99', 'VaRQ_pct_99_9', 'AVaRQ_pct_0_1', 'AVaRQ_pct_5', 'RP_mu', 'RP_var', 'RP_skew', 'RP_kurt', 'RP_moments_1', 'RP_moments_2', 'RP_moments_3', 'RP_moments_4', 'BTX_alpha_minus', 'BTX_alpha_plus', 'BTX_EQCV_k', 'BTX_EQJV_10', 'BTX_EQJV_k', 'BTX_EQV_relLeftTail_10', 'BTX_EQV_relLeftTail_k', 'BTX_EQV_relRightTail_10', 'BTX_EQV_relRightTail_k', 'BTX_EQV_relTail_10', 'BTX_EQV_relTail_k', 'BTX_implCrashFearVol_10_annual', 'BTX_implEuphoriaVol_10_annual', 'BTX_implTailVol_10_annual', 'BTX_k', 'BTX_LJV_10', 'BTX_LJV_7_5', 'BTX_LJV_k', 'BTX_MLJI_10_annual', 'BTX_MLJI_20_annual', 'BTX_MLJI_7_5_annual', 'BTX_MRJI_10_annual', 'BTX_PLJ_k', 'BTX_PRJ_k', 'BTX_RJV_10', 'BTX_RJV_k', 'Underlying_Ret_H1', 'Underlying_Ret_H3', 'Underlying_STD_H3', 'Underlying_Ret_D2', 'Underlying_Ret_D4_D2', 'Underlying_Ret_W5_D4', 'Bucket_PR_Ret_H1', 'Bucket_PR_Ret_H3', 'Bucket_PR_STD_H3', 'Bucket_PR_Ret_D2', 'Bucket_PR_Ret_D4_D2', 'Bucket_PR_Ret_W5_D4']
+Number of features: 84
+W0703 19:38:09.820000 12344 site-packages\torch\utils\flop_counter.py:29] triton not found; flop counting will not work for triton kernels
+Current model evaluated: ffn_noise
+Current model evaluated: ffn_noise
+Current model evaluated: ffn_noise
+Current model evaluated: ffn_noise
+Current model evaluated: ffn_noise
+Current model evaluated: ffn_noise
+Current model evaluated: ffn_noise
+Current model evaluated: ffn_noise
+W0703 19:38:14.021000 12344 site-packages\torch\_dynamo\convert_frame.py:1743] [0/8] torch._dynamo hit config.recompile_limit (8)
+W0703 19:38:14.021000 12344 site-packages\torch\_dynamo\convert_frame.py:1743] [0/8]    function: 'forward' (Z:\Dokumente\dev\ml-option-returns\scripts\model.py:239)
+W0703 19:38:14.021000 12344 site-packages\torch\_dynamo\convert_frame.py:1743] [0/8]    last reason: 0/7: len(self._modules['net']._modules) != 16
+W0703 19:38:14.021000 12344 site-packages\torch\_dynamo\convert_frame.py:1743] [0/8] To log all recompilation reasons, use TORCH_LOGS="recompiles".
+W0703 19:38:14.021000 12344 site-packages\torch\_dynamo\convert_frame.py:1743] [0/8] To diagnose recompilation issues, see https://docs.pytorch.org/docs/main/user_guide/torch_compiler/compile/programming_model.recompilation.html
+Current model evaluated: ffn_noise
+Current model evaluated: ffn_noise
+Current model evaluated: ffn_noise
+Current model evaluated: ffn_noise
+Current model evaluated: ffn_noise
+Current model evaluated: ffn_noise
+Current model evaluated: ffn_noise
+Portfolios 10, Rho 0: Strategy vs S&P 500 t = -1.4036086314594236, p = 0.16152789153635824
+Portfolios 10, Rho 0: Strategy vs S&P 500 t = -1.4097878066644771, p = 0.15969650378066902
+Portfolios 10, Rho 0: Strategy vs S&P 500 t = -1.3681528797949936, p = 0.17234568417642657
+Portfolios 10, Rho 0: Strategy vs S&P 500 t = -1.2668410813478033, p = 0.2062500500065771
+Portfolios 10, Rho 0: Strategy vs S&P 500 t = -1.5644497377587847, p = 0.118825549620864
+Portfolios 10, Rho 0: Strategy vs S&P 500 t = -0.09032196173945636, p = 0.9281031169436589
+Portfolios 10, Rho 0: Strategy vs S&P 500 t = -0.06107440361774906, p = 0.9513483633229913
+Portfolios 10, Rho 0: Strategy vs S&P 500 t = -0.40739442393841874, p = 0.6840641768259246
+Portfolios 10, Rho 0: Strategy vs S&P 500 t = -0.28058459087350734, p = 0.7792592491829081
+Portfolios 10, Rho 0: Strategy vs S&P 500 t = -0.34797327537121076, p = 0.7281507448253076
+Portfolios 10, Rho 0: Strategy vs S&P 500 t = 0.22130443986311227, p = 0.8250172734545566
+Portfolios 10, Rho 0: Strategy vs S&P 500 t = 0.06244654924430051, p = 0.9502519391236949
+Portfolios 10, Rho 0: Strategy vs S&P 500 t = 0.06261362986259572, p = 0.9501190085444368
+Portfolios 10, Rho 0: Strategy vs S&P 500 t = 0.05611965895077435, p = 0.95528665071697
+Portfolios 10, Rho 0: Strategy vs S&P 500 t = -0.15808696630752384, p = 0.874502628816109
+Cross-section stats: min=2238, median=4401.0, requested max portfolios=1000
+If requested portfolios exceed available contracts in a timepoint, that timepoint will be skipped instead of forcing empty long-short buckets.
+Portfolios 10, Rho 0: Strategy vs S&P 500 t = -1.1185430869173045, p = 0.2636638839007193
+Portfolios 100, Rho 0: Strategy vs S&P 500 t = -0.4610902645263252, p = 0.6448565666402374
+Portfolios 3, Rho 0.05: Strategy vs S&P 500 t = -2.320301680967029, p = 0.020570044125723982
+Portfolios 4, Rho 0.05: Strategy vs S&P 500 t = -1.9207343946874846, p = 0.0551129623782495
+Portfolios 5, Rho 0.05: Strategy vs S&P 500 t = -1.636860541129578, p = 0.10204471541180643
+Portfolios 3, Rho 0.05: Strategy vs S&P 500 t = -1.782289322788775, p = 0.07507334930718175
+Portfolios 4, Rho 0.05: Strategy vs S&P 500 t = -1.69503291873076, p = 0.09045022632290349
+Portfolios 5, Rho 0.05: Strategy vs S&P 500 t = -1.3412691062318998, p = 0.18020582502788904
+Portfolios 10, Rho 0.05: Strategy vs S&P 500 t = -0.8261686734451991, p = 0.40894960982951645
+Portfolios 10, Rho 0.05: Strategy vs S&P 500 t = -0.9355647304677118, p = 0.3497737845619447
+Portfolios 20, Rho 0.05: Strategy vs S&P 500 t = 2.179847585271287, p = 0.029553589113545473
+Portfolios 40, Rho 0.05: Strategy vs S&P 500 t = 3.0564499364328594, p = 0.0023126469169411135
+Portfolios 100, Rho 0.05: Strategy vs S&P 500 t = 3.43682291204707, p = 0.0006183143443521432
+Portfolios 200, Rho 0.05: Strategy vs S&P 500 t = 3.5001602156751517, p = 0.0004901567566193088
+Portfolios 500, Rho 0.05: Strategy vs S&P 500 t = 3.481639799933081, p = 0.0005247995326732564
+Portfolios 1000, Rho 0.05: Strategy vs S&P 500 t = 3.702711832437223, p = 0.00022763545912401123
+Portfolios 20, Rho 0.05: Strategy vs S&P 500 t = 2.3072839841450814, p = 0.02128817079879489
+Portfolios 40, Rho 0.05: Strategy vs S&P 500 t = 3.5283422302740526, p = 0.00044151747000784465
+Portfolios 100, Rho 0.05: Strategy vs S&P 500 t = 3.6585593809703085, p = 0.000269905501470171
+Portfolios 200, Rho 0.05: Strategy vs S&P 500 t = 3.527124309905266, p = 0.0004435226008611144
+Portfolios 500, Rho 0.05: Strategy vs S&P 500 t = 3.487816687780775, p = 0.0005129992005404482
+Portfolios 1000, Rho 0.05: Strategy vs S&P 500 t = 3.7302759700460904, p = 0.0002044911271275753
+Portfolios 3, Rho 0.04: Strategy vs S&P 500 t = -1.625970617187619, p = 0.10434153897192096
+Portfolios 4, Rho 0.04: Strategy vs S&P 500 t = -0.7841473164131957, p = 0.43318095704585335
+Portfolios 5, Rho 0.04: Strategy vs S&P 500 t = 0.11325603575707772, p = 0.9098553941745898
+Portfolios 3, Rho 0.04: Strategy vs S&P 500 t = -1.98384807005383, p = 0.04760707153946442
+Portfolios 4, Rho 0.04: Strategy vs S&P 500 t = -1.1666241383958054, p = 0.24370260256947848
+Portfolios 5, Rho 0.04: Strategy vs S&P 500 t = -0.24663338446571267, p = 0.805253920466597
+Portfolios 10, Rho 0.04: Strategy vs S&P 500 t = 1.5031037359621633, p = 0.13319871933014782
+Portfolios 10, Rho 0.04: Strategy vs S&P 500 t = 1.505462549467226, p = 0.1325916978847402
+Portfolios 20, Rho 0.04: Strategy vs S&P 500 t = 2.1411233294959624, p = 0.03255938011797897
+Portfolios 40, Rho 0.04: Strategy vs S&P 500 t = 2.3729485883549604, p = 0.017877249527549946
+Portfolios 100, Rho 0.04: Strategy vs S&P 500 t = 2.464751628657049, p = 0.013915552710853617
+Portfolios 200, Rho 0.04: Strategy vs S&P 500 t = 2.5058083159157194, p = 0.012410606254141225
+Portfolios 500, Rho 0.04: Strategy vs S&P 500 t = 2.4871229518917293, p = 0.013076632588503395
+Portfolios 1000, Rho 0.04: Strategy vs S&P 500 t = 2.625928587426406, p = 0.008802988824815366
+Portfolios 20, Rho 0.04: Strategy vs S&P 500 t = 2.6764908706505666, p = 0.007588850845497871
+Portfolios 40, Rho 0.04: Strategy vs S&P 500 t = 3.411169478654786, p = 0.0006786114158153625
+Portfolios 100, Rho 0.04: Strategy vs S&P 500 t = 3.6029405692235255, p = 0.00033366632029082147
+Portfolios 200, Rho 0.04: Strategy vs S&P 500 t = 3.6568759230166368, p = 0.0002716546339258581
+Portfolios 500, Rho 0.04: Strategy vs S&P 500 t = 3.6094626738920588, p = 0.00032551774771362885
+Portfolios 1000, Rho 0.04: Strategy vs S&P 500 t = 3.423955049613043, p = 0.0006479062066537382
+Portfolios 3, Rho 0.03: Strategy vs S&P 500 t = -2.430506731235099, p = 0.015292010386113079
+Portfolios 4, Rho 0.03: Strategy vs S&P 500 t = -2.026674039895487, p = 0.04302011078460103
+Portfolios 5, Rho 0.03: Strategy vs S&P 500 t = -1.5586032082379537, p = 0.11947758204667486
+Portfolios 3, Rho 0.03: Strategy vs S&P 500 t = -2.456211813128265, p = 0.014248137863453225
+Portfolios 4, Rho 0.03: Strategy vs S&P 500 t = -2.091720141911474, p = 0.03677177704283595
+Portfolios 5, Rho 0.03: Strategy vs S&P 500 t = -1.6164821825231022, p = 0.10637613712213312
+Portfolios 10, Rho 0.03: Strategy vs S&P 500 t = -0.20096818203420183, p = 0.8407734733348862
+Portfolios 10, Rho 0.03: Strategy vs S&P 500 t = -0.22957167310060972, p = 0.8184820810001632
+Portfolios 20, Rho 0.03: Strategy vs S&P 500 t = 1.2763555307328196, p = 0.20219256370895736
+Portfolios 40, Rho 0.03: Strategy vs S&P 500 t = 2.2257260791618325, p = 0.02630469444970461
+Portfolios 100, Rho 0.03: Strategy vs S&P 500 t = 2.803050586508555, p = 0.00518208856088562
+Portfolios 200, Rho 0.03: Strategy vs S&P 500 t = 2.870605237167024, p = 0.004202723338586751
+Portfolios 500, Rho 0.03: Strategy vs S&P 500 t = 2.9484333865628334, p = 0.00328491790659655
+Portfolios 1000, Rho 0.03: Strategy vs S&P 500 t = 2.751139199786064, p = 0.006070290763073819
+Portfolios 20, Rho 0.03: Strategy vs S&P 500 t = 1.2629975392187611, p = 0.20695039215646957
+Portfolios 40, Rho 0.03: Strategy vs S&P 500 t = 2.2526024288633635, p = 0.02454886228636452
+Portfolios 100, Rho 0.03: Strategy vs S&P 500 t = 3.0206129213497452, p = 0.002601236458576171
+Portfolios 200, Rho 0.03: Strategy vs S&P 500 t = 3.2168613994484883, p = 0.0013470425179785035
+Portfolios 500, Rho 0.03: Strategy vs S&P 500 t = 3.357845887510731, p = 0.0008218652048302864
+Portfolios 1000, Rho 0.03: Strategy vs S&P 500 t = 3.158909979526603, p = 0.0016418648567213792
+Portfolios 3, Rho 0.02: Strategy vs S&P 500 t = -2.0515164047714323, p = 0.04053500983248624
+Portfolios 4, Rho 0.02: Strategy vs S&P 500 t = -1.668451793625884, p = 0.09560922876015215
+Portfolios 5, Rho 0.02: Strategy vs S&P 500 t = -1.3314825568433553, p = 0.18340165656241356
+Portfolios 3, Rho 0.02: Strategy vs S&P 500 t = -2.0580487090010124, p = 0.039902170521146176
+Portfolios 4, Rho 0.02: Strategy vs S&P 500 t = -1.6648385389019624, p = 0.09632838120897909
+Portfolios 5, Rho 0.02: Strategy vs S&P 500 t = -1.3701852868566373, p = 0.17100545493315208
+Portfolios 10, Rho 0.02: Strategy vs S&P 500 t = -0.19515315523232976, p = 0.845321571408265
+Portfolios 10, Rho 0.02: Strategy vs S&P 500 t = -0.24158979440433723, p = 0.8091586525769815
+Portfolios 20, Rho 0.02: Strategy vs S&P 500 t = 0.98431598387757, p = 0.32525157362736745
+Portfolios 40, Rho 0.02: Strategy vs S&P 500 t = 1.7238171440363166, p = 0.08511916197097073
+Portfolios 100, Rho 0.02: Strategy vs S&P 500 t = 2.1214164382308622, p = 0.034187279328835724
+Portfolios 200, Rho 0.02: Strategy vs S&P 500 t = 2.199606131691355, p = 0.028114255656532184
+Portfolios 500, Rho 0.02: Strategy vs S&P 500 t = 2.267032570871104, p = 0.023648806830064126
+Portfolios 1000, Rho 0.02: Strategy vs S&P 500 t = 2.1340314062730354, p = 0.03313738350731477
+Portfolios 20, Rho 0.02: Strategy vs S&P 500 t = 0.9460319492365052, p = 0.34441199447170473
+Portfolios 40, Rho 0.02: Strategy vs S&P 500 t = 1.724746164707669, p = 0.08495143420863654
+Portfolios 100, Rho 0.02: Strategy vs S&P 500 t = 2.1891781075443926, p = 0.028866170290129382
+Portfolios 200, Rho 0.02: Strategy vs S&P 500 t = 2.246560635301414, p = 0.02493445175636075
+Portfolios 500, Rho 0.02: Strategy vs S&P 500 t = 2.3124863783499787, p = 0.020998595400491635
+Portfolios 1000, Rho 0.02: Strategy vs S&P 500 t = 2.2059398846503937, p = 0.027665863569475906
+Portfolios 3, Rho 0.01: Strategy vs S&P 500 t = -2.1306157124179372, p = 0.03341889299431513
+Portfolios 4, Rho 0.01: Strategy vs S&P 500 t = -1.8715713467052115, p = 0.06162306881117645
+Portfolios 5, Rho 0.01: Strategy vs S&P 500 t = -1.7244710669624135, p = 0.08500107312599631
+Portfolios 3, Rho 0.01: Strategy vs S&P 500 t = -2.2315550633059154, p = 0.025914917477151047
+Portfolios 4, Rho 0.01: Strategy vs S&P 500 t = -2.0920261164402314, p = 0.036744320467748656
+Portfolios 5, Rho 0.01: Strategy vs S&P 500 t = -1.8684972514179508, p = 0.062050482032686705
+Portfolios 10, Rho 0.01: Strategy vs S&P 500 t = -1.2038992014114416, p = 0.2289772249933713
+Portfolios 10, Rho 0.01: Strategy vs S&P 500 t = -1.2399381072271292, p = 0.21535429583460802
+Portfolios 20, Rho 0.01: Strategy vs S&P 500 t = -0.771655646733605, p = 0.44054153552769826
+Portfolios 40, Rho 0.01: Strategy vs S&P 500 t = -0.2789808488389094, p = 0.7803301230399332
+Portfolios 100, Rho 0.01: Strategy vs S&P 500 t = 0.8781911055010927, p = 0.38009820282659923
+Portfolios 200, Rho 0.01: Strategy vs S&P 500 t = 1.7239791041501347, p = 0.08508990198581429
+Portfolios 500, Rho 0.01: Strategy vs S&P 500 t = 2.1550647782047703, p = 0.0314483153080701
+Portfolios 1000, Rho 0.01: Strategy vs S&P 500 t = 2.403428378270095, p = 0.01646405310879983
+Portfolios 20, Rho 0.01: Strategy vs S&P 500 t = -0.7883965022828083, p = 0.4306935105083163
+Portfolios 40, Rho 0.01: Strategy vs S&P 500 t = -0.2946782930483199, p = 0.7683145056541264
+Portfolios 100, Rho 0.01: Strategy vs S&P 500 t = 0.8577682747310122, p = 0.3912719852144123
+Portfolios 200, Rho 0.01: Strategy vs S&P 500 t = 1.6756255785669651, p = 0.09419418365460645
+Portfolios 500, Rho 0.01: Strategy vs S&P 500 t = 2.1949819457368975, p = 0.02844557080488472
+Portfolios 1000, Rho 0.01: Strategy vs S&P 500 t = 2.458794389748542, p = 0.014146825364250626
+Portfolios 3, Rho 0: Strategy vs S&P 500 t = -1.503270403565515, p = 0.1331557581506462
+Portfolios 4, Rho 0: Strategy vs S&P 500 t = -1.4300278687200223, p = 0.1530913191752719
+Portfolios 5, Rho 0: Strategy vs S&P 500 t = -1.3627768499304402, p = 0.1733283463262627
+Portfolios 3, Rho 0: Strategy vs S&P 500 t = -1.5242158199120865, p = 0.12784178241593813
+Portfolios 4, Rho 0: Strategy vs S&P 500 t = -1.4395754062638921, p = 0.15037059404281153
+Portfolios 5, Rho 0: Strategy vs S&P 500 t = -1.3631828286582142, p = 0.17320044421604336
+Portfolios 10, Rho 0: Strategy vs S&P 500 t = -1.1185430878024372, p = 0.2636638835231385
+Portfolios 10, Rho 0: Strategy vs S&P 500 t = -1.1168918276060817, p = 0.26436892995994554
+Portfolios 20, Rho 0: Strategy vs S&P 500 t = -0.8828715171825728, p = 0.37756539023920926
+Portfolios 40, Rho 0: Strategy vs S&P 500 t = -0.6614475202053421, p = 0.5085118530509627
+Portfolios 100, Rho 0: Strategy vs S&P 500 t = -0.46109027278617537, p = 0.6448565607169552
+Portfolios 200, Rho 0: Strategy vs S&P 500 t = -0.5108291258880788, p = 0.6096087138846396
+Portfolios 500, Rho 0: Strategy vs S&P 500 t = -0.15177554877319893, p = 0.8794014376950816
+Portfolios 1000, Rho 0: Strategy vs S&P 500 t = -0.17077559655336932, p = 0.864442501477908
+Portfolios 20, Rho 0: Strategy vs S&P 500 t = -0.9090427494060603, p = 0.36359563978539605
+Portfolios 40, Rho 0: Strategy vs S&P 500 t = -0.6745107875267418, p = 0.5001774422950264
+Portfolios 100, Rho 0: Strategy vs S&P 500 t = -0.4229924062074944, p = 0.6724121145879801
+Portfolios 200, Rho 0: Strategy vs S&P 500 t = -0.5833478469733728, p = 0.5598201501683551
+Portfolios 500, Rho 0: Strategy vs S&P 500 t = -0.09081230224411525, p = 0.9276639939868125
+Portfolios 1000, Rho 0: Strategy vs S&P 500 t = -0.2800707438560806, p = 0.7794941252435965
+Warning: skipped cumulative_return_deciles because no decile strategy returns were available.
+Warning: skipped long_short_return_boxplot because one or more return series were empty.
+Fertig! 
