@@ -96,6 +96,7 @@ NORMALIZE = [_normalize]
 
 SCRIPT_DIR = Path(__file__).resolve().parent
 
+print(f"[INFO] model_name: {MODEL_NAMES}, model_type: {MODEL_TYPES}, normalize: {NORMALIZE}, eval_type: {EVALUATION_TYPE}")
 
 def resolve_output_base_dir() -> Path:
     if len(MODEL_NAMES) == 1:

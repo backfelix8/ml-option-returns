@@ -1,5 +1,6 @@
 Starte Jobs... 
 [INFO] model_name: gbrt_standard, model_type: rf, normalize: False, eval_type: performance
+[INFO] model_name: ['gbrt_standard'], model_type: ['rf'], normalize: [False], eval_type: performance
 [output] base dir: \\studhome.informatik.kit.edu\s_back\Dokumente\dev\ml-option-returns\scripts\gbrt_standard
 [output] figures dir: \\studhome.informatik.kit.edu\s_back\Dokumente\dev\ml-option-returns\scripts\gbrt_standard\figures
 [output] shap dir: \\studhome.informatik.kit.edu\s_back\Dokumente\dev\ml-option-returns\scripts\gbrt_standard\shap\figures
@@ -161,173 +162,8 @@ Portfolios 100, Rho 0: Strategy vs S&P 500 t = 0.39335866563333577, p = 0.694157
 Portfolios 200, Rho 0: Strategy vs S&P 500 t = 0.6195881495737218, p = 0.5357017172066432
 Portfolios 500, Rho 0: Strategy vs S&P 500 t = 0.9710920195327646, p = 0.33178986042902536
 Portfolios 1000, Rho 0: Strategy vs S&P 500 t = 1.5543304480900124, p = 0.12049287904650982
-Warning: skipped cumulative_return_deciles because no decile strategy returns were available.
-Warning: skipped long_short_return_boxplot because one or more return series were empty.
-[INFO] model_name: rf_standard, model_type: rf, normalize: False, eval_type: performance
-[output] base dir: \\studhome.informatik.kit.edu\s_back\Dokumente\dev\ml-option-returns\scripts\rf_standard
-[output] figures dir: \\studhome.informatik.kit.edu\s_back\Dokumente\dev\ml-option-returns\scripts\rf_standard\figures
-[output] shap dir: \\studhome.informatik.kit.edu\s_back\Dokumente\dev\ml-option-returns\scripts\rf_standard\shap\figures
-[output] robustness dir: \\studhome.informatik.kit.edu\s_back\Dokumente\dev\ml-option-returns\scripts\rf_standard\robustness
-Features for model prediction:
-['Bucket_PR_Ret_W5_D4', 'daystomaturity', 'openinterest', 'yld', 'gamma', 'rho', 'bid', 'ask', 'underlying_bid', 'underlying_ask', 'embedlev', 'optspread', 'undspread', 'putcall_P', 'bakshiImplVol_annual', 'bakshiSkew', 'bakshiKurt', 'disaster_RIX_annual', 'implERP_SVIX2_annual', 'P_implQ_var', 'P_implQ_skew', 'P_implQ_kurt', 'P_var', 'P_skew', 'P_kurt', 'VaRQ_pct_0_1', 'VaRQ_pct_1', 'VaRQ_pct_99', 'VaRQ_pct_99_9', 'AVaRQ_pct_0_1', 'AVaRQ_pct_5', 'RP_mu', 'RP_var', 'RP_skew', 'RP_kurt', 'RP_moments_1', 'RP_moments_2', 'RP_moments_3', 'RP_moments_4', 'BTX_alpha_minus', 'BTX_alpha_plus', 'BTX_EQCV_k', 'BTX_EQJV_10', 'BTX_EQJV_k', 'BTX_EQV_relLeftTail_10', 'BTX_EQV_relLeftTail_k', 'BTX_EQV_relRightTail_10', 'BTX_EQV_relRightTail_k', 'BTX_EQV_relTail_10', 'BTX_EQV_relTail_k', 'BTX_implCrashFearVol_10_annual', 'BTX_implEuphoriaVol_10_annual', 'BTX_implTailVol_10_annual', 'BTX_k', 'BTX_LJV_10', 'BTX_LJV_7_5', 'BTX_LJV_k', 'BTX_MLJI_10_annual', 'BTX_MLJI_20_annual', 'BTX_MLJI_7_5_annual', 'BTX_MRJI_10_annual', 'BTX_PLJ_k', 'BTX_PRJ_k', 'BTX_RJV_10', 'BTX_RJV_k', 'Underlying_Ret_H3', 'Underlying_STD_H3', 'Underlying_Ret_D4_D2', 'Underlying_Ret_W5_D4', 'Bucket_PR_Ret_H1', 'Bucket_PR_Ret_H3', 'Bucket_PR_STD_H3', 'Bucket_PR_Ret_D2', 'Bucket_PR_Ret_D4_D2', 'theta', 'bid_size', 'ask_size', 'implVol', 'vega', 'normalizedMoneyness', 'time', 'Underlying_Ret_D2', 'Underlying_Ret_H1', 'delta']
-Number of features: 84
-Current model evaluated: rf_standard
-Current model evaluated: rf_standard
-Current model evaluated: rf_standard
-Current model evaluated: rf_standard
-Current model evaluated: rf_standard
-Current model evaluated: rf_standard
-Current model evaluated: rf_standard
-Current model evaluated: rf_standard
-Current model evaluated: rf_standard
-Current model evaluated: rf_standard
-Current model evaluated: rf_standard
-Current model evaluated: rf_standard
-Current model evaluated: rf_standard
-Current model evaluated: rf_standard
-Current model evaluated: rf_standard
-Portfolios 10, Rho 0: Strategy vs S&P 500 t = -1.336806451692871, p = 0.1823556876483379
-Portfolios 10, Rho 0: Strategy vs S&P 500 t = -1.28308988317228, p = 0.2005066607887507
-Portfolios 10, Rho 0: Strategy vs S&P 500 t = -1.2663452544920495, p = 0.20642717694066898
-Portfolios 10, Rho 0: Strategy vs S&P 500 t = -1.3435336957399315, p = 0.18017172027089803
-Portfolios 10, Rho 0: Strategy vs S&P 500 t = -1.2694455212264033, p = 0.2053214737616844
-Portfolios 10, Rho 0: Strategy vs S&P 500 t = 0.13526651947874066, p = 0.8925091374661414
-Portfolios 10, Rho 0: Strategy vs S&P 500 t = 0.04470091101138813, p = 0.9643811082642526
-Portfolios 10, Rho 0: Strategy vs S&P 500 t = 0.10207806167424147, p = 0.9187758913104686
-Portfolios 10, Rho 0: Strategy vs S&P 500 t = 0.07375771913316342, p = 0.9412616825400142
-Portfolios 10, Rho 0: Strategy vs S&P 500 t = 0.1224948475925788, p = 0.9026047574545093
-Portfolios 10, Rho 0: Strategy vs S&P 500 t = -0.027142383184487088, p = 0.9783655741672682
-Portfolios 10, Rho 0: Strategy vs S&P 500 t = -0.03896807696266547, p = 0.9689437089742114
-Portfolios 10, Rho 0: Strategy vs S&P 500 t = -0.050111967825057974, p = 0.9600690190736935
-Portfolios 10, Rho 0: Strategy vs S&P 500 t = -0.007985127838336204, p = 0.9936345640705494
-Portfolios 10, Rho 0: Strategy vs S&P 500 t = -0.055506326438970986, p = 0.9557748172870673
-Cross-section stats: min=2238, median=4401.0, requested max portfolios=1000
-If requested portfolios exceed available contracts in a timepoint, that timepoint will be skipped instead of forcing empty long-short buckets.
-Portfolios 10, Rho 0: Strategy vs S&P 500 t = -1.0523380697222433, p = 0.29295560993516184
-Portfolios 100, Rho 0: Strategy vs S&P 500 t = -0.2375302225277111, p = 0.8123050273026703
-Portfolios 3, Rho 0.05: Strategy vs S&P 500 t = -2.3679482105231973, p = 0.018118987322432695
-Portfolios 4, Rho 0.05: Strategy vs S&P 500 t = -1.9506369918853443, p = 0.05144181109700294
-Portfolios 5, Rho 0.05: Strategy vs S&P 500 t = -1.680557059867465, p = 0.09323123078734319
-Portfolios 3, Rho 0.05: Strategy vs S&P 500 t = -2.1983357477479144, p = 0.028204942914826905
-Portfolios 4, Rho 0.05: Strategy vs S&P 500 t = -1.8647454066800568, p = 0.0625754545673448
-Portfolios 5, Rho 0.05: Strategy vs S&P 500 t = -1.5287905025839672, p = 0.12670344416402174
-Portfolios 10, Rho 0.05: Strategy vs S&P 500 t = -0.7414070593583877, p = 0.45865971973045355
-Portfolios 10, Rho 0.05: Strategy vs S&P 500 t = -0.7872587543610382, p = 0.4313587257371188
-Portfolios 20, Rho 0.05: Strategy vs S&P 500 t = 2.645539569580769, p = 0.008312821920511023
-Portfolios 40, Rho 0.05: Strategy vs S&P 500 t = 3.5573357111320036, p = 0.0003962147954264471
-Portfolios 100, Rho 0.05: Strategy vs S&P 500 t = 3.96161939803166, p = 8.09449564198393e-05
-Portfolios 200, Rho 0.05: Strategy vs S&P 500 t = 4.030323738660228, p = 6.090442046959092e-05
-Portfolios 500, Rho 0.05: Strategy vs S&P 500 t = 4.011932305469105, p = 6.575054065666741e-05
-Portfolios 1000, Rho 0.05: Strategy vs S&P 500 t = 4.231048283205811, p = 2.5894691396722758e-05
-Portfolios 20, Rho 0.05: Strategy vs S&P 500 t = 2.8879521205251653, p = 0.003980011372853263
-Portfolios 40, Rho 0.05: Strategy vs S&P 500 t = 4.276496100395588, p = 2.1229511046500277e-05
-Portfolios 100, Rho 0.05: Strategy vs S&P 500 t = 5.11504844943395, p = 3.910904112872196e-07
-Portfolios 200, Rho 0.05: Strategy vs S&P 500 t = 5.237762432121668, p = 2.06943571670839e-07
-Portfolios 500, Rho 0.05: Strategy vs S&P 500 t = 5.004439045526001, p = 6.863186261737532e-07
-Portfolios 1000, Rho 0.05: Strategy vs S&P 500 t = 5.0049953489827255, p = 6.843984589896429e-07
-Portfolios 3, Rho 0.04: Strategy vs S&P 500 t = -1.9692902935562808, p = 0.049257295602327264
-Portfolios 4, Rho 0.04: Strategy vs S&P 500 t = -1.0008595916790624, p = 0.31719102810934696
-Portfolios 5, Rho 0.04: Strategy vs S&P 500 t = -0.1713758960100504, p = 0.8639706425043078
-Portfolios 3, Rho 0.04: Strategy vs S&P 500 t = -2.0911622022025633, p = 0.03682188874424213
-Portfolios 4, Rho 0.04: Strategy vs S&P 500 t = -1.2748096279033143, p = 0.2027390585602508
-Portfolios 5, Rho 0.04: Strategy vs S&P 500 t = -0.3643671114376124, p = 0.7156781741721003
-Portfolios 10, Rho 0.04: Strategy vs S&P 500 t = 1.336869251558861, p = 0.1816374468103827
-Portfolios 10, Rho 0.04: Strategy vs S&P 500 t = 1.3570882174329384, p = 0.17512797422192145
-Portfolios 20, Rho 0.04: Strategy vs S&P 500 t = 1.9756153449656368, p = 0.04853449199026178
-Portfolios 40, Rho 0.04: Strategy vs S&P 500 t = 2.236256550877597, p = 0.02560418955111033
-Portfolios 100, Rho 0.04: Strategy vs S&P 500 t = 2.3424411687822078, p = 0.019397244774233036
-Portfolios 200, Rho 0.04: Strategy vs S&P 500 t = 2.3839044163619096, p = 0.017357475933956822
-Portfolios 500, Rho 0.04: Strategy vs S&P 500 t = 2.3733634304524727, p = 0.017857322194457338
-Portfolios 1000, Rho 0.04: Strategy vs S&P 500 t = 2.497743552838949, p = 0.012694285815327569
-Portfolios 20, Rho 0.04: Strategy vs S&P 500 t = 2.4655096804366634, p = 0.013886364674836076
-Portfolios 40, Rho 0.04: Strategy vs S&P 500 t = 3.0145068392393513, p = 0.0026535766367801715
-Portfolios 100, Rho 0.04: Strategy vs S&P 500 t = 3.2490792160446182, p = 0.001205114540279064
-Portfolios 200, Rho 0.04: Strategy vs S&P 500 t = 3.0258570881281828, p = 0.002557041110763261
-Portfolios 500, Rho 0.04: Strategy vs S&P 500 t = 2.80916380411789, p = 0.005085635263496442
-Portfolios 1000, Rho 0.04: Strategy vs S&P 500 t = 3.2478222046768788, p = 0.0012103819895221465
-Portfolios 3, Rho 0.03: Strategy vs S&P 500 t = -2.5573748197409323, p = 0.010726077628838699
-Portfolios 4, Rho 0.03: Strategy vs S&P 500 t = -2.0093253318294, p = 0.04483109306977481
-Portfolios 5, Rho 0.03: Strategy vs S&P 500 t = -1.5561370796159453, p = 0.12006276312343879
-Portfolios 3, Rho 0.03: Strategy vs S&P 500 t = -2.6318668364802376, p = 0.008651902551021256
-Portfolios 4, Rho 0.03: Strategy vs S&P 500 t = -2.1143474943282556, p = 0.03478795828047132
-Portfolios 5, Rho 0.03: Strategy vs S&P 500 t = -1.6920313801306341, p = 0.09102129935099407
-Portfolios 10, Rho 0.03: Strategy vs S&P 500 t = -0.10130147781000567, p = 0.9193359980312056
-Portfolios 10, Rho 0.03: Strategy vs S&P 500 t = -0.08083689442384936, p = 0.9355914640684728
-Portfolios 20, Rho 0.03: Strategy vs S&P 500 t = 1.6974846606029768, p = 0.0899859036307462
-Portfolios 40, Rho 0.03: Strategy vs S&P 500 t = 3.5755338052400982, p = 0.00037004313212840936
-Portfolios 100, Rho 0.03: Strategy vs S&P 500 t = 5.03633602714408, p = 5.842101642532666e-07
-Portfolios 200, Rho 0.03: Strategy vs S&P 500 t = 5.301838523835074, p = 1.476533951100759e-07
-Portfolios 500, Rho 0.03: Strategy vs S&P 500 t = 5.476628222832023, p = 5.773298108868063e-08
-Portfolios 1000, Rho 0.03: Strategy vs S&P 500 t = 5.471724094768286, p = 5.929573504570438e-08
-Portfolios 20, Rho 0.03: Strategy vs S&P 500 t = 1.6590190095871997, p = 0.09749576190545498
-Portfolios 40, Rho 0.03: Strategy vs S&P 500 t = 3.5799395924253115, p = 0.00036395505732296886
-Portfolios 100, Rho 0.03: Strategy vs S&P 500 t = 4.999174730663619, p = 7.047485562438567e-07
-Portfolios 200, Rho 0.03: Strategy vs S&P 500 t = 5.2292692778731285, p = 2.1635542127016796e-07
-Portfolios 500, Rho 0.03: Strategy vs S&P 500 t = 5.554363062122739, p = 3.770103335013574e-08
-Portfolios 1000, Rho 0.03: Strategy vs S&P 500 t = 5.563890884055493, p = 3.576952585863081e-08
-Portfolios 3, Rho 0.02: Strategy vs S&P 500 t = -2.0305485798400476, p = 0.04262423221218488
-Portfolios 4, Rho 0.02: Strategy vs S&P 500 t = -1.5202141438261505, p = 0.12884405636610827
-Portfolios 5, Rho 0.02: Strategy vs S&P 500 t = -1.2108448262573657, p = 0.22630503042843
-Portfolios 3, Rho 0.02: Strategy vs S&P 500 t = -2.1458127960279407, p = 0.032181950673841726
-Portfolios 4, Rho 0.02: Strategy vs S&P 500 t = -1.6864644536049078, p = 0.0920881504964991
-Portfolios 5, Rho 0.02: Strategy vs S&P 500 t = -1.2933469867306153, p = 0.19625663630572085
-Portfolios 10, Rho 0.02: Strategy vs S&P 500 t = 0.048975774653361094, p = 0.960950571740417
-Portfolios 10, Rho 0.02: Strategy vs S&P 500 t = -0.01798841720611905, p = 0.9856524855702027
-Portfolios 20, Rho 0.02: Strategy vs S&P 500 t = 1.233132402707605, p = 0.21788104797770175
-Portfolios 40, Rho 0.02: Strategy vs S&P 500 t = 2.0107403806246977, p = 0.04468100561098272
-Portfolios 100, Rho 0.02: Strategy vs S&P 500 t = 2.4254447519466327, p = 0.015505347980950043
-Portfolios 200, Rho 0.02: Strategy vs S&P 500 t = 2.505761712636957, p = 0.012412229242106455
-Portfolios 500, Rho 0.02: Strategy vs S&P 500 t = 2.5686113171125, p = 0.01038724137891719
-Portfolios 1000, Rho 0.02: Strategy vs S&P 500 t = 2.4473592413690284, p = 0.014600300792844578
-Portfolios 20, Rho 0.02: Strategy vs S&P 500 t = 1.1643599824014557, p = 0.2446180450756466
-Portfolios 40, Rho 0.02: Strategy vs S&P 500 t = 1.9501248270964897, p = 0.051502919404666066
-Portfolios 100, Rho 0.02: Strategy vs S&P 500 t = 2.570642941230474, p = 0.010327006731414023
-Portfolios 200, Rho 0.02: Strategy vs S&P 500 t = 2.69270234952945, p = 0.007232710493117098
-Portfolios 500, Rho 0.02: Strategy vs S&P 500 t = 2.7261483297198823, p = 0.006545041448479387
-Portfolios 1000, Rho 0.02: Strategy vs S&P 500 t = 2.5596316190585466, p = 0.010657244210622774
-Portfolios 3, Rho 0.01: Strategy vs S&P 500 t = -1.8944769618119288, p = 0.05851462895133544
-Portfolios 4, Rho 0.01: Strategy vs S&P 500 t = -1.7095192986352743, p = 0.0877345277158766
-Portfolios 5, Rho 0.01: Strategy vs S&P 500 t = -1.5222885895040965, p = 0.1283237224795521
-Portfolios 3, Rho 0.01: Strategy vs S&P 500 t = -2.096268981212016, p = 0.03636538743189565
-Portfolios 4, Rho 0.01: Strategy vs S&P 500 t = -1.939589023694108, p = 0.05277355276526772
-Portfolios 5, Rho 0.01: Strategy vs S&P 500 t = -1.7765406651919258, p = 0.07601590431281506
-Portfolios 10, Rho 0.01: Strategy vs S&P 500 t = -0.9819353284829468, p = 0.3264223942733551
-Portfolios 10, Rho 0.01: Strategy vs S&P 500 t = -1.3900394732471149, p = 0.16489548760750092
-Portfolios 20, Rho 0.01: Strategy vs S&P 500 t = -0.216525688323978, p = 0.8286320562307947
-Portfolios 40, Rho 0.01: Strategy vs S&P 500 t = 0.7660909470594169, p = 0.44384346602006
-Portfolios 100, Rho 0.01: Strategy vs S&P 500 t = 1.8187546237718115, p = 0.06931485914947134
-Portfolios 200, Rho 0.01: Strategy vs S&P 500 t = 2.170143560046151, p = 0.030283443534154943
-Portfolios 500, Rho 0.01: Strategy vs S&P 500 t = 2.2782657266779656, p = 0.022968148770957906
-Portfolios 1000, Rho 0.01: Strategy vs S&P 500 t = 2.308861810910427, p = 0.021199979943094097
-Portfolios 20, Rho 0.01: Strategy vs S&P 500 t = -0.9671847577821231, p = 0.33373789328118797
-Portfolios 40, Rho 0.01: Strategy vs S&P 500 t = -0.6824970256236365, p = 0.49511818126856516
-Portfolios 100, Rho 0.01: Strategy vs S&P 500 t = -0.28735657833371636, p = 0.7739121729003722
-Portfolios 200, Rho 0.01: Strategy vs S&P 500 t = -0.34240012398741726, p = 0.7321378608782406
-Portfolios 500, Rho 0.01: Strategy vs S&P 500 t = -0.3137845079641292, p = 0.7537648094326744
-Portfolios 1000, Rho 0.01: Strategy vs S&P 500 t = -0.2196870955885219, p = 0.8261697315411011
-Portfolios 3, Rho 0: Strategy vs S&P 500 t = -1.4704472053640454, p = 0.14182567924312053
-Portfolios 4, Rho 0: Strategy vs S&P 500 t = -1.3527987287953562, p = 0.17649418687789598
-Portfolios 5, Rho 0: Strategy vs S&P 500 t = -1.3213293001212238, p = 0.18676149986084914
-Portfolios 3, Rho 0: Strategy vs S&P 500 t = -1.4767388245576152, p = 0.14013099233506054
-Portfolios 4, Rho 0: Strategy vs S&P 500 t = -1.3861094125565272, p = 0.16609167485575785
-Portfolios 5, Rho 0: Strategy vs S&P 500 t = -1.297575667168454, p = 0.19479943489516915
-Portfolios 10, Rho 0: Strategy vs S&P 500 t = -1.0494346380776776, p = 0.2942884505186582
-Portfolios 10, Rho 0: Strategy vs S&P 500 t = -1.0778423371893542, p = 0.2814222554246115
-Portfolios 20, Rho 0: Strategy vs S&P 500 t = -0.7836974836009196, p = 0.43344477281612487
-Portfolios 40, Rho 0: Strategy vs S&P 500 t = -0.4402280904271168, p = 0.6598883576619388
-Portfolios 100, Rho 0: Strategy vs S&P 500 t = -0.21674717043468186, p = 0.8284594952386561
-Portfolios 200, Rho 0: Strategy vs S&P 500 t = -0.03628876999462585, p = 0.9710609686869963
-Portfolios 500, Rho 0: Strategy vs S&P 500 t = 0.3374872542711906, p = 0.7358363060463775
-Portfolios 1000, Rho 0: Strategy vs S&P 500 t = 0.636160902311016, p = 0.5248497236979791
-Portfolios 20, Rho 0: Strategy vs S&P 500 t = -0.8189319421764871, p = 0.41306405160167947
-Portfolios 40, Rho 0: Strategy vs S&P 500 t = -0.49302758276821246, p = 0.6221255815013867
-Portfolios 100, Rho 0: Strategy vs S&P 500 t = -0.23057756409487687, p = 0.817700723417857
-Portfolios 200, Rho 0: Strategy vs S&P 500 t = -0.008096319429284174, p = 0.9935421187865863
-Portfolios 500, Rho 0: Strategy vs S&P 500 t = 0.5566283469969264, p = 0.5779338129348733
-Portfolios 1000, Rho 0: Strategy vs S&P 500 t = 0.7677244055659298, p = 0.44287275411342847
-Warning: skipped cumulative_return_deciles because no decile strategy returns were available.
-Warning: skipped long_short_return_boxplot because one or more return series were empty.
 [INFO] model_name: ffn_discrete, model_type: ffn, normalize: True, eval_type: performance
+[INFO] model_name: ['ffn_discrete'], model_type: ['ffn'], normalize: [True], eval_type: performance
 [output] base dir: \\studhome.informatik.kit.edu\s_back\Dokumente\dev\ml-option-returns\scripts\ffn_discrete
 [output] figures dir: \\studhome.informatik.kit.edu\s_back\Dokumente\dev\ml-option-returns\scripts\ffn_discrete\figures
 [output] shap dir: \\studhome.informatik.kit.edu\s_back\Dokumente\dev\ml-option-returns\scripts\ffn_discrete\shap\figures
@@ -335,7 +171,7 @@ Warning: skipped long_short_return_boxplot because one or more return series wer
 Features for model prediction:
 ['daystomaturity', 'openinterest', 'implVol', 'yld', 'delta', 'gamma', 'rho', 'theta', 'vega', 'normalizedMoneyness', 'time', 'bid_size', 'bid', 'ask_size', 'ask', 'underlying_bid', 'underlying_ask', 'embedlev', 'optspread', 'undspread', 'putcall_P', 'bakshiImplVol_annual', 'bakshiSkew', 'bakshiKurt', 'disaster_RIX_annual', 'implERP_SVIX2_annual', 'P_implQ_var', 'P_implQ_skew', 'P_implQ_kurt', 'P_var', 'P_skew', 'P_kurt', 'VaRQ_pct_0_1', 'VaRQ_pct_1', 'VaRQ_pct_99', 'VaRQ_pct_99_9', 'AVaRQ_pct_0_1', 'AVaRQ_pct_5', 'RP_mu', 'RP_var', 'RP_skew', 'RP_kurt', 'RP_moments_1', 'RP_moments_2', 'RP_moments_3', 'RP_moments_4', 'BTX_alpha_minus', 'BTX_alpha_plus', 'BTX_EQCV_k', 'BTX_EQJV_10', 'BTX_EQJV_k', 'BTX_EQV_relLeftTail_10', 'BTX_EQV_relLeftTail_k', 'BTX_EQV_relRightTail_10', 'BTX_EQV_relRightTail_k', 'BTX_EQV_relTail_10', 'BTX_EQV_relTail_k', 'BTX_implCrashFearVol_10_annual', 'BTX_implEuphoriaVol_10_annual', 'BTX_implTailVol_10_annual', 'BTX_k', 'BTX_LJV_10', 'BTX_LJV_7_5', 'BTX_LJV_k', 'BTX_MLJI_10_annual', 'BTX_MLJI_20_annual', 'BTX_MLJI_7_5_annual', 'BTX_MRJI_10_annual', 'BTX_PLJ_k', 'BTX_PRJ_k', 'BTX_RJV_10', 'BTX_RJV_k', 'Underlying_Ret_H1', 'Underlying_Ret_H3', 'Underlying_STD_H3', 'Underlying_Ret_D2', 'Underlying_Ret_D4_D2', 'Underlying_Ret_W5_D4', 'Bucket_PR_Ret_H1', 'Bucket_PR_Ret_H3', 'Bucket_PR_STD_H3', 'Bucket_PR_Ret_D2', 'Bucket_PR_Ret_D4_D2', 'Bucket_PR_Ret_W5_D4']
 Number of features: 84
-W0703 17:29:36.211000 2460 site-packages\torch\utils\flop_counter.py:29] triton not found; flop counting will not work for triton kernels
+W0728 14:27:57.112000 5908 site-packages\torch\utils\flop_counter.py:29] triton not found; flop counting will not work for triton kernels
 Current model evaluated: ffn_discrete
 Current model evaluated: ffn_discrete
 Current model evaluated: ffn_discrete
@@ -344,11 +180,11 @@ Current model evaluated: ffn_discrete
 Current model evaluated: ffn_discrete
 Current model evaluated: ffn_discrete
 Current model evaluated: ffn_discrete
-W0703 17:29:40.533000 2460 site-packages\torch\_dynamo\convert_frame.py:1743] [0/8] torch._dynamo hit config.recompile_limit (8)
-W0703 17:29:40.533000 2460 site-packages\torch\_dynamo\convert_frame.py:1743] [0/8]    function: 'forward' (Z:\Dokumente\dev\ml-option-returns\scripts\model.py:239)
-W0703 17:29:40.533000 2460 site-packages\torch\_dynamo\convert_frame.py:1743] [0/8]    last reason: 0/7: ___as_tensor(self._modules['net']._modules['2'].p).item() == 0.4382048884374009  # (unknown source ___as_tensor(self._modules['net']._modules['2'].p).item(), please file a bug)
-W0703 17:29:40.533000 2460 site-packages\torch\_dynamo\convert_frame.py:1743] [0/8] To log all recompilation reasons, use TORCH_LOGS="recompiles".
-W0703 17:29:40.533000 2460 site-packages\torch\_dynamo\convert_frame.py:1743] [0/8] To diagnose recompilation issues, see https://docs.pytorch.org/docs/main/user_guide/torch_compiler/compile/programming_model.recompilation.html
+W0728 14:28:01.795000 5908 site-packages\torch\_dynamo\convert_frame.py:1743] [0/8] torch._dynamo hit config.recompile_limit (8)
+W0728 14:28:01.795000 5908 site-packages\torch\_dynamo\convert_frame.py:1743] [0/8]    function: 'forward' (Z:\Dokumente\dev\ml-option-returns\scripts\model.py:239)
+W0728 14:28:01.795000 5908 site-packages\torch\_dynamo\convert_frame.py:1743] [0/8]    last reason: 0/7: ___as_tensor(self._modules['net']._modules['2'].p).item() == 0.4382048884374009  # (unknown source ___as_tensor(self._modules['net']._modules['2'].p).item(), please file a bug)
+W0728 14:28:01.795000 5908 site-packages\torch\_dynamo\convert_frame.py:1743] [0/8] To log all recompilation reasons, use TORCH_LOGS="recompiles".
+W0728 14:28:01.795000 5908 site-packages\torch\_dynamo\convert_frame.py:1743] [0/8] To diagnose recompilation issues, see https://docs.pytorch.org/docs/main/user_guide/torch_compiler/compile/programming_model.recompilation.html
 Current model evaluated: ffn_discrete
 Current model evaluated: ffn_discrete
 Current model evaluated: ffn_discrete
@@ -495,9 +331,8 @@ Portfolios 100, Rho 0: Strategy vs S&P 500 t = -0.3364141432685666, p = 0.736644
 Portfolios 200, Rho 0: Strategy vs S&P 500 t = -0.27128663003100384, p = 0.7862391179544473
 Portfolios 500, Rho 0: Strategy vs S&P 500 t = -0.20762142096925146, p = 0.8355763176986081
 Portfolios 1000, Rho 0: Strategy vs S&P 500 t = -0.08981588875965157, p = 0.9284555349532195
-Warning: skipped cumulative_return_deciles because no decile strategy returns were available.
-Warning: skipped long_short_return_boxplot because one or more return series were empty.
 [INFO] model_name: ffn_l2, model_type: ffn, normalize: True, eval_type: performance
+[INFO] model_name: ['ffn_l2'], model_type: ['ffn'], normalize: [True], eval_type: performance
 [output] base dir: \\studhome.informatik.kit.edu\s_back\Dokumente\dev\ml-option-returns\scripts\ffn_l2
 [output] figures dir: \\studhome.informatik.kit.edu\s_back\Dokumente\dev\ml-option-returns\scripts\ffn_l2\figures
 [output] shap dir: \\studhome.informatik.kit.edu\s_back\Dokumente\dev\ml-option-returns\scripts\ffn_l2\shap\figures
@@ -505,7 +340,7 @@ Warning: skipped long_short_return_boxplot because one or more return series wer
 Features for model prediction:
 ['daystomaturity', 'openinterest', 'implVol', 'yld', 'delta', 'gamma', 'rho', 'theta', 'vega', 'normalizedMoneyness', 'time', 'bid_size', 'bid', 'ask_size', 'ask', 'underlying_bid', 'underlying_ask', 'embedlev', 'optspread', 'undspread', 'putcall_P', 'bakshiImplVol_annual', 'bakshiSkew', 'bakshiKurt', 'disaster_RIX_annual', 'implERP_SVIX2_annual', 'P_implQ_var', 'P_implQ_skew', 'P_implQ_kurt', 'P_var', 'P_skew', 'P_kurt', 'VaRQ_pct_0_1', 'VaRQ_pct_1', 'VaRQ_pct_99', 'VaRQ_pct_99_9', 'AVaRQ_pct_0_1', 'AVaRQ_pct_5', 'RP_mu', 'RP_var', 'RP_skew', 'RP_kurt', 'RP_moments_1', 'RP_moments_2', 'RP_moments_3', 'RP_moments_4', 'BTX_alpha_minus', 'BTX_alpha_plus', 'BTX_EQCV_k', 'BTX_EQJV_10', 'BTX_EQJV_k', 'BTX_EQV_relLeftTail_10', 'BTX_EQV_relLeftTail_k', 'BTX_EQV_relRightTail_10', 'BTX_EQV_relRightTail_k', 'BTX_EQV_relTail_10', 'BTX_EQV_relTail_k', 'BTX_implCrashFearVol_10_annual', 'BTX_implEuphoriaVol_10_annual', 'BTX_implTailVol_10_annual', 'BTX_k', 'BTX_LJV_10', 'BTX_LJV_7_5', 'BTX_LJV_k', 'BTX_MLJI_10_annual', 'BTX_MLJI_20_annual', 'BTX_MLJI_7_5_annual', 'BTX_MRJI_10_annual', 'BTX_PLJ_k', 'BTX_PRJ_k', 'BTX_RJV_10', 'BTX_RJV_k', 'Underlying_Ret_H1', 'Underlying_Ret_H3', 'Underlying_STD_H3', 'Underlying_Ret_D2', 'Underlying_Ret_D4_D2', 'Underlying_Ret_W5_D4', 'Bucket_PR_Ret_H1', 'Bucket_PR_Ret_H3', 'Bucket_PR_STD_H3', 'Bucket_PR_Ret_D2', 'Bucket_PR_Ret_D4_D2', 'Bucket_PR_Ret_W5_D4']
 Number of features: 84
-W0703 18:01:09.553000 2384 site-packages\torch\utils\flop_counter.py:29] triton not found; flop counting will not work for triton kernels
+W0728 15:00:08.013000 11324 site-packages\torch\utils\flop_counter.py:29] triton not found; flop counting will not work for triton kernels
 Current model evaluated: ffn_l2
 Current model evaluated: ffn_l2
 Current model evaluated: ffn_l2
@@ -514,11 +349,11 @@ Current model evaluated: ffn_l2
 Current model evaluated: ffn_l2
 Current model evaluated: ffn_l2
 Current model evaluated: ffn_l2
-W0703 18:01:14.058000 2384 site-packages\torch\_dynamo\convert_frame.py:1743] [0/8] torch._dynamo hit config.recompile_limit (8)
-W0703 18:01:14.058000 2384 site-packages\torch\_dynamo\convert_frame.py:1743] [0/8]    function: 'forward' (Z:\Dokumente\dev\ml-option-returns\scripts\model.py:239)
-W0703 18:01:14.058000 2384 site-packages\torch\_dynamo\convert_frame.py:1743] [0/8]    last reason: 0/7: ___as_tensor(self._modules['net']._modules['2'].p).item() == 0.2040797696843316  # (unknown source ___as_tensor(self._modules['net']._modules['2'].p).item(), please file a bug)
-W0703 18:01:14.058000 2384 site-packages\torch\_dynamo\convert_frame.py:1743] [0/8] To log all recompilation reasons, use TORCH_LOGS="recompiles".
-W0703 18:01:14.058000 2384 site-packages\torch\_dynamo\convert_frame.py:1743] [0/8] To diagnose recompilation issues, see https://docs.pytorch.org/docs/main/user_guide/torch_compiler/compile/programming_model.recompilation.html
+W0728 15:00:12.475000 11324 site-packages\torch\_dynamo\convert_frame.py:1743] [0/8] torch._dynamo hit config.recompile_limit (8)
+W0728 15:00:12.475000 11324 site-packages\torch\_dynamo\convert_frame.py:1743] [0/8]    function: 'forward' (Z:\Dokumente\dev\ml-option-returns\scripts\model.py:239)
+W0728 15:00:12.475000 11324 site-packages\torch\_dynamo\convert_frame.py:1743] [0/8]    last reason: 0/7: ___as_tensor(self._modules['net']._modules['2'].p).item() == 0.2040797696843316  # (unknown source ___as_tensor(self._modules['net']._modules['2'].p).item(), please file a bug)
+W0728 15:00:12.475000 11324 site-packages\torch\_dynamo\convert_frame.py:1743] [0/8] To log all recompilation reasons, use TORCH_LOGS="recompiles".
+W0728 15:00:12.475000 11324 site-packages\torch\_dynamo\convert_frame.py:1743] [0/8] To diagnose recompilation issues, see https://docs.pytorch.org/docs/main/user_guide/torch_compiler/compile/programming_model.recompilation.html
 Current model evaluated: ffn_l2
 Current model evaluated: ffn_l2
 Current model evaluated: ffn_l2
@@ -665,9 +500,177 @@ Portfolios 100, Rho 0: Strategy vs S&P 500 t = -0.786757510525053, p = 0.4316519
 Portfolios 200, Rho 0: Strategy vs S&P 500 t = -0.5550110964962329, p = 0.579038986554769
 Portfolios 500, Rho 0: Strategy vs S&P 500 t = -0.5406951925547787, p = 0.5888650671197357
 Portfolios 1000, Rho 0: Strategy vs S&P 500 t = -0.4197733278898242, p = 0.6747614126965494
-Warning: skipped cumulative_return_deciles because no decile strategy returns were available.
-Warning: skipped long_short_return_boxplot because one or more return series were empty.
+[INFO] model_name: ffn, model_type: ffn, normalize: True, eval_type: performance
+[INFO] model_name: ['ffn'], model_type: ['ffn'], normalize: [True], eval_type: performance
+[output] base dir: \\studhome.informatik.kit.edu\s_back\Dokumente\dev\ml-option-returns\scripts\ffn
+[output] figures dir: \\studhome.informatik.kit.edu\s_back\Dokumente\dev\ml-option-returns\scripts\ffn\figures
+[output] shap dir: \\studhome.informatik.kit.edu\s_back\Dokumente\dev\ml-option-returns\scripts\ffn\shap\figures
+[output] robustness dir: \\studhome.informatik.kit.edu\s_back\Dokumente\dev\ml-option-returns\scripts\ffn\robustness
+Features for model prediction:
+['daystomaturity', 'openinterest', 'implVol', 'yld', 'delta', 'gamma', 'rho', 'theta', 'vega', 'normalizedMoneyness', 'time', 'bid_size', 'bid', 'ask_size', 'ask', 'underlying_bid', 'underlying_ask', 'embedlev', 'optspread', 'undspread', 'putcall_P', 'bakshiImplVol_annual', 'bakshiSkew', 'bakshiKurt', 'disaster_RIX_annual', 'implERP_SVIX2_annual', 'P_implQ_var', 'P_implQ_skew', 'P_implQ_kurt', 'P_var', 'P_skew', 'P_kurt', 'VaRQ_pct_0_1', 'VaRQ_pct_1', 'VaRQ_pct_99', 'VaRQ_pct_99_9', 'AVaRQ_pct_0_1', 'AVaRQ_pct_5', 'RP_mu', 'RP_var', 'RP_skew', 'RP_kurt', 'RP_moments_1', 'RP_moments_2', 'RP_moments_3', 'RP_moments_4', 'BTX_alpha_minus', 'BTX_alpha_plus', 'BTX_EQCV_k', 'BTX_EQJV_10', 'BTX_EQJV_k', 'BTX_EQV_relLeftTail_10', 'BTX_EQV_relLeftTail_k', 'BTX_EQV_relRightTail_10', 'BTX_EQV_relRightTail_k', 'BTX_EQV_relTail_10', 'BTX_EQV_relTail_k', 'BTX_implCrashFearVol_10_annual', 'BTX_implEuphoriaVol_10_annual', 'BTX_implTailVol_10_annual', 'BTX_k', 'BTX_LJV_10', 'BTX_LJV_7_5', 'BTX_LJV_k', 'BTX_MLJI_10_annual', 'BTX_MLJI_20_annual', 'BTX_MLJI_7_5_annual', 'BTX_MRJI_10_annual', 'BTX_PLJ_k', 'BTX_PRJ_k', 'BTX_RJV_10', 'BTX_RJV_k', 'Underlying_Ret_H1', 'Underlying_Ret_H3', 'Underlying_STD_H3', 'Underlying_Ret_D2', 'Underlying_Ret_D4_D2', 'Underlying_Ret_W5_D4', 'Bucket_PR_Ret_H1', 'Bucket_PR_Ret_H3', 'Bucket_PR_STD_H3', 'Bucket_PR_Ret_D2', 'Bucket_PR_Ret_D4_D2', 'Bucket_PR_Ret_W5_D4']
+Number of features: 84
+W0728 15:31:58.555000 2548 site-packages\torch\utils\flop_counter.py:29] triton not found; flop counting will not work for triton kernels
+Current model evaluated: ffn
+Current model evaluated: ffn
+Current model evaluated: ffn
+Current model evaluated: ffn
+Current model evaluated: ffn
+Current model evaluated: ffn
+Current model evaluated: ffn
+Current model evaluated: ffn
+W0728 15:32:02.995000 2548 site-packages\torch\_dynamo\convert_frame.py:1743] [0/8] torch._dynamo hit config.recompile_limit (8)
+W0728 15:32:02.995000 2548 site-packages\torch\_dynamo\convert_frame.py:1743] [0/8]    function: 'forward' (Z:\Dokumente\dev\ml-option-returns\scripts\model.py:239)
+W0728 15:32:02.995000 2548 site-packages\torch\_dynamo\convert_frame.py:1743] [0/8]    last reason: 0/7: tensor 'self._modules['net']._modules['0']._parameters['bias']' size mismatch at index 0. expected 32, actual 64. Guard failed on a parameter, consider using torch._dynamo.config.force_parameter_static_shapes = False to allow dynamism on parameters.
+W0728 15:32:02.995000 2548 site-packages\torch\_dynamo\convert_frame.py:1743] [0/8] To log all recompilation reasons, use TORCH_LOGS="recompiles".
+W0728 15:32:02.995000 2548 site-packages\torch\_dynamo\convert_frame.py:1743] [0/8] To diagnose recompilation issues, see https://docs.pytorch.org/docs/main/user_guide/torch_compiler/compile/programming_model.recompilation.html
+Current model evaluated: ffn
+Current model evaluated: ffn
+Current model evaluated: ffn
+Current model evaluated: ffn
+Current model evaluated: ffn
+Current model evaluated: ffn
+Current model evaluated: ffn
+Portfolios 10, Rho 0: Strategy vs S&P 500 t = -1.4030444225351422, p = 0.16169590320186403
+Portfolios 10, Rho 0: Strategy vs S&P 500 t = -1.588048712981511, p = 0.11338797812129404
+Portfolios 10, Rho 0: Strategy vs S&P 500 t = -1.4048033963599948, p = 0.16117254866834757
+Portfolios 10, Rho 0: Strategy vs S&P 500 t = -1.4725193565207815, p = 0.14198802522896647
+Portfolios 10, Rho 0: Strategy vs S&P 500 t = -1.4739198441504373, p = 0.1416107272534221
+Portfolios 10, Rho 0: Strategy vs S&P 500 t = -0.02865837337099586, p = 0.9771597385451661
+Portfolios 10, Rho 0: Strategy vs S&P 500 t = -0.09076392306216927, p = 0.9277522792377376
+Portfolios 10, Rho 0: Strategy vs S&P 500 t = -0.017057796651330233, p = 0.9864040047690423
+Portfolios 10, Rho 0: Strategy vs S&P 500 t = -0.15014082320290803, p = 0.8807736132041517
+Portfolios 10, Rho 0: Strategy vs S&P 500 t = -0.17246773927175438, p = 0.8632082537879847
+Portfolios 10, Rho 0: Strategy vs S&P 500 t = 0.13288539870608362, p = 0.8943798052182416
+Portfolios 10, Rho 0: Strategy vs S&P 500 t = 0.15793232033992924, p = 0.8746243731605154
+Portfolios 10, Rho 0: Strategy vs S&P 500 t = 0.052793073867961754, p = 0.9579345599321869
+Portfolios 10, Rho 0: Strategy vs S&P 500 t = -0.08525108194958574, p = 0.9321229237403417
+Portfolios 10, Rho 0: Strategy vs S&P 500 t = 0.06109363945190521, p = 0.9513283751335503
+Cross-section stats: min=2238, median=4401.0, requested max portfolios=1000
+If requested portfolios exceed available contracts in a timepoint, that timepoint will be skipped instead of forcing empty long-short buckets.
+Portfolios 10, Rho 0: Strategy vs S&P 500 t = -1.1007154165245756, p = 0.27134472797856407
+Portfolios 100, Rho 0: Strategy vs S&P 500 t = -0.748900896877341, p = 0.4541324909381519
+Portfolios 3, Rho 0.05: Strategy vs S&P 500 t = -2.389866237999027, p = 0.017080247516041553
+Portfolios 4, Rho 0.05: Strategy vs S&P 500 t = -2.035619643609742, p = 0.04211076632596732
+Portfolios 5, Rho 0.05: Strategy vs S&P 500 t = -1.9031025069101557, p = 0.05737841462769555
+Portfolios 3, Rho 0.05: Strategy vs S&P 500 t = -2.0691159190534756, p = 0.03884916316380829
+Portfolios 4, Rho 0.05: Strategy vs S&P 500 t = -1.7151639246231083, p = 0.08669435632615762
+Portfolios 5, Rho 0.05: Strategy vs S&P 500 t = -1.4215400031358747, p = 0.15554143008990698
+Portfolios 10, Rho 0.05: Strategy vs S&P 500 t = -1.114929692515744, p = 0.2652084037672185
+Portfolios 10, Rho 0.05: Strategy vs S&P 500 t = -1.113826387640768, p = 0.26568124555168354
+Portfolios 20, Rho 0.05: Strategy vs S&P 500 t = 1.1607420106360204, p = 0.24608587621880607
+Portfolios 40, Rho 0.05: Strategy vs S&P 500 t = 2.0440419119183457, p = 0.041269564614228045
+Portfolios 100, Rho 0.05: Strategy vs S&P 500 t = 2.475974561758271, p = 0.013488923341736847
+Portfolios 200, Rho 0.05: Strategy vs S&P 500 t = 2.5302167471881964, p = 0.011586007645262134
+Portfolios 500, Rho 0.05: Strategy vs S&P 500 t = 2.51077582443436, p = 0.012238685763255982
+Portfolios 1000, Rho 0.05: Strategy vs S&P 500 t = 2.671611870940747, p = 0.0076990761854082625
+Portfolios 20, Rho 0.05: Strategy vs S&P 500 t = 1.0931828674381685, p = 0.274635738581285
+Portfolios 40, Rho 0.05: Strategy vs S&P 500 t = 2.0686167804058164, p = 0.03889614008320044
+Portfolios 100, Rho 0.05: Strategy vs S&P 500 t = 2.4820062068666817, p = 0.013264453685887339
+Portfolios 200, Rho 0.05: Strategy vs S&P 500 t = 2.5562089401437875, p = 0.010761792397710837
+Portfolios 500, Rho 0.05: Strategy vs S&P 500 t = 2.519692303900614, p = 0.011935391728537336
+Portfolios 1000, Rho 0.05: Strategy vs S&P 500 t = 2.7016099645569542, p = 0.007043487726707048
+Portfolios 3, Rho 0.04: Strategy vs S&P 500 t = -2.0033206963774637, p = 0.0454727236298333
+Portfolios 4, Rho 0.04: Strategy vs S&P 500 t = -1.1705757971772877, p = 0.24211065149630645
+Portfolios 5, Rho 0.04: Strategy vs S&P 500 t = -0.39156222051174855, p = 0.6954838103324833
+Portfolios 3, Rho 0.04: Strategy vs S&P 500 t = -2.383582165677948, p = 0.017372572772258857
+Portfolios 4, Rho 0.04: Strategy vs S&P 500 t = -1.722977593828031, p = 0.08527096718051623
+Portfolios 5, Rho 0.04: Strategy vs S&P 500 t = -0.937898541839189, p = 0.3485737252611945
+Portfolios 10, Rho 0.04: Strategy vs S&P 500 t = 0.8112474934229678, p = 0.417459824669194
+Portfolios 10, Rho 0.04: Strategy vs S&P 500 t = 0.676693018556021, p = 0.4987922820897803
+Portfolios 20, Rho 0.04: Strategy vs S&P 500 t = 1.4301052340676568, p = 0.15306912290865893
+Portfolios 40, Rho 0.04: Strategy vs S&P 500 t = 1.7230382265967361, p = 0.08525999638452526
+Portfolios 100, Rho 0.04: Strategy vs S&P 500 t = 1.8378717790567813, p = 0.06644423912586916
+Portfolios 200, Rho 0.04: Strategy vs S&P 500 t = 1.8706717638836992, p = 0.0617478907186954
+Portfolios 500, Rho 0.04: Strategy vs S&P 500 t = 1.84676225859124, p = 0.06514306373053169
+Portfolios 1000, Rho 0.04: Strategy vs S&P 500 t = 1.9395149341841955, p = 0.05278258017810758
+Portfolios 20, Rho 0.04: Strategy vs S&P 500 t = 1.4267534130390933, p = 0.15403301727408486
+Portfolios 40, Rho 0.04: Strategy vs S&P 500 t = 1.9321224689645098, p = 0.053689835829487546
+Portfolios 100, Rho 0.04: Strategy vs S&P 500 t = 1.8433268913616434, p = 0.06564333245805193
+Portfolios 200, Rho 0.04: Strategy vs S&P 500 t = 1.8582443711870342, p = 0.06349381487040184
+Portfolios 500, Rho 0.04: Strategy vs S&P 500 t = 1.9936920755122634, p = 0.046517776420612895
+Portfolios 1000, Rho 0.04: Strategy vs S&P 500 t = 1.9249700073060194, p = 0.0545800161634754
+Portfolios 3, Rho 0.03: Strategy vs S&P 500 t = -2.9333492224285664, p = 0.0034470510250512055
+Portfolios 4, Rho 0.03: Strategy vs S&P 500 t = -2.5739801536665476, p = 0.01022873905680402
+Portfolios 5, Rho 0.03: Strategy vs S&P 500 t = -2.2730996834262203, p = 0.023279031720721755
+Portfolios 3, Rho 0.03: Strategy vs S&P 500 t = -2.887960943573834, p = 0.003979900880958809
+Portfolios 4, Rho 0.03: Strategy vs S&P 500 t = -2.55413086548119, p = 0.01082571345614148
+Portfolios 5, Rho 0.03: Strategy vs S&P 500 t = -2.3130350248020286, p = 0.020968258045896124
+Portfolios 10, Rho 0.03: Strategy vs S&P 500 t = -1.4001550211177631, p = 0.16184653003034413
+Portfolios 10, Rho 0.03: Strategy vs S&P 500 t = -1.501314799221408, p = 0.1336605228180827
+Portfolios 20, Rho 0.03: Strategy vs S&P 500 t = -0.32752822955135025, p = 0.7433523016857625
+Portfolios 40, Rho 0.03: Strategy vs S&P 500 t = 1.5415590792192988, p = 0.12356798902033089
+Portfolios 100, Rho 0.03: Strategy vs S&P 500 t = 3.2237624945772927, p = 0.0013154007569716535
+Portfolios 200, Rho 0.03: Strategy vs S&P 500 t = 3.7006590037996134, p = 0.0002294541992143181
+Portfolios 500, Rho 0.03: Strategy vs S&P 500 t = 4.1899300538028275, p = 3.0943752070460695e-05
+Portfolios 1000, Rho 0.03: Strategy vs S&P 500 t = 4.183710986198905, p = 3.178460370196317e-05
+Portfolios 20, Rho 0.03: Strategy vs S&P 500 t = -0.5044527148307816, p = 0.6140793011549592
+Portfolios 40, Rho 0.03: Strategy vs S&P 500 t = 1.530137897430654, p = 0.12636967743018682
+Portfolios 100, Rho 0.03: Strategy vs S&P 500 t = 3.2274312271680996, p = 0.0012988606009339632
+Portfolios 200, Rho 0.03: Strategy vs S&P 500 t = 3.667894321042078, p = 0.0002603967599498271
+Portfolios 500, Rho 0.03: Strategy vs S&P 500 t = 4.212491391298942, p = 2.8067642322059735e-05
+Portfolios 1000, Rho 0.03: Strategy vs S&P 500 t = 4.201042833124145, p = 2.9493709433001735e-05
+Portfolios 3, Rho 0.02: Strategy vs S&P 500 t = -2.1306824908511826, p = 0.03341336976687799
+Portfolios 4, Rho 0.02: Strategy vs S&P 500 t = -1.8134744209184044, p = 0.07012547523373558
+Portfolios 5, Rho 0.02: Strategy vs S&P 500 t = -1.6156440216704537, p = 0.10655736761808644
+Portfolios 3, Rho 0.02: Strategy vs S&P 500 t = -2.282790216112952, p = 0.022698847340389808
+Portfolios 4, Rho 0.02: Strategy vs S&P 500 t = -1.917326557920498, p = 0.05554490241585829
+Portfolios 5, Rho 0.02: Strategy vs S&P 500 t = -1.6491774029682287, p = 0.09949571175374237
+Portfolios 10, Rho 0.02: Strategy vs S&P 500 t = -0.6113783960100092, p = 0.5411191719505982
+Portfolios 10, Rho 0.02: Strategy vs S&P 500 t = -0.7354102488627805, p = 0.4623007380393652
+Portfolios 20, Rho 0.02: Strategy vs S&P 500 t = 0.5285699119505786, p = 0.5972473891674912
+Portfolios 40, Rho 0.02: Strategy vs S&P 500 t = 1.302137249395283, p = 0.1932364478202105
+Portfolios 100, Rho 0.02: Strategy vs S&P 500 t = 1.6653564821127744, p = 0.09622502861289896
+Portfolios 200, Rho 0.02: Strategy vs S&P 500 t = 1.749660141946447, p = 0.08055240969134166
+Portfolios 500, Rho 0.02: Strategy vs S&P 500 t = 1.8162426964037235, p = 0.06969952331630498
+Portfolios 1000, Rho 0.02: Strategy vs S&P 500 t = 1.7379693341257592, p = 0.08259299606581583
+Portfolios 20, Rho 0.02: Strategy vs S&P 500 t = 0.492387252281739, p = 0.6225778953295262
+Portfolios 40, Rho 0.02: Strategy vs S&P 500 t = 1.3112748696636403, p = 0.19013331634490097
+Portfolios 100, Rho 0.02: Strategy vs S&P 500 t = 1.705958594251199, p = 0.08839585307720205
+Portfolios 200, Rho 0.02: Strategy vs S&P 500 t = 1.7558424392770324, p = 0.0794900086041064
+Portfolios 500, Rho 0.02: Strategy vs S&P 500 t = 1.912719528190924, p = 0.05613332818161418
+Portfolios 1000, Rho 0.02: Strategy vs S&P 500 t = 1.7299465865554189, p = 0.08401747569365196
+Portfolios 3, Rho 0.01: Strategy vs S&P 500 t = -2.0169184451258344, p = 0.044030692648249846
+Portfolios 4, Rho 0.01: Strategy vs S&P 500 t = -1.8380806256069162, p = 0.06641342899859314
+Portfolios 5, Rho 0.01: Strategy vs S&P 500 t = -1.7415445255450401, p = 0.08196455131767096
+Portfolios 3, Rho 0.01: Strategy vs S&P 500 t = -2.1362064302641506, p = 0.03295918726049869
+Portfolios 4, Rho 0.01: Strategy vs S&P 500 t = -2.00677879313547, p = 0.04510226541393788
+Portfolios 5, Rho 0.01: Strategy vs S&P 500 t = -1.7958908031465233, p = 0.0728812747058526
+Portfolios 10, Rho 0.01: Strategy vs S&P 500 t = -1.3782931821117916, p = 0.16849010507912587
+Portfolios 10, Rho 0.01: Strategy vs S&P 500 t = -1.286543053806983, p = 0.19861803582229015
+Portfolios 20, Rho 0.01: Strategy vs S&P 500 t = -0.6610513987884814, p = 0.5087657145790497
+Portfolios 40, Rho 0.01: Strategy vs S&P 500 t = 0.1331123498937922, p = 0.8941373067743089
+Portfolios 100, Rho 0.01: Strategy vs S&P 500 t = 1.285124694972015, p = 0.19911290754668956
+Portfolios 200, Rho 0.01: Strategy vs S&P 500 t = 1.9864935016988488, p = 0.047312249292774965
+Portfolios 500, Rho 0.01: Strategy vs S&P 500 t = 2.2990017105897356, p = 0.021756368767573354
+Portfolios 1000, Rho 0.01: Strategy vs S&P 500 t = 2.3698779570312234, p = 0.018025358098205633
+Portfolios 20, Rho 0.01: Strategy vs S&P 500 t = -0.7484402686071573, p = 0.45441003879301217
+Portfolios 40, Rho 0.01: Strategy vs S&P 500 t = 0.046753827190213426, p = 0.9627208550068279
+Portfolios 100, Rho 0.01: Strategy vs S&P 500 t = 1.2318463165151152, p = 0.21836092171704946
+Portfolios 200, Rho 0.01: Strategy vs S&P 500 t = 2.013184731181292, p = 0.04442274533365733
+Portfolios 500, Rho 0.01: Strategy vs S&P 500 t = 2.4111730544230294, p = 0.016121022028928282
+Portfolios 1000, Rho 0.01: Strategy vs S&P 500 t = 2.5145613544303407, p = 0.012109095071980349
+Portfolios 3, Rho 0: Strategy vs S&P 500 t = -1.4295772242488007, p = 0.15322065869490964
+Portfolios 4, Rho 0: Strategy vs S&P 500 t = -1.3444708706301454, p = 0.17916932846447164
+Portfolios 5, Rho 0: Strategy vs S&P 500 t = -1.293368655811064, p = 0.19624914881152924
+Portfolios 3, Rho 0: Strategy vs S&P 500 t = -1.4341164122708812, p = 0.15192166491281411
+Portfolios 4, Rho 0: Strategy vs S&P 500 t = -1.3460367211129733, p = 0.17866404094639132
+Portfolios 5, Rho 0: Strategy vs S&P 500 t = -1.296044733219902, p = 0.19532607305244362
+Portfolios 10, Rho 0: Strategy vs S&P 500 t = -1.1007154150470781, p = 0.27134472862142467
+Portfolios 10, Rho 0: Strategy vs S&P 500 t = -1.0744128585423571, p = 0.2829548888325427
+Portfolios 20, Rho 0: Strategy vs S&P 500 t = -0.9575687737896426, p = 0.33856351876899254
+Portfolios 40, Rho 0: Strategy vs S&P 500 t = -0.9126265914738796, p = 0.36170818152125517
+Portfolios 100, Rho 0: Strategy vs S&P 500 t = -0.7489009068120202, p = 0.4541324849531235
+Portfolios 200, Rho 0: Strategy vs S&P 500 t = -0.43203192104166166, p = 0.6658322088079515
+Portfolios 500, Rho 0: Strategy vs S&P 500 t = -0.1821370440938674, p = 0.8555203591610572
+Portfolios 1000, Rho 0: Strategy vs S&P 500 t = -0.36282682992007026, p = 0.7168280924020395
+Portfolios 20, Rho 0: Strategy vs S&P 500 t = -0.9487112667316275, p = 0.3430480162786125
+Portfolios 40, Rho 0: Strategy vs S&P 500 t = -0.9102041659285912, p = 0.3629832958357629
+Portfolios 100, Rho 0: Strategy vs S&P 500 t = -0.6968161563544906, p = 0.486116064652148
+Portfolios 200, Rho 0: Strategy vs S&P 500 t = -0.507322132308427, p = 0.612065721963775
+Portfolios 500, Rho 0: Strategy vs S&P 500 t = 0.020732375290880258, p = 0.9834642049542762
+Portfolios 1000, Rho 0: Strategy vs S&P 500 t = -0.1486284927784864, p = 0.881883464986484
 [INFO] model_name: gbrt_standard_l2, model_type: rf, normalize: False, eval_type: performance
+[INFO] model_name: ['gbrt_standard_l2'], model_type: ['rf'], normalize: [False], eval_type: performance
 [output] base dir: \\studhome.informatik.kit.edu\s_back\Dokumente\dev\ml-option-returns\scripts\gbrt_standard_l2
 [output] figures dir: \\studhome.informatik.kit.edu\s_back\Dokumente\dev\ml-option-returns\scripts\gbrt_standard_l2\figures
 [output] shap dir: \\studhome.informatik.kit.edu\s_back\Dokumente\dev\ml-option-returns\scripts\gbrt_standard_l2\shap\figures
@@ -829,9 +832,8 @@ Portfolios 100, Rho 0: Strategy vs S&P 500 t = 0.11179260506343786, p = 0.911015
 Portfolios 200, Rho 0: Strategy vs S&P 500 t = 0.3930588243689686, p = 0.6943785727601114
 Portfolios 500, Rho 0: Strategy vs S&P 500 t = 0.6302485765753795, p = 0.52870819394094
 Portfolios 1000, Rho 0: Strategy vs S&P 500 t = 0.7670385991371161, p = 0.4432801586638969
-Warning: skipped cumulative_return_deciles because no decile strategy returns were available.
-Warning: skipped long_short_return_boxplot because one or more return series were empty.
 [INFO] model_name: rf_standard_l2, model_type: rf, normalize: False, eval_type: performance
+[INFO] model_name: ['rf_standard_l2'], model_type: ['rf'], normalize: [False], eval_type: performance
 [output] base dir: \\studhome.informatik.kit.edu\s_back\Dokumente\dev\ml-option-returns\scripts\rf_standard_l2
 [output] figures dir: \\studhome.informatik.kit.edu\s_back\Dokumente\dev\ml-option-returns\scripts\rf_standard_l2\figures
 [output] shap dir: \\studhome.informatik.kit.edu\s_back\Dokumente\dev\ml-option-returns\scripts\rf_standard_l2\shap\figures
@@ -993,9 +995,8 @@ Portfolios 100, Rho 0: Strategy vs S&P 500 t = -0.4830577378894471, p = 0.629184
 Portfolios 200, Rho 0: Strategy vs S&P 500 t = -0.3759311300442711, p = 0.7070656883754127
 Portfolios 500, Rho 0: Strategy vs S&P 500 t = 0.0543582309077645, p = 0.956663045656175
 Portfolios 1000, Rho 0: Strategy vs S&P 500 t = 0.3087369053283534, p = 0.7576003756366001
-Warning: skipped cumulative_return_deciles because no decile strategy returns were available.
-Warning: skipped long_short_return_boxplot because one or more return series were empty.
 [INFO] model_name: ffn_noise, model_type: ffn, normalize: True, eval_type: performance
+[INFO] model_name: ['ffn_noise'], model_type: ['ffn'], normalize: [True], eval_type: performance
 [output] base dir: \\studhome.informatik.kit.edu\s_back\Dokumente\dev\ml-option-returns\scripts\ffn_noise
 [output] figures dir: \\studhome.informatik.kit.edu\s_back\Dokumente\dev\ml-option-returns\scripts\ffn_noise\figures
 [output] shap dir: \\studhome.informatik.kit.edu\s_back\Dokumente\dev\ml-option-returns\scripts\ffn_noise\shap\figures
@@ -1003,7 +1004,7 @@ Warning: skipped long_short_return_boxplot because one or more return series wer
 Features for model prediction:
 ['daystomaturity', 'openinterest', 'implVol', 'yld', 'delta', 'gamma', 'rho', 'theta', 'vega', 'normalizedMoneyness', 'time', 'bid_size', 'bid', 'ask_size', 'ask', 'underlying_bid', 'underlying_ask', 'embedlev', 'optspread', 'undspread', 'putcall_P', 'bakshiImplVol_annual', 'bakshiSkew', 'bakshiKurt', 'disaster_RIX_annual', 'implERP_SVIX2_annual', 'P_implQ_var', 'P_implQ_skew', 'P_implQ_kurt', 'P_var', 'P_skew', 'P_kurt', 'VaRQ_pct_0_1', 'VaRQ_pct_1', 'VaRQ_pct_99', 'VaRQ_pct_99_9', 'AVaRQ_pct_0_1', 'AVaRQ_pct_5', 'RP_mu', 'RP_var', 'RP_skew', 'RP_kurt', 'RP_moments_1', 'RP_moments_2', 'RP_moments_3', 'RP_moments_4', 'BTX_alpha_minus', 'BTX_alpha_plus', 'BTX_EQCV_k', 'BTX_EQJV_10', 'BTX_EQJV_k', 'BTX_EQV_relLeftTail_10', 'BTX_EQV_relLeftTail_k', 'BTX_EQV_relRightTail_10', 'BTX_EQV_relRightTail_k', 'BTX_EQV_relTail_10', 'BTX_EQV_relTail_k', 'BTX_implCrashFearVol_10_annual', 'BTX_implEuphoriaVol_10_annual', 'BTX_implTailVol_10_annual', 'BTX_k', 'BTX_LJV_10', 'BTX_LJV_7_5', 'BTX_LJV_k', 'BTX_MLJI_10_annual', 'BTX_MLJI_20_annual', 'BTX_MLJI_7_5_annual', 'BTX_MRJI_10_annual', 'BTX_PLJ_k', 'BTX_PRJ_k', 'BTX_RJV_10', 'BTX_RJV_k', 'Underlying_Ret_H1', 'Underlying_Ret_H3', 'Underlying_STD_H3', 'Underlying_Ret_D2', 'Underlying_Ret_D4_D2', 'Underlying_Ret_W5_D4', 'Bucket_PR_Ret_H1', 'Bucket_PR_Ret_H3', 'Bucket_PR_STD_H3', 'Bucket_PR_Ret_D2', 'Bucket_PR_Ret_D4_D2', 'Bucket_PR_Ret_W5_D4']
 Number of features: 84
-W0703 19:38:09.820000 12344 site-packages\torch\utils\flop_counter.py:29] triton not found; flop counting will not work for triton kernels
+W0728 17:09:46.673000 13728 site-packages\torch\utils\flop_counter.py:29] triton not found; flop counting will not work for triton kernels
 Current model evaluated: ffn_noise
 Current model evaluated: ffn_noise
 Current model evaluated: ffn_noise
@@ -1012,11 +1013,11 @@ Current model evaluated: ffn_noise
 Current model evaluated: ffn_noise
 Current model evaluated: ffn_noise
 Current model evaluated: ffn_noise
-W0703 19:38:14.021000 12344 site-packages\torch\_dynamo\convert_frame.py:1743] [0/8] torch._dynamo hit config.recompile_limit (8)
-W0703 19:38:14.021000 12344 site-packages\torch\_dynamo\convert_frame.py:1743] [0/8]    function: 'forward' (Z:\Dokumente\dev\ml-option-returns\scripts\model.py:239)
-W0703 19:38:14.021000 12344 site-packages\torch\_dynamo\convert_frame.py:1743] [0/8]    last reason: 0/7: len(self._modules['net']._modules) != 16
-W0703 19:38:14.021000 12344 site-packages\torch\_dynamo\convert_frame.py:1743] [0/8] To log all recompilation reasons, use TORCH_LOGS="recompiles".
-W0703 19:38:14.021000 12344 site-packages\torch\_dynamo\convert_frame.py:1743] [0/8] To diagnose recompilation issues, see https://docs.pytorch.org/docs/main/user_guide/torch_compiler/compile/programming_model.recompilation.html
+W0728 17:09:50.867000 13728 site-packages\torch\_dynamo\convert_frame.py:1743] [0/8] torch._dynamo hit config.recompile_limit (8)
+W0728 17:09:50.867000 13728 site-packages\torch\_dynamo\convert_frame.py:1743] [0/8]    function: 'forward' (Z:\Dokumente\dev\ml-option-returns\scripts\model.py:239)
+W0728 17:09:50.867000 13728 site-packages\torch\_dynamo\convert_frame.py:1743] [0/8]    last reason: 0/7: len(self._modules['net']._modules) != 16
+W0728 17:09:50.867000 13728 site-packages\torch\_dynamo\convert_frame.py:1743] [0/8] To log all recompilation reasons, use TORCH_LOGS="recompiles".
+W0728 17:09:50.867000 13728 site-packages\torch\_dynamo\convert_frame.py:1743] [0/8] To diagnose recompilation issues, see https://docs.pytorch.org/docs/main/user_guide/torch_compiler/compile/programming_model.recompilation.html
 Current model evaluated: ffn_noise
 Current model evaluated: ffn_noise
 Current model evaluated: ffn_noise
@@ -1163,6 +1164,4 @@ Portfolios 100, Rho 0: Strategy vs S&P 500 t = -0.4229924062074944, p = 0.672412
 Portfolios 200, Rho 0: Strategy vs S&P 500 t = -0.5833478469733728, p = 0.5598201501683551
 Portfolios 500, Rho 0: Strategy vs S&P 500 t = -0.09081230224411525, p = 0.9276639939868125
 Portfolios 1000, Rho 0: Strategy vs S&P 500 t = -0.2800707438560806, p = 0.7794941252435965
-Warning: skipped cumulative_return_deciles because no decile strategy returns were available.
-Warning: skipped long_short_return_boxplot because one or more return series were empty.
 Fertig! 

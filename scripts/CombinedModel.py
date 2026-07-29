@@ -1169,13 +1169,14 @@ class CombinedModel:
             writer.close()
             return
 
+        result_decile = result
         writer = pd.ExcelWriter(output_dir / 'selective_strategy.xlsx', engine='xlsxwriter')
         #Perform strategy calculation for only predicted non-zero returns (selective strategy)
         # using different fractions of effective to quoted trading costs
         for rho in [0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1]: #fractions of quoted spreads to pay
-            resultPort, result = self.sharpe_top_contenders(x, y_pred, rho) #perform strategy evaluation
+            resultPort, result_top = self.sharpe_top_contenders(x, y_pred, rho) #perform strategy evaluation
             resultPort.to_excel(writer, sheet_name=f'result_{rho}') #aggregated results
-            result.to_excel(writer, sheet_name=f'trading_times_{rho}') #results for each trading interval
+            result_top.to_excel(writer, sheet_name=f'trading_times_{rho}') #results for each trading interval
         writer.close()
 
         #Calculate Sharpe Ratio for long-short strategy using no trading costs and
@@ -1290,7 +1291,7 @@ class CombinedModel:
 
         #Create plot for cumulative return of decile strategy without trading costs or
         # turnover over testing sample
-        hlPortfolio1 = result[result['subgroup'] == 'H-L 10 portfolios, 0 turnover']
+        hlPortfolio1 = result_decile[result_decile['subgroup'] == 'H-L 10 portfolios, 0 turnover']
         hlPortfolio1 = hlPortfolio1.copy()
         if hlPortfolio1.empty:
             print('Warning: skipped cumulative_return_deciles because no decile strategy returns were available.')
