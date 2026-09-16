@@ -62,7 +62,7 @@ from optuna.samplers import TPESampler
 
 # Which model to train. Possible 'TransformerModel', 'AutoencoderModel', 'FFN', 'GBR', 'GBR-AV', 'RF',
 # 'RF-AV', 'Hypernetwork', 'DoubleNet', 'TripleNet', 'fusion', 'fusionContextFirst'
-MODEL_TO_TRAIN = 'GBR'
+MODEL_TO_TRAIN = 'FFN'
 # Set to an integer to force-override the default Optuna/Ray trial count.
 # Set to None to keep the default returned by Config.get_config(MODEL_TO_TRAIN).
 TRIALS_OVERRIDE = 30
@@ -70,10 +70,10 @@ TRIALS_OVERRIDE = 30
 IMPORTANT_COLUMNS = ['theta', 'bid_size', 'ask_size','implVol','vega','normalizedMoneyness','time','Underlying_Ret_D2','Underlying_Ret_H1','delta']
 # Whether the model is trained with normalized features or not (True for Neural Network based models
 # and False for tree-based models across this thesis)
-NORMALIZE = False
+NORMALIZE = True
 # Regularization strategy. Possible 'none' | 'l2' | 'noise' | 'discrete'.
 # Only has an effect for MODEL_TO_TRAIN in ('GBR', 'RF', 'FFN').
-REGULARIZATION = 'none'
+REGULARIZATION = 'discrete'
 # Data availability and rolling window configuration.
 # MONTHS_AVAILABLE: how many monthly parquet files exist (1 … MONTHS_AVAILABLE are loaded).
 # TRAIN_MONTHS:     size of the initial training window (months 1 … TRAIN_MONTHS).
@@ -609,6 +609,8 @@ def train_neural_model(config: dict, train_path: str, val_path: str,
         checkpoint = Checkpoint.from_directory(temp_checkpoint_dir)
         session.report({"loss": best_val_loss, 'done': True}, checkpoint=checkpoint)
 
+def short_dirname_creator(trial):
+    return f"trial_{trial.trial_id}"
 
 def hyperparameter_optimization() -> None:
     """
@@ -766,6 +768,7 @@ def hyperparameter_optimization() -> None:
                         search_alg=OptunaSearch(),
                         num_samples=samples_model,
                         max_concurrent_trials=1,
+                        trial_dirname_creator=short_dirname_creator
                     ),
                     param_space=config[run],
                 )

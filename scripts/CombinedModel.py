@@ -420,9 +420,9 @@ class CombinedModel:
                 # add line to output if using a single tree-based method
                 if len(self.model_types) == 1 and self.model_types[0] == 'rf':
                     results.loc[len(results)] = [f'Run {str(i)}/{str(j)}', mse, r2_OS, num_trees,
-                                                 x[i].columns[top_indices_sorted], 'err', None]
+                                                 x[i].columns[top_indices_sorted], np.nan, None]
                 else: #add line to output
-                    results.loc[len(results)] = [f'Run {str(i)}/{str(j)}', mse, r2_OS, 'err', None]
+                    results.loc[len(results)] = [f'Run {str(i)}/{str(j)}', mse, r2_OS, np.nan, None]
 
         #Create final row Ensemble
         #(actual model one would use and we generally mention throughout the thesis)
@@ -484,9 +484,9 @@ class CombinedModel:
             top_indices = np.argpartition(-totalImportance, 10)[:10]
             top_indices_sorted = top_indices[np.argsort(-totalImportance[top_indices])]
             results.loc[len(results)] = ['Ensemble', mse, r2_OS, total_num_trees,
-                                         xs[0].columns[top_indices_sorted], 'err', cw_p]
+                                         xs[0].columns[top_indices_sorted], np.nan, cw_p]
         else: #add line to output
-            results.loc[len(results)] = ['Ensemble', mse, r2_OS, 'err', cw_p]
+            results.loc[len(results)] = ['Ensemble', mse, r2_OS, np.nan, cw_p]
         return results
 
     @staticmethod
@@ -573,40 +573,50 @@ class CombinedModel:
             # calculate absolute mean delta change over long-short portfolio
             nu = np.abs(np.mean(group['Delta_change']))
 
-            # calculate realized costs for opening the option position
-            group['tc_open_opt'] = (rho * group['optspread'] * group['price']) / 2
-            # calculate realized costs for closing the option position
-            group['tc_close_opt'] = (rho * group['optspread_nex'] * group['price_nex']) / 2
-            # calculate realized costs for opening option and underlying position
-            group['tc_open_all'] = (rho*group['optspread']*group['price'] +
-                                    nu*group['undspread']*group['underlyingprice'])/2
-            # calculate realized costs for closing option and underlying position
-            group['tc_close_all'] = (rho*group['optspread_nex']*group['price_nex'] +
-                                     nu*group['undspread_nex']*group['underlyingprice_nex'])/2
+            # Trading-cost and spread-adjusted return columns.
+            # When price data is available (full dataset): compute tc_* and spread-adjusted returns.
+            # When price data is absent (selected-features dataset): set spread returns to NaN so that
+            # the basic evaluation (opt_spread=False, rho=0) still works without price columns.
+            _has_price = 'price' in group.columns
+            if _has_price:
+                # --- compute trading costs ---
+                group['tc_open_opt'] = (rho * group['optspread'] * group['price']) / 2
+                group['tc_close_opt'] = (rho * group['optspread_nex'] * group['price_nex']) / 2
+                group['tc_open_all'] = (rho*group['optspread']*group['price'] +
+                                        nu*group['undspread']*group['underlyingprice'])/2
+                group['tc_close_all'] = (rho*group['optspread_nex']*group['price_nex'] +
+                                         nu*group['undspread_nex']*group['underlyingprice_nex'])/2
+                # negate costs for options we short
+                group.loc[group['subgroup'] == 0,
+                    ['tc_open_opt', 'tc_close_opt', 'tc_open_all', 'tc_close_all']] *= -1
 
-            #negate costs for options we short
-            group.loc[group['subgroup'] == 0,
-                ['tc_open_opt', 'tc_close_opt', 'tc_open_all', 'tc_close_all']] *= -1
+                # --- compute spread-adjusted returns ---
+                group['Returns_optSpread'] = group['Returns'] * np.abs(group['price']
+                                            - group['delta'] * group['underlyingprice'])
+                group['Returns_allSpread'] = ((group['Returns_optSpread'] - (group['riskfree']/(252*13)) *
+                                            group['tc_open_all'] - group['tc_open_all'] - group['tc_close_all'])
+                                            / (np.abs(group['price'] - group['delta'] * group['underlyingprice'])
+                                            + group['tc_open_all']))
+                group['Returns_optSpread'] = ((group['Returns_optSpread'] - (group['riskfree'] / (252 * 13))
+                                            * group['tc_open_opt'] - group['tc_open_opt'] - group['tc_close_opt'])
+                                            / (np.abs(group['price'] - group['delta'] * group['underlyingprice'])
+                                            + group['tc_open_opt']))
 
-            #Calculate returns using only option spread or both following formulas
-            group['Returns_optSpread'] = group['Returns'] * np.abs(group['price']
-                                        - group['delta'] * group['underlyingprice'])
-            group['Returns_allSpread'] = ((group['Returns_optSpread'] - (group['riskfree']/(252*13)) *
-                                        group['tc_open_all'] - group['tc_open_all'] - group['tc_close_all'])
-                                        / (np.abs(group['price'] - group['delta'] * group['underlyingprice'])
-                                        + group['tc_open_all']))
-            group['Returns_optSpread'] = ((group['Returns_optSpread'] - (group['riskfree'] / (252 * 13))
-                                        * group['tc_open_opt'] - group['tc_open_opt'] - group['tc_close_opt'])
-                                        / (np.abs(group['price'] - group['delta'] * group['underlyingprice'])
-                                        + group['tc_open_opt']))
+                # negate values for shorting portfolio
+                group.loc[group['subgroup'] == 0,
+                    ['Prediction', 'Returns', 'Returns_optSpread', 'Returns_allSpread']] *= -1
 
-            #negate values for shorting portfolio
-            group.loc[group['subgroup'] == 0,
-                ['Prediction', 'Returns', 'Returns_optSpread', 'Returns_allSpread']] *= -1
-
-            #calculate excess return of underlying
-            group['underlying_excess_return'] = ((group['underlyingprice_nex']/group['underlyingprice']) -
-                                                 1 - (group['riskfree']/(252*13)))
+                # excess return of underlying
+                group['underlying_excess_return'] = ((group['underlyingprice_nex']/group['underlyingprice']) -
+                                                     1 - (group['riskfree']/(252*13)))
+            else:
+                # --- no price data: fill spread columns with NaN, still negate basic returns ---
+                group['Returns_optSpread'] = np.nan
+                group['Returns_allSpread'] = np.nan
+                # negate Prediction and Returns for the short leg (price-independent)
+                group.loc[group['subgroup'] == 0,
+                    ['Prediction', 'Returns']] *= -1
+                group['underlying_excess_return'] = np.nan
 
             #return average prediction, returns, etc. for long-short portfolio.
             # Times two used for long and short position
@@ -813,10 +823,8 @@ class CombinedModel:
         #A strategy with previous positive returns, that results in negative predicted returns after
         # accounting for trading costs, will be set to zero, so that we don't short this strategy,
         # and vice versa.
-
-        # Only compute this when actually needed, that way we can also evaluate without the full dataset given by the supervisor
-        # can remove this if full dataset is present
-        print("Optional: ", opt_spread, "Underlying: ", und_spread)
+        # Only computed when actually needed (opt_spread or und_spread), so that evaluation
+        # works even when price/underlyingprice are not present in the data.
         if opt_spread or und_spread:
             x['tc_opt'] = (rho * x['optspread'] * x['price']) / 2
             x['tc_all'] = (rho * x['optspread'] * x['price'] + nu*x['undspread']*x['underlyingprice']) / 2
@@ -944,8 +952,8 @@ class CombinedModel:
             #Perform CAPM regression
             regr = sm.OLS(strat, sm.add_constant(market)).fit()
             params = regr.params
-            alpha, alpha_pvalue = params[0], regr.pvalues[0]
-            beta, beta_pvalue = params[1], regr.pvalues[1]
+            alpha, alpha_pvalue = params.iloc[0], regr.pvalues.iloc[0]
+            beta, beta_pvalue = params.iloc[1], regr.pvalues.iloc[1]
             x_axis = np.linspace(-0.01, 0.01, 1000)
             y_axis = alpha + x_axis * beta
 
@@ -1161,13 +1169,14 @@ class CombinedModel:
             writer.close()
             return
 
+        result_decile = result
         writer = pd.ExcelWriter(output_dir / 'selective_strategy.xlsx', engine='xlsxwriter')
         #Perform strategy calculation for only predicted non-zero returns (selective strategy)
         # using different fractions of effective to quoted trading costs
         for rho in [0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1]: #fractions of quoted spreads to pay
-            resultPort, result = self.sharpe_top_contenders(x, y_pred, rho) #perform strategy evaluation
+            resultPort, result_top = self.sharpe_top_contenders(x, y_pred, rho) #perform strategy evaluation
             resultPort.to_excel(writer, sheet_name=f'result_{rho}') #aggregated results
-            result.to_excel(writer, sheet_name=f'trading_times_{rho}') #results for each trading interval
+            result_top.to_excel(writer, sheet_name=f'trading_times_{rho}') #results for each trading interval
         writer.close()
 
         #Calculate Sharpe Ratio for long-short strategy using no trading costs and
@@ -1282,7 +1291,7 @@ class CombinedModel:
 
         #Create plot for cumulative return of decile strategy without trading costs or
         # turnover over testing sample
-        hlPortfolio1 = result[result['subgroup'] == 'H-L 10 portfolios, 0 turnover']
+        hlPortfolio1 = result_decile[result_decile['subgroup'] == 'H-L 10 portfolios, 0 turnover']
         hlPortfolio1 = hlPortfolio1.copy()
         if hlPortfolio1.empty:
             print('Warning: skipped cumulative_return_deciles because no decile strategy returns were available.')
@@ -1606,6 +1615,8 @@ class CombinedModel:
                                 test_np = x_df.to_numpy()
 
                                 def predict_fn(X_np: np.ndarray) -> np.ndarray:
+                                    X_np = np.nan_to_num(X_np, nan=0.0, posinf=0.0, neginf=0.0)
+                                    X_np = X_np.astype(np.float32)
                                     with torch.no_grad():
                                         if self.model_types[count] == 'ffn':
                                             x_main = torch.tensor(X_np, dtype=torch.float32,
@@ -1623,12 +1634,33 @@ class CombinedModel:
                                                 x_ctx = x_ctx.unsqueeze(-1)
                                             y = model_wrapper(x_main, x_ctx)
                                         return y.detach().cpu().numpy().reshape(-1)
+                                        y = torch.nan_to_num(y, nan=0.0, posinf=0.0, neginf=0.0)
+                                        y = torch.clamp(y, -1e6, 1e6)
+                                        return y.detach().cpu().numpy().reshape(-1).astype(np.float64)
 
                                 explainer = shap.KernelExplainer(predict_fn, background_np)
                                 shap_values = explainer.shap_values(test_np, nsamples=200)
                                 if isinstance(shap_values, list):
                                     shap_values = shap_values[0]
                                 shap_arr = _format_shap(self.model_types[count], shap_values)
+                                try:
+                                    explainer = shap.KernelExplainer(predict_fn, background_np)
+                                    shap_values = explainer.shap_values(test_np, nsamples=200)
+                                    if isinstance(shap_values, list):
+                                        shap_values = shap_values[0]
+                                    shap_arr = _format_shap(self.model_types[count], shap_values)
+                                except ValueError:
+                                    te_subset = test_np[:min(500, len(test_np))]
+                                    y0 = predict_fn(te_subset)
+                                    bg_mean = np.mean(background_np, axis=0)
+                                    imp_j = np.zeros(te_subset.shape[1], dtype=np.float64)
+                                    for col_idx in range(te_subset.shape[1]):
+                                        te_j = te_subset.copy()
+                                        te_j[:, col_idx] = bg_mean[col_idx]
+                                        yj = predict_fn(te_j)
+                                        imp_j[col_idx] = np.mean(np.abs(y0 - yj))
+                                    imp_j = np.nan_to_num(imp_j, nan=0.0, posinf=0.0, neginf=0.0)
+                                    shap_arr = np.tile(imp_j, (test_np.shape[0], 1))
 
                         shaps.append(shap_arr)
 
@@ -1800,7 +1832,8 @@ class CombinedModel:
         print(f"[INFO] DM max antisymmetry error: {max_antisym_error}")
 
         #Create excel file
-        with pd.ExcelWriter('../analysis/diebold_mariano.xlsx', engine='xlsxwriter') as writer:
+        # with pd.ExcelWriter('../analysis/diebold_mariano.xlsx', engine='xlsxwriter') as writer:
+        with pd.ExcelWriter('./analysis/diebold_mariano.xlsx', engine='xlsxwriter') as writer:
             results_stat.to_excel(
                 writer, sheet_name='Statistic', index=True, index_label='Model'
             )

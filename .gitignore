@@ -1,2 +1,4 @@
 # data set
 data/
+__pycache__/
+_dm_flat_models/
